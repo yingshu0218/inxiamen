@@ -1,0 +1,43 @@
+{
+  "blocks": [
+    {
+      "id": "tatou-lushang",
+      "name": "塔头环岛鹭尚",
+      "blockPoint": [
+        1362,
+        4849
+      ],
+      "boundaryWay": "386930755@2",
+      "boundaryEdit": "2024-08-31T03:48:05Z",
+      "dataset": "doi:10.5281/zenodo.8174931",
+      "outlineCheckDate": "2023-12-31",
+      "outlineCheckSource": "Esri World Imagery · Vantor WorldView-3, 0.31 m, visual check only",
+      "siteCheckScenes": [
+        "S2C_50RPN_20261029_0_L2A",
+        "S2A_50RPN_20261110_0_L2A"
+      ],
+      "height": 10.5,
+      "sourceIds": [
+        "73e40e4a-134d-4319-9cf6-5073783ac0ca",
+        "06fbe143-5f93-4f60-98f1-51505c25d1e2",
+        "011ddd86-2586-4014-a82b-154986980620",
+        "7e7157ea-fffd-4639-bf71-77c648257f12",
+        "5a2110bd-e2f6-4b28-9f96-32cc2bea627c",
+        "5c2b4616-655b-44db-b4fc-cee2e4029a65",
+        "00454775-5118-4046-8159-9d7d5e38bd2a",
+        "d364eb00-7680-4b93-9d5c-631fe28e13ac",
+        "d27e91ca-4249-48f7-9303-40bc741c0ffa",
+        "d49f9816-7846-4f87-8851-701000112a0d",
+        "d6c946ed-2797-44be-b6f7-dc2092ab9090",
+        "b60efd0b-9456-4993-9681-eecc0b958f0d",
+        "1f0a0117-3666-460a-9ed7-7f5e0de4a04b",
+        "aa41c70b-cfa3-4fd5-9030-bd422a1c88fb",
+        "ea67b7a1-f406-4d4b-a9c8-bdd209c1df06",
+        "fb74a35c-dd0c-4b34-8f74-57241b49363e",
+        "0503af48-c677-4e0c-8e96-65d6b0382729",
+        "4d90d81a-8782-47b5-a7fd-d2f5ca9ff135",
+        "16e2b073-1779-4bc0-917c-d0e8f1f3a316"
+      ]
+    }
+  ]
+}

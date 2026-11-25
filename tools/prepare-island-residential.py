@@ -217,6 +217,25 @@ def landmark_hits(records):
     return json.loads(result.stdout)
 
 
+def roof_samples(roof):
+    shell = make_ring(roof.exterior)
+    samples = shell + [[roof.centroid.x, roof.centroid.y]]
+    for a, b in zip(shell, shell[1:] + shell[:1]):
+        steps = math.ceil(math.dist(a, b) / 8)
+        samples.extend([[a[0] + (b[0] - a[0]) * t / steps, a[1] + (b[1] - a[1]) * t / steps]
+                        for t in range(1, steps)])
+    return samples
+
+
+def safe_ground(samples, height):
+    ground = [height(x, z) for x, z in samples]
+    if min(ground) < 2.1 or max(ground) - min(ground) > 5:
+        return False
+    grade = max(math.hypot(height(x + 1, z) - height(x - 1, z),
+                           height(x, z + 1) - height(x, z - 1)) / 2 for x, z in samples)
+    return grade <= 0.18
+
+
 def suggest_roofs(features, blocks, footprints, streets, height):
     shapely.prepare(streets)
     parcel_index = STRtree([p for _, p, _ in blocks])
@@ -254,17 +273,8 @@ def suggest_roofs(features, blocks, footprints, streets, height):
             counts["weakRemoteEvidence"] += 1
             continue
         shell = make_ring(roof.exterior)
-        samples = shell + [[roof.centroid.x, roof.centroid.y]]
-        for a, b in zip(shell, shell[1:] + shell[:1]):
-            steps = math.ceil(math.dist(a, b) / 8)
-            samples.extend([[a[0] + (b[0] - a[0]) * t / steps, a[1] + (b[1] - a[1]) * t / steps] for t in range(1, steps)])
-        ground = [height(x, z) for x, z in samples]
-        if min(ground) < 2.1 or max(ground) - min(ground) > 5:
-            counts["steepOrLow"] += 1
-            continue
-        grade = max(math.hypot(height(x + 1, z) - height(x - 1, z),
-                               height(x, z + 1) - height(x, z - 1)) / 2 for x, z in samples)
-        if grade > 0.18:
+        samples = roof_samples(roof)
+        if not safe_ground(samples, height):
             counts["steepOrLow"] += 1
             continue
         mapped_height = props.get("height") or (props["num_floors"] * 3.05 if props["num_floors"] else None)
@@ -290,7 +300,7 @@ def suggest_roofs(features, blocks, footprints, streets, height):
     return roofs, counts
 
 
-def coverage(land, mapped, active, additions, approximate, city, city_tree, protected):
+def coverage(land, mapped, active, additions, approximate, reviewed, city, city_tree, protected):
     active_polys = [polygon for _, polygon, _ in active]
     active_domain = union(active_polys)
     centers = STRtree([p.representative_point() for p in active_polys])
@@ -298,6 +308,7 @@ def coverage(land, mapped, active, additions, approximate, city, city_tree, prot
     existing_homes = STRtree(dwelling_points)
     new_points = STRtree([roof.representative_point() for roofs in additions for roof in roofs])
     approximate_points = STRtree([roof.representative_point() for roof in approximate])
+    reviewed_points = STRtree([roof.representative_point() for roof in reviewed])
     supported, baseline_supported, baseline_gaps, remaining_gaps = [], [], [], []
     for (mode, parcel, homes), roofs in zip(active, additions):
         x, z = parcel.representative_point().coords[0]
@@ -339,6 +350,7 @@ def coverage(land, mapped, active, additions, approximate, city, city_tree, prot
                 "baseResidentialRoofs": counted,
                 "addedRoofs": len(new_points.query(ground, predicate="covers")) + approximate_count,
                 "approximateAddedRoofs": approximate_count,
+                "datedAddedOutlines": len(reviewed_points.query(ground, predicate="covers")),
                 "blocks": len(centers.query(window, predicate="contains")),
             })
     gaps = []
@@ -406,11 +418,54 @@ def add_survey_volumes(rows, active, surveys, land, streets, reserved, city_tree
     return accepted
 
 
+def add_reviewed_roofs(rows, active, reviews, features, streets, reserved, city_tree, height):
+    """Use open source geometry for individually reviewed roof outlines."""
+    selected_ids = {roof_id for review in reviews for roof_id in review["sourceIds"]}
+    by_id = {item["id"]: item for item in features if item["id"] in selected_ids}
+    if selected_ids != by_id.keys():
+        raise ValueError("Missing reviewed outlines from the pinned Overture release")
+    occupied = [Polygon(roof["rings"][0], roof["rings"][1:]) for row in rows for roof in row["roofs"]]
+    checked = []
+    for review in reviews:
+        point = Point(review["blockPoint"])
+        owners = [idx for idx, (kind, parcel, _) in enumerate(active)
+                  if kind == "mapped" and parcel.contains(point)]
+        if len(owners) != 1:
+            raise ValueError(f'{review["id"]}: expected a unique mapped residential block')
+        owner = owners[0]
+        for roof_id in review["sourceIds"]:
+            source = by_id[roof_id]
+            if source["properties"]["sources"][0]["dataset"] != review["dataset"]:
+                raise ValueError(f'{roof_id}: unexpected source dataset')
+            roof = shapely.set_precision(project(shape(source["geometry"])), 0.5)
+            if (roof.geom_type != "Polygon" or not roof.is_valid or not 85 <= roof.area <= 4000
+                or not active[owner][1].contains_properly(roof) or streets.intersects(roof)
+                or reserved.intersects(roof) or city_tree.query(roof.buffer(1), predicate="intersects").size
+                or any(other.distance(roof) < 1 for other in occupied)):
+                raise ValueError(f'{roof_id}: reviewed outline conflicts with current inputs')
+            samples = roof_samples(roof)
+            if not safe_ground(samples, height):
+                raise ValueError(f'{roof_id}: unsafe terrain for reviewed outline')
+            record = {
+                "id": roof_id, "source": "east-asian-roofprint", "quality": "dated-roof-outline",
+                "height": review["height"], "heightSource": "low-rise-estimate",
+                "rings": [make_ring(roof.exterior), *map(make_ring, roof.interiors)],
+            }
+            checked.append((owner, record, samples, roof))
+            occupied.append(roof)
+    if checked and any(landmark_hits([samples for _, _, samples, _ in checked])):
+        raise ValueError("Reviewed outline overlaps an existing landmark")
+    for owner, record, _, _ in checked:
+        rows[owner]["roofs"].append(record)
+    return [roof for _, _, _, roof in checked]
+
+
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("--tiles", type=Path, required=True)
     cli.add_argument("--overture", type=Path, required=True)
     cli.add_argument("--survey", type=Path, default=TOOLS / "data/residential-survey-v2.json")
+    cli.add_argument("--reviewed", type=Path, default=TOOLS / "data/residential-reviewed-roofs.json")
     cli.add_argument("--output", type=Path, default=GEO / "residential-blocks.json")
     cli.add_argument("--coverage", type=Path, default=ROOT / "docs/urban-review/island-residential-coverage.json")
     args = cli.parse_args()
@@ -432,7 +487,8 @@ def main():
         for p in pilot_polys
     ] + blocks
     height = runpy.run_path(str(TOOLS / "check-residential-blocks.py"))["terrain"]()
-    roofs, screening = suggest_roofs(read(args.overture)["features"], blocks, city_tree, streets, height)
+    features = read(args.overture)["features"]
+    roofs, screening = suggest_roofs(features, blocks, city_tree, streets, height)
     generated = []
     for i, (mode, polygon, homes) in enumerate(blocks):
         x, z = polygon.representative_point().coords[0]
@@ -451,13 +507,21 @@ def main():
     rows = [{"kind": "pilot", **item} for item in pilots] + generated
     surveys = read(args.survey)
     approximate = add_survey_volumes(rows, active, surveys["sites"], land, streets, reserved, city_tree)
+    reviews = read(args.reviewed)["blocks"]
+    reviewed = add_reviewed_roofs(rows, active, reviews, features, streets, reserved, city_tree, height)
     additions = [[Polygon(roof["rings"][0], roof["rings"][1:]) for roof in group["roofs"]
                   if roof.get("quality") != "approximate"] for group in rows]
-    inventory = coverage(land, mapped_area, active, additions, approximate, city, city_tree, old_town_mask)
+    inventory = coverage(land, mapped_area, active, additions, approximate, reviewed, city, city_tree, old_town_mask)
     inventory["followupSurvey"] = [{
         "id": site["id"], "resolvedFootprints": 0,
         "approximateVolumes": len(site["volumes"]), "unresolvedBuildings": site["expectedBuildings"] - len(site["volumes"]),
+        "buildingCountBasis": site.get("expectedBuildingsBasis", "published-project-count"),
+        **{key: site[key] for key in ("completionPeriod", "completionSource") if key in site},
     } for site in surveys["sites"]]
+    inventory["reviewedRoofBlocks"] = [{
+        "id": item["id"], "name": item["name"], "datedOutlines": len(item["sourceIds"]),
+        "outlineCheckDate": item["outlineCheckDate"], "siteCheckScenes": item["siteCheckScenes"],
+    } for item in reviews]
     print("coverage:", {k:v for k,v in inventory.items() if not isinstance(v,list)}, flush=True)
     inventory["source"] = {"openFreeMap": TILE_SNAPSHOT, "overture": RELEASE, "gridMetres": 1000}
     inventory["sourceFeatures"] = len(city)

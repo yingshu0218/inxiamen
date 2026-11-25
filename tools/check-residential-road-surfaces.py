@@ -36,7 +36,7 @@ def surface_geometry(records, walkway):
             polygon = polygon.intersection(walkway)
             if polygon.is_empty:
                 continue
-        surfaces.append((polygon, vertices, elevation, record["ground"], name))
+        surfaces.append((polygon, vertices, elevation, record["ground"], name, record.get("paving", "unspecified")))
     return surfaces
 
 
@@ -58,7 +58,7 @@ def height_at(vertices, values, point):
 
 
 def classify(building, surface, overlap):
-    _, xyz, levels, ground, _ = surface
+    _, xyz, levels, ground, *_ = surface
     points = list(intersection_vertices(overlap))
     roads = [height_at(xyz, levels, p) for p in points]
     minimum, maximum = min(roads), max(roads)
@@ -89,6 +89,7 @@ def audit(surfaces_file, volumes_file, baseline=False):
                 raise ValueError(f'{b["id"]}: model did not appear at expected height')
             footprint = Polygon(b["ring"], b["holes"]).buffer(0)
             areas = defaultdict(list)
+            at_grade_paving = defaultdict(list)
             sources = set()
             if not b["historic"]:
                 new.append({"id": b["id"], "minPlanarClearanceM": round(footprint.distance(surfaces[tree.nearest(footprint)][0]), 2),
@@ -98,8 +99,11 @@ def audit(surfaces_file, volumes_file, baseline=False):
                 overlap = footprint.intersection(surface[0])
                 if overlap.area <= 1e-7:
                     continue
-                areas[classify(b, surface, overlap)].append(overlap)
-                sources.add(surface[-1])
+                kind = classify(b, surface, overlap)
+                areas[kind].append(overlap)
+                if kind == "sameLevelConflict":
+                    at_grade_paving[surface[5]].append(overlap)
+                sources.add(surface[4])
             total = {kind: round(union_all(polygons).area, 2) for kind, polygons in areas.items()}
             total = {kind: area for kind, area in total.items() if area >= MIN_CONTACT_M2}
             if total:
@@ -107,7 +111,9 @@ def audit(surfaces_file, volumes_file, baseline=False):
                 counts.update(f"{scope}-{kind}" for kind in total)
                 hits.append({"id": b["id"], "centroid": b["center"], "scope": scope,
                              "estimatedFrontage": b.get("frontage", False),
-                             "overlapM2": total, "meshSources": sorted(sources)})
+                             "overlapM2": total, "meshSources": sorted(sources),
+                             "sameLevelPavingM2": {paving: round(union_all(polygons).area, 2)
+                                                   for paving, polygons in sorted(at_grade_paving.items())}})
         report[name] = {"triangles": len(surfaces), "count": dict(counts), "contacts": hits, "newVolumes": new}
     return report
 

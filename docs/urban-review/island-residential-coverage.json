@@ -2,9 +2,9 @@
   "landHa": 14096.55,
   "mappedResidentialHa": 1372.98,
   "mappedResidentialInLayerHa": 1101.9,
-  "mappedResidentialWithRoofEvidenceHa": 867.63,
+  "mappedResidentialWithRoofEvidenceHa": 869.68,
   "mappedResidentialWithBaselineRoofEvidenceHa": 867.63,
-  "layerWithRoofEvidenceHa": 2078.88,
+  "layerWithRoofEvidenceHa": 2080.93,
   "baseResidentialRoofs": 17974,
   "roadSupportedHa": 1211.23,
   "parallelProtectionMappedHa": 133.13,
@@ -685,13 +685,6 @@
       "z": 1457,
       "areaHa": 2.07,
       "existingRoofs": 1,
-      "addedRoofs": 0
-    },
-    {
-      "x": 1362,
-      "z": 4849,
-      "areaHa": 2.05,
-      "existingRoofs": 0,
       "addedRoofs": 0
     },
     {
@@ -1684,6 +1677,7 @@
       "baseResidentialRoofs": 4,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1699,6 +1693,7 @@
       "baseResidentialRoofs": 78,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -1714,6 +1709,7 @@
       "baseResidentialRoofs": 82,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -1729,6 +1725,7 @@
       "baseResidentialRoofs": 49,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -1744,6 +1741,7 @@
       "baseResidentialRoofs": 155,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -1759,6 +1757,7 @@
       "baseResidentialRoofs": 270,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1774,6 +1773,7 @@
       "baseResidentialRoofs": 7,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1789,6 +1789,7 @@
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1804,6 +1805,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1819,6 +1821,7 @@
       "baseResidentialRoofs": 7,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1834,6 +1837,7 @@
       "baseResidentialRoofs": 94,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -1849,6 +1853,7 @@
       "baseResidentialRoofs": 211,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 5
     },
     {
@@ -1864,6 +1869,7 @@
       "baseResidentialRoofs": 148,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 5
     },
     {
@@ -1879,6 +1885,7 @@
       "baseResidentialRoofs": 176,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 15
     },
     {
@@ -1894,6 +1901,7 @@
       "baseResidentialRoofs": 314,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -1909,6 +1917,7 @@
       "baseResidentialRoofs": 218,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1924,6 +1933,7 @@
       "baseResidentialRoofs": 211,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1939,6 +1949,7 @@
       "baseResidentialRoofs": 79,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1954,6 +1965,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1969,6 +1981,7 @@
       "baseResidentialRoofs": 7,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1984,6 +1997,7 @@
       "baseResidentialRoofs": 129,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -1999,6 +2013,7 @@
       "baseResidentialRoofs": 98,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 5
     },
     {
@@ -2014,6 +2029,7 @@
       "baseResidentialRoofs": 198,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 11
     },
     {
@@ -2029,6 +2045,7 @@
       "baseResidentialRoofs": 118,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -2044,6 +2061,7 @@
       "baseResidentialRoofs": 171,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 10
     },
     {
@@ -2059,6 +2077,7 @@
       "baseResidentialRoofs": 166,
       "addedRoofs": 2,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 6
     },
     {
@@ -2074,6 +2093,7 @@
       "baseResidentialRoofs": 113,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -2089,6 +2109,7 @@
       "baseResidentialRoofs": 351,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 22
     },
     {
@@ -2104,6 +2125,7 @@
       "baseResidentialRoofs": 140,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -2119,6 +2141,7 @@
       "baseResidentialRoofs": 70,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2134,6 +2157,7 @@
       "baseResidentialRoofs": 157,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2149,6 +2173,7 @@
       "baseResidentialRoofs": 4,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2164,6 +2189,7 @@
       "baseResidentialRoofs": 4,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2179,6 +2205,7 @@
       "baseResidentialRoofs": 42,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -2194,6 +2221,7 @@
       "baseResidentialRoofs": 136,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -2209,6 +2237,7 @@
       "baseResidentialRoofs": 170,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -2224,6 +2253,7 @@
       "baseResidentialRoofs": 197,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -2239,6 +2269,7 @@
       "baseResidentialRoofs": 210,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 5
     },
     {
@@ -2254,6 +2285,7 @@
       "baseResidentialRoofs": 119,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -2269,6 +2301,7 @@
       "baseResidentialRoofs": 161,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 5
     },
     {
@@ -2284,6 +2317,7 @@
       "baseResidentialRoofs": 75,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 5
     },
     {
@@ -2299,6 +2333,7 @@
       "baseResidentialRoofs": 254,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 13
     },
     {
@@ -2314,6 +2349,7 @@
       "baseResidentialRoofs": 316,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 8
     },
     {
@@ -2329,6 +2365,7 @@
       "baseResidentialRoofs": 97,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -2344,6 +2381,7 @@
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2359,6 +2397,7 @@
       "baseResidentialRoofs": 55,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2374,6 +2413,7 @@
       "baseResidentialRoofs": 28,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2389,6 +2429,7 @@
       "baseResidentialRoofs": 49,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 5
     },
     {
@@ -2404,6 +2445,7 @@
       "baseResidentialRoofs": 204,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -2419,6 +2461,7 @@
       "baseResidentialRoofs": 181,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2434,6 +2477,7 @@
       "baseResidentialRoofs": 192,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2449,6 +2493,7 @@
       "baseResidentialRoofs": 221,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 9
     },
     {
@@ -2464,6 +2509,7 @@
       "baseResidentialRoofs": 412,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -2479,6 +2525,7 @@
       "baseResidentialRoofs": 261,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -2494,6 +2541,7 @@
       "baseResidentialRoofs": 311,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 13
     },
     {
@@ -2509,6 +2557,7 @@
       "baseResidentialRoofs": 355,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 19
     },
     {
@@ -2524,6 +2573,7 @@
       "baseResidentialRoofs": 240,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 12
     },
     {
@@ -2539,6 +2589,7 @@
       "baseResidentialRoofs": 64,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2554,6 +2605,7 @@
       "baseResidentialRoofs": 35,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2569,6 +2621,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2584,6 +2637,7 @@
       "baseResidentialRoofs": 48,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2599,6 +2653,7 @@
       "baseResidentialRoofs": 127,
       "addedRoofs": 2,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 12
     },
     {
@@ -2614,6 +2669,7 @@
       "baseResidentialRoofs": 18,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2629,6 +2685,7 @@
       "baseResidentialRoofs": 58,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2644,6 +2701,7 @@
       "baseResidentialRoofs": 18,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2659,6 +2717,7 @@
       "baseResidentialRoofs": 107,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2674,6 +2733,7 @@
       "baseResidentialRoofs": 111,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2689,6 +2749,7 @@
       "baseResidentialRoofs": 311,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 11
     },
     {
@@ -2704,6 +2765,7 @@
       "baseResidentialRoofs": 191,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -2719,6 +2781,7 @@
       "baseResidentialRoofs": 374,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 14
     },
     {
@@ -2734,6 +2797,7 @@
       "baseResidentialRoofs": 251,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 8
     },
     {
@@ -2749,6 +2813,7 @@
       "baseResidentialRoofs": 326,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 11
     },
     {
@@ -2764,6 +2829,7 @@
       "baseResidentialRoofs": 44,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2779,6 +2845,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2794,6 +2861,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2809,6 +2877,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2824,6 +2893,7 @@
       "baseResidentialRoofs": 65,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -2839,6 +2909,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2854,6 +2925,7 @@
       "baseResidentialRoofs": 4,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2869,6 +2941,7 @@
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -2884,6 +2957,7 @@
       "baseResidentialRoofs": 27,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -2899,6 +2973,7 @@
       "baseResidentialRoofs": 294,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 6
     },
     {
@@ -2914,6 +2989,7 @@
       "baseResidentialRoofs": 191,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -2929,6 +3005,7 @@
       "baseResidentialRoofs": 189,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 9
     },
     {
@@ -2944,6 +3021,7 @@
       "baseResidentialRoofs": 66,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -2959,6 +3037,7 @@
       "baseResidentialRoofs": 375,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 14
     },
     {
@@ -2974,6 +3053,7 @@
       "baseResidentialRoofs": 231,
       "addedRoofs": 2,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -2989,6 +3069,7 @@
       "baseResidentialRoofs": 195,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -3004,6 +3085,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3019,6 +3101,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3034,6 +3117,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -3049,6 +3133,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3064,6 +3149,7 @@
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3079,6 +3165,7 @@
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3094,6 +3181,7 @@
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3109,6 +3197,7 @@
       "baseResidentialRoofs": 9,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3124,6 +3213,7 @@
       "baseResidentialRoofs": 47,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -3139,6 +3229,7 @@
       "baseResidentialRoofs": 134,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3154,6 +3245,7 @@
       "baseResidentialRoofs": 188,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -3169,6 +3261,7 @@
       "baseResidentialRoofs": 172,
       "addedRoofs": 2,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -3184,6 +3277,7 @@
       "baseResidentialRoofs": 182,
       "addedRoofs": 3,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 11
     },
     {
@@ -3199,6 +3293,7 @@
       "baseResidentialRoofs": 166,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 11
     },
     {
@@ -3214,6 +3309,7 @@
       "baseResidentialRoofs": 266,
       "addedRoofs": 2,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 8
     },
     {
@@ -3229,6 +3325,7 @@
       "baseResidentialRoofs": 187,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -3244,6 +3341,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3259,6 +3357,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3274,6 +3373,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3283,12 +3383,13 @@
       "mappedResidentialHa": 3.19,
       "insideResidentialLayerHa": 3.04,
       "baselineWithRoofEvidenceHa": 0.0,
-      "layerWithRoofEvidenceHa": 0.0,
+      "layerWithRoofEvidenceHa": 2.05,
       "mappedOutsideLayerHa": 0.15,
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
-      "addedRoofs": 0,
+      "addedRoofs": 19,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 19,
       "blocks": 1
     },
     {
@@ -3304,6 +3405,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3319,6 +3421,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3334,6 +3437,7 @@
       "baseResidentialRoofs": 25,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3349,6 +3453,7 @@
       "baseResidentialRoofs": 60,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3364,6 +3469,7 @@
       "baseResidentialRoofs": 149,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -3379,6 +3485,7 @@
       "baseResidentialRoofs": 167,
       "addedRoofs": 2,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 6
     },
     {
@@ -3394,6 +3501,7 @@
       "baseResidentialRoofs": 205,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 9
     },
     {
@@ -3409,6 +3517,7 @@
       "baseResidentialRoofs": 252,
       "addedRoofs": 6,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 18
     },
     {
@@ -3424,6 +3533,7 @@
       "baseResidentialRoofs": 156,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 6
     },
     {
@@ -3439,6 +3549,7 @@
       "baseResidentialRoofs": 148,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3454,6 +3565,7 @@
       "baseResidentialRoofs": 186,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -3469,6 +3581,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3484,6 +3597,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3499,6 +3613,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3514,6 +3629,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3529,6 +3645,7 @@
       "baseResidentialRoofs": 60,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -3544,6 +3661,7 @@
       "baseResidentialRoofs": 83,
       "addedRoofs": 5,
       "approximateAddedRoofs": 4,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -3559,6 +3677,7 @@
       "baseResidentialRoofs": 99,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3574,6 +3693,7 @@
       "baseResidentialRoofs": 111,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -3589,6 +3709,7 @@
       "baseResidentialRoofs": 83,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -3604,6 +3725,7 @@
       "baseResidentialRoofs": 29,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3619,6 +3741,7 @@
       "baseResidentialRoofs": 89,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -3634,6 +3757,7 @@
       "baseResidentialRoofs": 149,
       "addedRoofs": 17,
       "approximateAddedRoofs": 6,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -3649,6 +3773,7 @@
       "baseResidentialRoofs": 312,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 11
     },
     {
@@ -3664,6 +3789,7 @@
       "baseResidentialRoofs": 150,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3679,6 +3805,7 @@
       "baseResidentialRoofs": 6,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3694,6 +3821,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3709,6 +3837,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3724,6 +3853,7 @@
       "baseResidentialRoofs": 3,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3739,6 +3869,7 @@
       "baseResidentialRoofs": 6,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3754,6 +3885,7 @@
       "baseResidentialRoofs": 20,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3769,6 +3901,7 @@
       "baseResidentialRoofs": 53,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3784,6 +3917,7 @@
       "baseResidentialRoofs": 75,
       "addedRoofs": 2,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -3799,6 +3933,7 @@
       "baseResidentialRoofs": 47,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3814,6 +3949,7 @@
       "baseResidentialRoofs": 78,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -3829,6 +3965,7 @@
       "baseResidentialRoofs": 108,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -3844,6 +3981,7 @@
       "baseResidentialRoofs": 344,
       "addedRoofs": 2,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 8
     },
     {
@@ -3859,6 +3997,7 @@
       "baseResidentialRoofs": 190,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 8
     },
     {
@@ -3874,6 +4013,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3889,6 +4029,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3904,6 +4045,7 @@
       "baseResidentialRoofs": 51,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3919,6 +4061,7 @@
       "baseResidentialRoofs": 139,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 5
     },
     {
@@ -3934,6 +4077,7 @@
       "baseResidentialRoofs": 68,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -3949,6 +4093,7 @@
       "baseResidentialRoofs": 130,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -3964,6 +4109,7 @@
       "baseResidentialRoofs": 114,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -3979,6 +4125,7 @@
       "baseResidentialRoofs": 43,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 1
     },
     {
@@ -3994,6 +4141,7 @@
       "baseResidentialRoofs": 107,
       "addedRoofs": 1,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 9
     },
     {
@@ -4009,6 +4157,7 @@
       "baseResidentialRoofs": 104,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 7
     },
     {
@@ -4024,6 +4173,7 @@
       "baseResidentialRoofs": 53,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 3
     },
     {
@@ -4039,6 +4189,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4054,6 +4205,7 @@
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4069,6 +4221,7 @@
       "baseResidentialRoofs": 16,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4084,6 +4237,7 @@
       "baseResidentialRoofs": 55,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4099,6 +4253,7 @@
       "baseResidentialRoofs": 122,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -4114,6 +4269,7 @@
       "baseResidentialRoofs": 105,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 4
     },
     {
@@ -4129,6 +4285,7 @@
       "baseResidentialRoofs": 114,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 2
     },
     {
@@ -4144,6 +4301,7 @@
       "baseResidentialRoofs": 88,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 6
     },
     {
@@ -4159,6 +4317,7 @@
       "baseResidentialRoofs": 13,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4174,6 +4333,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4189,6 +4349,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4204,6 +4365,7 @@
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4219,6 +4381,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4234,6 +4397,7 @@
       "baseResidentialRoofs": 6,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4249,6 +4413,7 @@
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4264,6 +4429,7 @@
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     },
     {
@@ -4279,6 +4445,7 @@
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
       "approximateAddedRoofs": 0,
+      "datedAddedOutlines": 0,
       "blocks": 0
     }
   ],
@@ -4287,13 +4454,29 @@
       "id": "2021P02",
       "resolvedFootprints": 0,
       "approximateVolumes": 6,
-      "unresolvedBuildings": 9
+      "unresolvedBuildings": 9,
+      "buildingCountBasis": "published-project-count"
     },
     {
       "id": "wuyuan-haiyue",
       "resolvedFootprints": 0,
       "approximateVolumes": 4,
-      "unresolvedBuildings": 10
+      "unresolvedBuildings": 10,
+      "buildingCountBasis": "unconfirmed-sales-count",
+      "completionPeriod": "2025-H1",
+      "completionSource": "https://dataclouds.cninfo.com.cn/shgonggao/2025/2025-08-30/f2640d1784ca11f09287fa163e957f7a.pdf"
+    }
+  ],
+  "reviewedRoofBlocks": [
+    {
+      "id": "tatou-lushang",
+      "name": "塔头环岛鹭尚",
+      "datedOutlines": 19,
+      "outlineCheckDate": "2023-12-31",
+      "siteCheckScenes": [
+        "S2C_50RPN_20261029_0_L2A",
+        "S2A_50RPN_20261110_0_L2A"
+      ]
     }
   ],
   "source": {
