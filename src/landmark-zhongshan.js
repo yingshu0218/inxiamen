@@ -1,6 +1,6 @@
 import { cylinder, groundY, litSurface, prism, randomSource } from './scenery-mesh.js';
 import { localFrame, rect, up } from './landmark-forms.js';
-import { alongFrame, offset, plan, ribbon, street } from './old-town-layout.js';
+import { alongFrame, carriageways, offset, plan, ribbon, street } from './old-town-layout.js';
 
 const plaster = ['#e1d3b9','#d9baa5','#d9c9ae','#c7c9b7','#e7dac3','#d3b39c','#d6c4b7'];
 const redTiles = ['#9e6150','#ad6c51','#95705c','#ae7459'];
@@ -143,7 +143,14 @@ export function buildZhongshan(batch,geo,lamps,obstacles,signs) {
     const sidewalk=(x,z)=>y(x,z)+.12;
     ribbon(batch,part,-8.55,-5.05,sidewalk,'#bcb4a3',17);
     ribbon(batch,part,5.05,8.55,sidewalk,'#bcb4a3',17);
-    ribbon(batch,part,-5.05,5.05,y,'#797971',litSurface.carriageway);
+    // Match the avenue's +0.71 m surface at its edge. The approach starts
+    // inside that carriageway, so keep its overlapping tip below the asphalt.
+    const approachLevel = (x, z, s) => {
+      if (s > 24) return y(x, z);
+      const fromEdge = carriageways[1].nearest(x, z).distance - 5.32;
+      return y(x, z) + .15 * Math.max(0, 1 - Math.abs(fromEdge) / 7);
+    };
+    ribbon(batch,part,-5.05,5.05,approachLevel,'#797971',litSurface.carriageway);
   }
   for(let s=start+7;s<end-5;s+=42){
     const p=street.sample(s), xy=alongFrame(p);

@@ -1,4 +1,5 @@
 import { mazeWater } from './parks/layout.js';
+import { gradeShapoweiBank } from './shapowei-bank.js';
 import { gradeOldTown } from './old-town-layout.js';
 import { gradeNeicuoaoEntrance } from './gulangyu-layout.js';
 import { gradeHubin, plan as hubin } from './hubin-layout.js';
@@ -105,6 +106,7 @@ export async function loadGeography(renderer, runway) {
   const terrainPatch = new Int16Array(reliefBuffer);
   gradeAirport(runway, relief, terrainPatch);
   gradeOldTown(relief, terrainPatch);
+  gradeShapoweiBank(relief, terrainPatch);
   gradeHubin(relief, terrainPatch);
   gradeRailway(relief, terrainPatch);
   gradeGaoqiRailway(relief, terrainPatch);

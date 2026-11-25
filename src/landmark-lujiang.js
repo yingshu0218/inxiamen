@@ -1,7 +1,7 @@
 import { cylinder, groundY, inRing, litSurface, prism, randomSource } from './scenery-mesh.js';
 import { localFrame, rect, up } from './landmark-forms.js';
 import { pathTube } from './landmark-haicang.js';
-import { alongFrame, carriageways, offset, plan, ribbon, shore } from './old-town-layout.js';
+import { alongFrame, carriageways, offset, plan, ribbon, shore, street } from './old-town-layout.js';
 
 const metal='#b5c2c1', enamel='#edf0df', teal='#497e83', stone='#bab5a8';
 const landingStations=plan.gangways.map(g=>shore.nearest(...g.at(-1)).s);
@@ -145,13 +145,44 @@ function avenueTraffic(geo) {
   return {length,step,at,center:step(.5),surfaceStreet:true};
 }
 
+// Clip the landward sidewalk at the mapped Zhongshan Road junction. Use
+// the street's two edges so the opening follows the oblique approach.
+function inlandSidewalk(batch, lane, sections, curb) {
+  const mouth = street.sample(0);
+  const atSide = (row, width) => [row.x - width * row.rx, row.z - width * row.rz];
+  const lateral = ([x, z]) => (z - mouth.z) * mouth.ux - (x - mouth.x) * mouth.uz;
+  const crossing = lane.nearest(mouth.x, mouth.z).s;
+  for (let i = 1; i < sections.length; i++) {
+    const a = sections[i - 1], b = sections[i];
+    if (Math.abs(a.s - crossing) > 25) {
+      ribbon(batch, [a, b], -5.32, -6.76, curb, '#c0b6a1', 17);
+      continue;
+    }
+    const quad = [atSide(a, 5.32), atSide(a, 6.76), atSide(b, 6.76), atSide(b, 5.32)];
+    for (const sign of [-1, 1]) {
+      const kept = [];
+      for (let j = 0; j < quad.length; j++) {
+        const p = quad[j], q = quad[(j + 1) % quad.length];
+        const d = sign * lateral(p) - 5.05, e = sign * lateral(q) - 5.05;
+        if (d >= 0) kept.push(p);
+        if ((d < 0) !== (e < 0)) {
+          const t = d / (d - e);
+          kept.push([p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t]);
+        }
+      }
+      if (kept.length >= 3) batch.top(kept.map(([x, z]) => [x, curb(x, z), z]), '#c0b6a1', 17);
+    }
+  }
+}
+
 function avenuePaving(batch,geo){
   const asphalt=(x,z)=>roadLevel(geo,x,z), curb=(x,z)=>asphalt(x,z)+.115;
   for(const [i,lane] of carriageways.entries()){
     const sections=lane.sections(7);
     ribbon(batch,sections,-5.32,5.32,asphalt,'#666b69',litSurface.carriageway);
     const outer=i===0?1:-1;
-    ribbon(batch,sections,outer*5.32,outer*6.76,curb,'#c0b6a1',17);
+    if (i===1) inlandSidewalk(batch,lane,sections,curb);
+    else ribbon(batch,sections,outer*5.32,outer*6.76,curb,'#c0b6a1',17);
     ribbon(batch,sections,-outer*5.32,-outer*5.65,curb,'#c4b9a4');
     for(const s of plan.crosswalks[i]){
       const xy=alongFrame(lane.sample(s));

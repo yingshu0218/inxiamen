@@ -18,6 +18,7 @@ import { buildCampus } from './landmark-campus.js';
 import { campusInfillReserved } from './campus-layout.js';
 import { buildBailuzhou, parkReserved } from './landmark-bailuzhou.js';
 import { buildZhongshan } from './landmark-zhongshan.js';
+import { buildShapoweiBank } from './shapowei-bank.js';
 import { buildFerry, buildLujiang } from './landmark-lujiang.js';
 import { buildBroadcast } from './landmark-broadcast.js';
 import { buildHubinRoad } from './landmark-hubin-road.js';
@@ -86,6 +87,7 @@ const sites = [
   ['中山路 · 骑楼街与鹭江宾馆', buildZhongshan],
   ['轮渡码头 · 候船厅、登船桥与浮码头', buildFerry],
   ['鹭江道 · 滨海大道与海滨公园', buildLujiang],
+  ['沙坡尾避风坞内岸', buildShapoweiBank],
   ['白鹭洲公园 · 白鹭女神与湖滨步道', buildBailuzhou],
   ['厦门广播电视中心 · 主楼、演播楼与卫星天线', buildBroadcast],
   ['湖滨北路 · 湖东桥与环湖步道', buildHubinRoad],
