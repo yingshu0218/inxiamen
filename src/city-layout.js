@@ -1,6 +1,7 @@
 import { siliHomes, siliReserved } from './sili-layout.js';
 import { drawSiliHome } from './sili-community.js';
 import { parkBuildingHeight } from './parks/layout.js';
+import { replacesHuizhiFootprint } from './landmark-torch-huizhi.js';
 import { MeshBatch, litSurface, prism, signedArea, inRing, ringRect, supportsHipRoof } from './scenery-mesh.js';
 import { airportWorksReserved } from './airport-layout.js';
 import { airportIndustryBuilding } from './airport-industry-layout.js';
@@ -154,6 +155,7 @@ export async function buildCity(parent,geo,frame,material,index,buffer,bridgeFoo
       for (const part of neicuoao) enqueue(part);
       continue;
     }
+    if(replacesHuizhiFootprint(building))continue;
     const pieces=oldTownFootprints(building);
     if (pieces === undefined) enqueue(building);
     else for (const rings of pieces) enqueue({...building,rings});

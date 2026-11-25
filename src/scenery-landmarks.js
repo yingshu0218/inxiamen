@@ -52,6 +52,7 @@ import { parkModelReserved } from './parks/layout.js';
 import { buildZhongshanPark, buildWetland, buildExpo } from './parks/landscapes.js';
 import { buildNanhu } from './landmark-nanhu.js';
 import { buildLianbanGuomao } from './landmark-lianban.js';
+import { buildTorchHuizhi } from './landmark-torch-huizhi.js';
 import { lianbanReserved } from './lianban-layout.js';
 import { buildSmXiamen } from './landmark-sm.js';
 import { buildZhonghuaCity } from './landmark-zhonghua-city.js';
@@ -120,6 +121,7 @@ const sites = [
   ['中山公园 · 湖岛与南门', buildZhongshanPark],
   ['南湖公园 · 桃花岛、湖亭与后埭溪步桥', buildNanhu],
   ['莲坂国贸大厦 · 拱顶玻璃幕墙与红色钢桁架', buildLianbanGuomao],
+  ['火炬园 · 荟智空间', buildTorchHuizhi],
   ['厦门 SM 城市广场 · 一期、二期与嘉禾路连廊', buildSmXiamen],
   ['中华城 · 思明南路骑楼、屋顶与台光街', buildZhonghuaCity],
   ['东渡海上世界 · 滨海商业和潮汐之眼', buildSeaWorld],
