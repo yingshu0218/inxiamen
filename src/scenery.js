@@ -42,8 +42,9 @@ export async function createScenery({ scene, geo, runway }) {
   const darkness = { value: 0 }, minute = { value: 0 };
   const lamps = new LampBatch(),
     obstacles = new ObstacleIndex();
-  const [buildings, streets, trees, coastalCover, bankTrees, atlas, occlusion, signAtlas, reflection, inscriptionMask, graniteDetail] = await Promise.all([
+  const [buildings, residentialBlocks, streets, trees, coastalCover, bankTrees, atlas, occlusion, signAtlas, reflection, inscriptionMask, graniteDetail] = await Promise.all([
     readBinary('/geo/city-layout.bin'),
+    readJSON('/geo/residential-blocks.json'),
     readJSON('/geo/urban-streets.json'),
     readBinary('/scenery/canopies.bin'),
     readBinary('/scenery/gulangyu-cover.bin'),
@@ -87,7 +88,7 @@ export async function createScenery({ scene, geo, runway }) {
   addStreets(group, geo, streets.roads, material, frame, lamps, roads);
   const bridgeFootprint = bridgeCorridors(roads.filter((road) => road.carOffsets)
     .flatMap((road) => road.metro ? [road, road.metro] : [road]));
-  const updateCity = await buildCity(group, geo, frame, material, obstacles, buildings, bridgeFootprint);
+  const updateCity = await buildCity(group, geo, frame, material, obstacles, buildings, bridgeFootprint, residentialBlocks.blocks);
   const islandCover = new Int16Array(coastalCover), shoreline = new MeshBatch();
   islandForeshore(shoreline, islandCover, geo, obstacles);
   const rocks = shoreline.finish(group, material, '鼓浪屿岸礁');

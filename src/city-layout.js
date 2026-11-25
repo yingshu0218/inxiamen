@@ -10,6 +10,7 @@ import { nanhuBuildingsReserved } from './downtown-landmark-layout.js';
 import { inIslandBounds, replacesGardenBuilding } from './gulangyu-layout.js';
 import { neicuoaoPieces, neicuoaoImageHouses } from './gulangyu-neicuoao.js';
 import { islandHouse } from './gulangyu-neighborhoods.js';
+import { applyResidentialBlocks } from './residential-blocks.js';
 
 const plaster = ['#bcafa0','#b7aca0','#c0bcb0','#b8aa97','#afb3a7','#c6b79e','#a8afaf','#beb6a8'];
 const homes = ['#c1b4a4','#c4b69e','#c1af96','#bfb6ab','#b3ac9a','#aeb6ad','#c4bbaf'];
@@ -37,7 +38,7 @@ export function decodeCityLayout(buffer) {
       for(let k=0;k<n;k++,cursor+=4) ring.push([data.getInt16(cursor,true)*.5,data.getInt16(cursor+2,true)*.5]);
       rings.push(ring);
     }
-    if (rings[0]?.length>=3) result.push({height,base,use,mappedHeight:(flags&3)>=2,roofTone:(flags>>5)&3,reviewedDistrict:!!(flags&8),interpreted:(flags&132)===132,rings});
+    if (rings[0]?.length>=3) result.push({height,base,use,mappedHeight:(flags&3)>=2,roofTone:(flags>>5)&3,reviewedDistrict:!!(flags&8),interpreted:(flags&132)===132,streetFrontage:(flags&132)===128,rings});
   }
   if(cursor!==data.byteLength)throw new Error('城市建筑记录未读完整');
   return result;
@@ -99,8 +100,10 @@ function drawBuilding(batch,b,geo,index) {
   const retail=b.use===2 && area>525 && h<49;
   const residential=b.use===1 || (!b.use && h<72 && area<1100);
   const office=b.use===5 || (!industrial && !residential && !retail && h>=64);
-  const wall=b.interpreted && residential && h>80 ? pick(['#a7afb0','#aeb5b5'],seed) : pick(office?glass:residential?homes:plaster,seed);
-  const roof=pick(b.roofTone===1?redTiles:b.roofTone===2?steel:greyRoofs,tile);
+  const wallPalette=office?glass:residential?(b.residentialFinish?.walls??homes):plaster;
+  const roofPalette=b.roofTone===1?redTiles:b.roofTone===2?steel:b.residentialFinish?.roofs??greyRoofs;
+  const wall=b.interpreted && residential && h>80 ? pick(['#a7afb0','#aeb5b5'],seed) : pick(wallPalette,seed);
+  const roof=pick(roofPalette,tile);
   const pitched=!holes.length && !b.base && !industrial && !retail && !office && h<21 && area<850 && b.roofTone===1 && supportsHipRoof(ring);
   const rise=pitched?Math.min(h*.20,Math.sqrt(area)*.13,4):0;
   const style=industrial?3:office?litSurface.office:retail?litSurface.shopfront:residential&&h>=17?20:1;
@@ -125,7 +128,7 @@ function drawBuilding(batch,b,geo,index) {
 
 // Make a small draw batch per neighbourhood. Small roofs beyond the visible
 // window are already present in the ground imagery; the skyline remains in 3D.
-export async function buildCity(parent,geo,frame,material,index,buffer,bridgeFootprint) {
+export async function buildCity(parent,geo,frame,material,index,buffer,bridgeFootprint,residentialBlocks=[]) {
   const tiles=new Map();
   function enqueue(b) {
     const ring=b.rings[0];
@@ -141,7 +144,7 @@ export async function buildCity(parent,geo,frame,material,index,buffer,bridgeFoo
     const minor=!b.reviewedDistrict && b.height<24 && Math.abs(signedArea(ring))<950;
     (minor?tile.small:tile.large).push(b);
   }
-  for(const building of decodeCityLayout(buffer)) {
+  for(const building of applyResidentialBlocks(decodeCityLayout(buffer),residentialBlocks)) {
     const neicuoao = neicuoaoPieces(building);
     if (neicuoao) {
       for (const part of neicuoao) enqueue(part);
