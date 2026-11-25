@@ -1,6 +1,6 @@
 // Run from the repository root with Node and Python 3 + Pillow.
 import assert from 'node:assert/strict';
-import {Group,MeshStandardMaterial} from 'three';
+import {DoubleSide,Group,MeshStandardMaterial} from 'three';
 import {loadMainlandRoadGeography} from './mainland-road-geography.mjs';
 import {Flight} from '../src/flight.js';
 import {nearestRoute,routePoint,tourStops} from '../src/route.js';
@@ -15,7 +15,7 @@ import {survey} from '../src/coast/layout.js';
 const geo=loadMainlandRoadGeography();
 const group=new Group(), obstacles=new ObstacleIndex();
 globalThis.document={createElement:()=>({getContext:()=>({fillText(){}})})}; // Sign rasterization belongs to browser QA.
-buildHuandao(group,geo,new MeshStandardMaterial(),new LampBatch(),obstacles);
+buildHuandao(group,geo,new MeshStandardMaterial({side:DoubleSide}),new LampBatch(),obstacles);
 const meshes=group.children.map(mesh=>{
   const positions=mesh.geometry.attributes.position;
   assert(positions.array.every(Number.isFinite));

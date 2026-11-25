@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {Group,Raycaster,Vector3,MeshStandardMaterial} from 'three';
+import {Group,Raycaster,Vector3} from 'three';
 import {addStreets} from '../src/scenery-streets.js';
 import {LampBatch} from '../src/scenery-mesh.js';
 import {airportFrame} from '../src/airport-layout.js';
@@ -64,7 +64,7 @@ export function northernChecks(group,geo){
   const local=streets.filter(r=>ends(r).some(p=>westEnds.some(e=>distance(e,p)<.01))
     || r.slice(3).some((x,i)=>i%2===0 && x>4450 && x<4650 && r[i+4]>-7000 && r[i+4]<-6840));
   addStreets(existing,geo,
-    [...new Set([...local,...joined])],new MeshStandardMaterial(),airportFrame(runway),new LampBatch(),[]);
+    [...new Set([...local,...joined])],bridgeDeck.material,airportFrame(runway),new LampBatch(),[]);
   existing.updateMatrixWorld();group.updateMatrixWorld();
   const seams=north.abutments.map(a=>{
     const [x,z]=a.bridge,dx=x-a.next[0],dz=z-a.next[1],l=Math.hypot(dx,dz);
@@ -111,6 +111,20 @@ export function northernChecks(group,geo){
     }
     return {way:lane.id,approachToApproachM:round(length(lane.points)),deckRayHits:probes,westJointStepM:round(westStep)};
   });
+  // Follow the strip between the staggered western carriageways as their
+  // overlapping shoulders narrow into a separate median.
+  let westMedianProbes=0;
+  for(let s=5;s<=40;s+=.5){
+    const centers=wuyuanLanes.map(({points:[a,b]})=>{
+      const t=s/distance(a,b);
+      return [a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];
+    });
+    for(const t of [.46,.5,.54]){
+      const x=centers[0][0]*(1-t)+centers[1][0]*t,z=centers[0][1]*(1-t)+centers[1][1]*t;
+      assert(Number.isFinite(hits(bridgeDeck,x,z)[0]),'gap between west bridge shoulders');
+      westMedianProbes++;
+    }
+  }
   const clipped=streets.filter(([k,flags,layer,...flat])=>wuyuanDeckRecord(k,Boolean(flags&1)||layer>0,flat));
   assert.equal(clipped.length,4);
   const westUnderpasses=[];
@@ -163,7 +177,7 @@ export function northernChecks(group,geo){
     }
   }
   assert(minSkin>0,'terrain penetrates road '+minSkin);
-  return {seams,pierRays,fullCrossing,westUnderpasses,underpasses,mupuUnderdeckM:mupu,frontageJoinGapsM:connected,frontageKm:round(north.frontages.reduce((n,f)=>n+length(f.points),0)/1000),
+  return {seams,pierRays,fullCrossing,westMedianProbes,westUnderpasses,underpasses,mupuUnderdeckM:mupu,frontageJoinGapsM:connected,frontageKm:round(north.frontages.reduce((n,f)=>n+length(f.points),0)/1000),
     parkWalkM:round(length(north.parkWalk)),parkBranchM:round(length(north.parkBranch)),quayWalkSamples:supported,
     roadTerrainSamples:samples,minimumRoadSkinM:round(minSkin)};
 }
