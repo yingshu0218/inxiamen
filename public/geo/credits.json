@@ -108,7 +108,7 @@
       "license": "https://opendatacommons.org/licenses/odbl/1-0/",
       "eastAsianBuildings": "https://doi.org/10.5281/zenodo.8174931",
       "data": ["/geo/residential-blocks.json"],
-      "edits": "按本岛陆地、地图住宅用地和路网划分。路网推断街坊需有成片既有住宅支持。补充的遥感屋面保留来源标识，高度为估值。洪文、吕岭、金尚及五缘湾西北用带采集日影像抽查。核验影像不在游戏中分发。"
+      "edits": "按本岛陆地、地图住宅用地和路网划分。路网推断街坊需有成片既有住宅支持。补充的遥感屋面保留来源标识。国贸上城及五缘海悦的屋面核心用两期 Sentinel-2 影像核对，轮廓尺度及高度为估值。Contains modified Copernicus Sentinel data 2026. 核验影像不在游戏中分发。"
     },
     {
       "layer": "鼓浪屿西坡与日光岩山肩局部相对地形",

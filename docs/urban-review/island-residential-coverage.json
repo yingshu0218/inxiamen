@@ -11,7 +11,8 @@
   "blocksBySource": {
     "pilot": 7,
     "mapped": 353,
-    "road-supported": 218
+    "road-supported": 218,
+    "survey-subarea": 1
   },
   "baselineRoofGaps": [
     {
@@ -1682,6 +1683,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 4,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1696,6 +1698,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 78,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -1710,6 +1713,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 82,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -1724,6 +1728,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 49,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -1738,6 +1743,7 @@
       "protectedMappedHa": 20.06,
       "baseResidentialRoofs": 155,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -1752,6 +1758,7 @@
       "protectedMappedHa": 39.62,
       "baseResidentialRoofs": 270,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1766,6 +1773,7 @@
       "protectedMappedHa": 0.04,
       "baseResidentialRoofs": 7,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1780,6 +1788,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1794,6 +1803,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1808,6 +1818,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 7,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1822,6 +1833,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 94,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -1836,6 +1848,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 211,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 5
     },
     {
@@ -1850,6 +1863,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 148,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 5
     },
     {
@@ -1864,6 +1878,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 176,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 15
     },
     {
@@ -1878,6 +1893,7 @@
       "protectedMappedHa": 26.82,
       "baseResidentialRoofs": 314,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -1892,6 +1908,7 @@
       "protectedMappedHa": 34.12,
       "baseResidentialRoofs": 218,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1906,6 +1923,7 @@
       "protectedMappedHa": 3.57,
       "baseResidentialRoofs": 211,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1920,6 +1938,7 @@
       "protectedMappedHa": 1.68,
       "baseResidentialRoofs": 79,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1934,6 +1953,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1948,6 +1968,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 7,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1962,6 +1983,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 129,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -1976,6 +1998,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 98,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 5
     },
     {
@@ -1990,6 +2013,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 198,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 11
     },
     {
@@ -2004,6 +2028,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 118,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -2018,6 +2043,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 171,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 10
     },
     {
@@ -2032,6 +2058,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 166,
       "addedRoofs": 2,
+      "approximateAddedRoofs": 0,
       "blocks": 6
     },
     {
@@ -2046,6 +2073,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 113,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -2060,6 +2088,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 351,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 22
     },
     {
@@ -2074,6 +2103,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 140,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -2088,6 +2118,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 70,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2102,6 +2133,7 @@
       "protectedMappedHa": 7.21,
       "baseResidentialRoofs": 157,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2116,6 +2148,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 4,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2130,6 +2163,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 4,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2144,6 +2178,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 42,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -2158,6 +2193,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 136,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -2172,6 +2208,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 170,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -2186,6 +2223,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 197,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -2200,6 +2238,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 210,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 5
     },
     {
@@ -2214,6 +2253,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 119,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -2228,6 +2268,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 161,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 5
     },
     {
@@ -2242,6 +2283,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 75,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 5
     },
     {
@@ -2256,6 +2298,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 254,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 13
     },
     {
@@ -2270,6 +2313,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 316,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 8
     },
     {
@@ -2284,6 +2328,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 97,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -2298,6 +2343,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2312,6 +2358,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 55,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2326,6 +2373,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 28,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2340,6 +2388,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 49,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 5
     },
     {
@@ -2354,6 +2403,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 204,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -2368,6 +2418,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 181,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2382,6 +2433,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 192,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2396,6 +2448,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 221,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 9
     },
     {
@@ -2410,6 +2463,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 412,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -2424,6 +2478,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 261,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -2438,6 +2493,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 311,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 13
     },
     {
@@ -2452,6 +2508,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 355,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 19
     },
     {
@@ -2466,6 +2523,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 240,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 12
     },
     {
@@ -2480,6 +2538,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 64,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2494,6 +2553,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 35,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2508,6 +2568,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2522,6 +2583,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 48,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2536,6 +2598,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 127,
       "addedRoofs": 2,
+      "approximateAddedRoofs": 0,
       "blocks": 12
     },
     {
@@ -2550,6 +2613,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 18,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2564,6 +2628,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 58,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2578,6 +2643,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 18,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2592,6 +2658,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 107,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2606,6 +2673,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 111,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2620,6 +2688,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 311,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 11
     },
     {
@@ -2634,6 +2703,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 191,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -2648,6 +2718,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 374,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 14
     },
     {
@@ -2662,6 +2733,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 251,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 8
     },
     {
@@ -2676,6 +2748,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 326,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 11
     },
     {
@@ -2690,6 +2763,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 44,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2704,6 +2778,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2718,6 +2793,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2732,6 +2808,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2746,6 +2823,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 65,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -2760,6 +2838,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2774,6 +2853,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 4,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2788,6 +2868,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2802,6 +2883,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 27,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2816,6 +2898,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 294,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 6
     },
     {
@@ -2830,6 +2913,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 191,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -2844,6 +2928,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 189,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 9
     },
     {
@@ -2858,6 +2943,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 66,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -2872,6 +2958,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 375,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 14
     },
     {
@@ -2886,6 +2973,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 231,
       "addedRoofs": 2,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -2900,6 +2988,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 195,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -2914,6 +3003,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2928,6 +3018,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -2942,6 +3033,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -2956,6 +3048,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2970,6 +3063,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2984,6 +3078,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -2998,6 +3093,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3012,6 +3108,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 9,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3026,6 +3123,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 47,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -3040,6 +3138,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 134,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3054,6 +3153,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 188,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -3068,6 +3168,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 172,
       "addedRoofs": 2,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -3082,6 +3183,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 182,
       "addedRoofs": 3,
+      "approximateAddedRoofs": 0,
       "blocks": 11
     },
     {
@@ -3096,6 +3198,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 166,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 11
     },
     {
@@ -3110,6 +3213,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 266,
       "addedRoofs": 2,
+      "approximateAddedRoofs": 0,
       "blocks": 8
     },
     {
@@ -3124,6 +3228,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 187,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -3138,6 +3243,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3152,6 +3258,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3166,6 +3273,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3180,6 +3288,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3194,6 +3303,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3208,6 +3318,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3222,6 +3333,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 25,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3236,6 +3348,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 60,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3250,6 +3363,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 149,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -3264,6 +3378,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 167,
       "addedRoofs": 2,
+      "approximateAddedRoofs": 0,
       "blocks": 6
     },
     {
@@ -3278,6 +3393,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 205,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 9
     },
     {
@@ -3292,6 +3408,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 252,
       "addedRoofs": 6,
+      "approximateAddedRoofs": 0,
       "blocks": 18
     },
     {
@@ -3306,6 +3423,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 156,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 6
     },
     {
@@ -3320,6 +3438,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 148,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3334,6 +3453,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 186,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -3348,6 +3468,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3362,6 +3483,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3376,6 +3498,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3390,6 +3513,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3404,6 +3528,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 60,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -3411,14 +3536,15 @@
       "z": -7000,
       "landHa": 100.0,
       "mappedResidentialHa": 23.06,
-      "insideResidentialLayerHa": 23.52,
+      "insideResidentialLayerHa": 25.29,
       "baselineWithRoofEvidenceHa": 23.52,
       "layerWithRoofEvidenceHa": 23.52,
       "mappedOutsideLayerHa": 0.57,
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 83,
-      "addedRoofs": 1,
-      "blocks": 1
+      "addedRoofs": 5,
+      "approximateAddedRoofs": 4,
+      "blocks": 2
     },
     {
       "x": 3000,
@@ -3432,6 +3558,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 99,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3446,6 +3573,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 111,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -3460,6 +3588,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 83,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -3474,6 +3603,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 29,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3488,6 +3618,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 89,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -3501,7 +3632,8 @@
       "mappedOutsideLayerHa": 1.5,
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 149,
-      "addedRoofs": 11,
+      "addedRoofs": 17,
+      "approximateAddedRoofs": 6,
       "blocks": 7
     },
     {
@@ -3516,6 +3648,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 312,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 11
     },
     {
@@ -3530,6 +3663,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 150,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3544,6 +3678,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 6,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3558,6 +3693,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3572,6 +3708,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3586,6 +3723,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 3,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3600,6 +3738,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 6,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3614,6 +3753,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 20,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3628,6 +3768,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 53,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3642,6 +3783,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 75,
       "addedRoofs": 2,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -3656,6 +3798,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 47,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3670,6 +3813,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 78,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -3684,6 +3828,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 108,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -3698,6 +3843,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 344,
       "addedRoofs": 2,
+      "approximateAddedRoofs": 0,
       "blocks": 8
     },
     {
@@ -3712,6 +3858,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 190,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 8
     },
     {
@@ -3726,6 +3873,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3740,6 +3888,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3754,6 +3903,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 51,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3768,6 +3918,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 139,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 5
     },
     {
@@ -3782,6 +3933,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 68,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3796,6 +3948,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 130,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -3810,6 +3963,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 114,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -3824,6 +3978,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 43,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 1
     },
     {
@@ -3838,6 +3993,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 107,
       "addedRoofs": 1,
+      "approximateAddedRoofs": 0,
       "blocks": 9
     },
     {
@@ -3852,6 +4008,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 104,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 7
     },
     {
@@ -3866,6 +4023,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 53,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 3
     },
     {
@@ -3880,6 +4038,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3894,6 +4053,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 2,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3908,6 +4068,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 16,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3922,6 +4083,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 55,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -3936,6 +4098,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 122,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -3950,6 +4113,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 105,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 4
     },
     {
@@ -3964,6 +4128,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 114,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 2
     },
     {
@@ -3978,6 +4143,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 88,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 6
     },
     {
@@ -3992,6 +4158,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 13,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -4006,6 +4173,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -4020,6 +4188,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -4034,6 +4203,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -4048,6 +4218,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -4062,6 +4233,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 6,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -4076,6 +4248,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -4090,6 +4263,7 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 1,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
     },
     {
@@ -4104,7 +4278,22 @@
       "protectedMappedHa": 0.0,
       "baseResidentialRoofs": 0,
       "addedRoofs": 0,
+      "approximateAddedRoofs": 0,
       "blocks": 0
+    }
+  ],
+  "followupSurvey": [
+    {
+      "id": "2021P02",
+      "resolvedFootprints": 0,
+      "approximateVolumes": 6,
+      "unresolvedBuildings": 9
+    },
+    {
+      "id": "wuyuan-haiyue",
+      "resolvedFootprints": 0,
+      "approximateVolumes": 4,
+      "unresolvedBuildings": 10
     }
   ],
   "source": {

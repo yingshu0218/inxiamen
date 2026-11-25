@@ -290,13 +290,14 @@ def suggest_roofs(features, blocks, footprints, streets, height):
     return roofs, counts
 
 
-def coverage(land, mapped, active, additions, city, city_tree, protected):
+def coverage(land, mapped, active, additions, approximate, city, city_tree, protected):
     active_polys = [polygon for _, polygon, _ in active]
     active_domain = union(active_polys)
     centers = STRtree([p.representative_point() for p in active_polys])
     dwelling_points = [r.poly.representative_point() for r in city if r.use == 1 and (r.flags & 132) != 128]
     existing_homes = STRtree(dwelling_points)
     new_points = STRtree([roof.representative_point() for roofs in additions for roof in roofs])
+    approximate_points = STRtree([roof.representative_point() for roof in approximate])
     supported, baseline_supported, baseline_gaps, remaining_gaps = [], [], [], []
     for (mode, parcel, homes), roofs in zip(active, additions):
         x, z = parcel.representative_point().coords[0]
@@ -305,12 +306,12 @@ def coverage(land, mapped, active, additions, city, city_tree, protected):
         share = (existing_area + sum(roof.area for roof in roofs)) / parcel.area
         if count >= 3 and share >= 0.04:
             supported.append(parcel)
-        elif mode != "road-supported" and parcel.area >= 7000:
+        elif mode in {"mapped", "pilot"} and parcel.area >= 7000:
             remaining_gaps.append({"x": round(x), "z": round(z), "areaHa": round(parcel.area / 10000, 2),
                                    "existingRoofs": len(homes), "addedRoofs": len(roofs)})
         if len(homes) >= 3 and existing_area >= 0.04 * parcel.area:
             baseline_supported.append(parcel)
-        elif mode != "road-supported" and parcel.area >= 7000:
+        elif mode in {"mapped", "pilot"} and parcel.area >= 7000:
             baseline_gaps.append({"x": round(x), "z": round(z), "areaHa": round(parcel.area / 10000, 2),
                                   "existingRoofs": len(homes)})
     supported_domain = union(supported)
@@ -326,6 +327,7 @@ def coverage(land, mapped, active, additions, city, city_tree, protected):
             covered = ground.intersection(active_domain)
             deferred = known.intersection(protected)
             counted = len(existing_homes.query(ground, predicate="covers"))
+            approximate_count = len(approximate_points.query(ground, predicate="covers"))
             cells.append({
                 "x": x, "z": z, "landHa": round(ground.area / 10000, 2),
                 "mappedResidentialHa": round(known.area / 10000, 2),
@@ -335,7 +337,8 @@ def coverage(land, mapped, active, additions, city, city_tree, protected):
                 "mappedOutsideLayerHa": round(known.difference(active_domain).area / 10000, 2),
                 "protectedMappedHa": round(deferred.area / 10000, 2),
                 "baseResidentialRoofs": counted,
-                "addedRoofs": len(new_points.query(ground, predicate="covers")),
+                "addedRoofs": len(new_points.query(ground, predicate="covers")) + approximate_count,
+                "approximateAddedRoofs": approximate_count,
                 "blocks": len(centers.query(window, predicate="contains")),
             })
     gaps = []
@@ -362,10 +365,52 @@ def coverage(land, mapped, active, additions, city, city_tree, protected):
     }
 
 
+def add_survey_volumes(rows, active, surveys, land, streets, reserved, city_tree):
+    """Keep open-imagery massing separate from mapped or resolved footprints."""
+    domains = [p for _, p, _ in active]
+    occupied = [
+        Polygon(roof["rings"][0], roof["rings"][1:])
+        for group in rows for roof in group["roofs"]
+    ]
+    accepted = []
+    for site in surveys:
+        if "blockPoint" in site:
+            matches = [i for i, p in enumerate(domains) if p.contains(Point(site["blockPoint"]))]
+            if len(matches) != 1:
+                raise ValueError(f'{site["id"]}: expected a unique existing parcel')
+            idx = matches[0]
+            parcel = domains[idx]
+        else:
+            parcel = Polygon(site["subarea"])
+            if not land.contains(parcel) or any(p.intersection(parcel).area > .1 for p in domains):
+                raise ValueError(f'{site["id"]}: invalid or overlapping review subarea')
+            idx = len(rows)
+            domains.append(parcel)
+            active.append(("survey-subarea", parcel, []))
+            rows.append({"kind": "survey-subarea", "ring": site["subarea"],
+                         "style": "cool", "keepFrontage": True, "roofs": []})
+        for record in site["volumes"]:
+            ring = record["ring"]
+            roof = Polygon(ring)
+            if (not roof.is_valid or not parcel.contains_properly(roof) or not land.contains(roof)
+                or streets.intersects(roof) or reserved.intersects(roof)
+                or len(city_tree.query(roof.buffer(1), predicate="intersects"))
+                or any(other.distance(roof) < 1 for other in occupied)):
+                raise ValueError(f'{record["id"]}: surveyed core conflicts with current inputs')
+            rows[idx]["roofs"].append({
+                "id": record["id"], "source": "sentinel-2-roof-core", "heightSource": "project-band-estimate",
+                "quality": "approximate", "height": record["height"], "rings": [ring],
+            })
+            occupied.append(roof)
+            accepted.append(roof)
+    return accepted
+
+
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("--tiles", type=Path, required=True)
     cli.add_argument("--overture", type=Path, required=True)
+    cli.add_argument("--survey", type=Path, default=TOOLS / "data/residential-survey-v2.json")
     cli.add_argument("--output", type=Path, default=GEO / "residential-blocks.json")
     cli.add_argument("--coverage", type=Path, default=ROOT / "docs/urban-review/island-residential-coverage.json")
     args = cli.parse_args()
@@ -404,8 +449,15 @@ def main():
             group["keepFrontage"] = True
         generated.append(group)
     rows = [{"kind": "pilot", **item} for item in pilots] + generated
-    additions = [[Polygon(roof["rings"][0], roof["rings"][1:]) for roof in group["roofs"]] for group in rows]
-    inventory = coverage(land, mapped_area, active, additions, city, city_tree, old_town_mask)
+    surveys = read(args.survey)
+    approximate = add_survey_volumes(rows, active, surveys["sites"], land, streets, reserved, city_tree)
+    additions = [[Polygon(roof["rings"][0], roof["rings"][1:]) for roof in group["roofs"]
+                  if roof.get("quality") != "approximate"] for group in rows]
+    inventory = coverage(land, mapped_area, active, additions, approximate, city, city_tree, old_town_mask)
+    inventory["followupSurvey"] = [{
+        "id": site["id"], "resolvedFootprints": 0,
+        "approximateVolumes": len(site["volumes"]), "unresolvedBuildings": site["expectedBuildings"] - len(site["volumes"]),
+    } for site in surveys["sites"]]
     print("coverage:", {k:v for k,v in inventory.items() if not isinstance(v,list)}, flush=True)
     inventory["source"] = {"openFreeMap": TILE_SNAPSHOT, "overture": RELEASE, "gridMetres": 1000}
     inventory["sourceFeatures"] = len(city)
@@ -415,6 +467,7 @@ def main():
         "license": "https://opendatacommons.org/licenses/odbl/1-0/",
         "boundarySource": f"© OpenStreetMap contributors · OpenFreeMap {TILE_SNAPSHOT}; seven pilot boundaries from OSM API 2026-11-25",
         "roofSource": f"Overture Buildings {RELEASE}; OpenStreetMap and Qian Shi et al., East Asian Buildings (CC BY 4.0)",
+        "approximateRoofSource": "Contains modified Copernicus Sentinel data 2026. See residential-survey-v2 for source scenes and interpretation.",
         "protectedOldTownBounds": OLD_TOWN,
     }
     with args.output.open("w") as out:
