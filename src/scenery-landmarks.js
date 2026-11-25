@@ -1,6 +1,8 @@
 import { MeshBatch } from './scenery-mesh.js';
 import { eastDistrictReserved } from './east-district-layout.js';
+import { buildBinbeiOffices, buildTorchHightech } from './island-workplaces.js';
 import { buildGuanyinBusiness, buildSoftwareOne, buildSoftwareTwo } from './landmark-east-districts.js';
+import { buildWinlandIfc } from './landmark-winland-ifc.js';
 import { buildTowers, towersReserved } from './landmark-towers.js';
 import { buildGulangyu, gulangyuReserved } from './landmark-gulangyu.js';
 import { buildIslandHeritage } from './gulangyu-heritage.js';
@@ -18,6 +20,9 @@ import { buildCampus } from './landmark-campus.js';
 import { campusInfillReserved } from './campus-layout.js';
 import { buildBailuzhou, parkReserved } from './landmark-bailuzhou.js';
 import { buildZhongshan } from './landmark-zhongshan.js';
+import { buildYundangPaths } from './yundang-paths.js';
+import { buildXiagang } from './xiagang-layout.js';
+import { buildShapoweiBank } from './shapowei-bank.js';
 import { buildFerry, buildLujiang } from './landmark-lujiang.js';
 import { buildBroadcast } from './landmark-broadcast.js';
 import { buildHubinRoad } from './landmark-hubin-road.js';
@@ -47,6 +52,7 @@ import { parkModelReserved } from './parks/layout.js';
 import { buildZhongshanPark, buildWetland, buildExpo } from './parks/landscapes.js';
 import { buildNanhu } from './landmark-nanhu.js';
 import { buildLianbanGuomao } from './landmark-lianban.js';
+import { buildTorchHuizhi } from './landmark-torch-huizhi.js';
 import { lianbanReserved } from './lianban-layout.js';
 import { buildSmXiamen } from './landmark-sm.js';
 import { buildZhonghuaCity } from './landmark-zhonghua-city.js';
@@ -66,9 +72,12 @@ export function landmarkReserved(x, z) {
 }
 
 const sites = [
+  ['滨北 · 财经、振业与振兴大厦', buildBinbeiOffices],
+  ['湖里火炬园 · 高新广场', buildTorchHightech],
   ['厦门软件园一期 · 曾厝垵南北两区', buildSoftwareOne],
   ['厦门软件园二期 · 望海路与观日路', buildSoftwareTwo],
   ['东海岸观音山 · 国际商务营运中心', buildGuanyinBusiness],
+  ['五通 · 英蓝国际金融中心', buildWinlandIfc],
   ['世茂海峡双子塔', buildTowers],
   ['演武大桥与观景平台', buildYanwu],
   ['鼓浪屿 · 八卦楼、日光岩与菽庄花园', buildGulangyu],
@@ -86,6 +95,9 @@ const sites = [
   ['中山路 · 骑楼街与鹭江宾馆', buildZhongshan],
   ['轮渡码头 · 候船厅、登船桥与浮码头', buildFerry],
   ['鹭江道 · 滨海大道与海滨公园', buildLujiang],
+  ['厦港街道与铁路文化公园西口', buildXiagang],
+  ['沙坡尾避风坞内岸', buildShapoweiBank],
+  ['筼筜湖 · 西岸步桥与白鹭洲堤上步道', buildYundangPaths],
   ['白鹭洲公园 · 白鹭女神与湖滨步道', buildBailuzhou],
   ['厦门广播电视中心 · 主楼、演播楼与卫星天线', buildBroadcast],
   ['湖滨北路 · 湖东桥与环湖步道', buildHubinRoad],
@@ -109,6 +121,7 @@ const sites = [
   ['中山公园 · 湖岛与南门', buildZhongshanPark],
   ['南湖公园 · 桃花岛、湖亭与后埭溪步桥', buildNanhu],
   ['莲坂国贸大厦 · 拱顶玻璃幕墙与红色钢桁架', buildLianbanGuomao],
+  ['火炬园 · 荟智空间', buildTorchHuizhi],
   ['厦门 SM 城市广场 · 一期、二期与嘉禾路连廊', buildSmXiamen],
   ['中华城 · 思明南路骑楼、屋顶与台光街', buildZhonghuaCity],
   ['东渡海上世界 · 滨海商业和潮汐之眼', buildSeaWorld],

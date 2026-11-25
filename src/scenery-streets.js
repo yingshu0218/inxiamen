@@ -1,5 +1,11 @@
+import {
+  bridgeWaterFloor, layMainlandStrip, mainlandRoadWater, mainlandStreet, roadVegetationMask,
+} from './mainland-street-surface.js';
+import { lulingConnector, lulingConnectorWidth, withLulingJunctions } from './luling-ramps.js';
+import { replacesYundangPath } from './yundang-paths.js';
 import { replacesCoastStreet, replacesNorthernRecord } from './coast/layout.js';
 import { insidePark } from './parks/layout.js';
+import { replacesXiagangStreet } from './xiagang-layout.js';
 import { replacesStreet } from './old-town-layout.js';
 import { replacesHubinStreet } from './hubin-layout.js';
 import { railwayReserved } from './railway-layout.js';
@@ -113,16 +119,21 @@ function streetJunctions(records,geo) {
 export function addStreets(parent, geo, records, material, frame, lights, modeledRoads) {
   const reserved=bridgeCorridors(modeledRoads);
   const junctions=streetJunctions(records,geo);
+  const vegetation = roadVegetationMask(geo);
   const sectors = new Map();
-  for (const [kind, flags, layer, ...flat] of records) {
+  for (const [kind, flags, layer, ...source] of records) {
+    const flat = withLulingJunctions(kind, flags, layer, source);
     const bridge=Boolean(flags&1)||layer>0;
     if (flat.length < 4 || replacesNorthernRecord(kind,bridge,flat)) continue;
     if (bridge && kind < 1 && replacesYanwuPlatformTile(flat)) continue;
+    const mainland = mainlandStreet(flags);
     const yanwuContinuation = !bridge && kind === 4 && reachesYanwuFromLujiang(flat);
     const island = kind <= 1 && inIslandBounds(flat[0], flat[1])
       && (inRing(flat[0],flat[1],geo.islands.gulangyu) || inRing(flat.at(-2),flat.at(-1),geo.islands.gulangyu));
+    const singleLane = lulingConnector(kind, flags, layer, flat);
     const points = [],
-      width = island ? (kind === -1 ? 2.05 : kind === 0 ? 3.25 : 4.35) : widths[kind + 1],
+      width = singleLane ? lulingConnectorWidth :
+        island ? (kind === -1 ? 2.05 : kind === 0 ? 3.25 : 4.35) : widths[kind + 1],
       shade = roadTones[kind + 1];
     for (let i = 2; i < flat.length; i += 2) {
       const x0 = flat[i - 2],
@@ -154,8 +165,9 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
         l = Math.hypot(dx, dz);
       if(i)station+=Math.hypot(p[0]-last[0],p[1]-last[1]);
       if (l < .03 || (kind < 0 && insidePark(...p)) || airportRoadReserved(frame, ...p, bridge, kind)
-          || (!bridge && (geo.waterAt(...p) || (geo.rawHeightAt(...p)<.12 && !geo.isletAt(...p))))
-          || (!bridge && replacesStreet(...p,dx/l,dz/l))
+          || (mainland && kind === -1 && !bridge && replacesYundangPath(...p, dx/l, dz/l))
+          || (!bridge && !mainland && (geo.waterAt(...p) || (geo.rawHeightAt(...p)<.12 && !geo.isletAt(...p))))
+          || (!bridge && (replacesStreet(...p,dx/l,dz/l) || (!layer && replacesXiagangStreet(...p,dx/l,dz/l,kind))))
           || replacesHubinStreet(...p,dx/l,dz/l)
           || replacesCoastStreet(...p,dx/l,dz/l,bridge,kind)
           || replacesWucunStreet(...p,dx/l,dz/l,bridge)
@@ -171,6 +183,7 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
         const t=span>0?station/span:0;
         const rise=Math.min(1,station/52,(span-station)/52);
         deck=Math.max(head*(1-t)+tail*t,geo.heightAt(...p)+rise*(5.2+Math.max(0,layer-1)*4.5));
+        if (mainland) deck = Math.max(deck, bridgeWaterFloor(geo, ...p));
       }
       const at = (r, extra = 0) => {
         const x = p[0] - (dz / l) * r,
@@ -207,20 +220,30 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
         continue;
       }
       if (kind >= 2) {
-        road.a = at(-width / 2 + 0.6, 0.026);
-        road.b = at(width / 2 - 0.6, 0.026);
+        const shoulder = singleLane ? .25 : .6;
+        road.a = at(-width / 2 + shoulder, 0.026);
+        road.b = at(width / 2 - shoulder, 0.026);
       }
       if (prev) {
+        const top = (corners, color, style, seed, uv) => {
+          if (mainland && !bridge) layMainlandStrip(batch, geo, corners, color, style, seed, uv, vegetation.add);
+          else batch.top(corners, color, style, seed, uv);
+        };
         if (kind >= 2) {
           // Share the asphalt edges with the shoulders, including on sloping ground.
-          batch.top([prev.lo, prev.a, road.a, road.lo], '#aeaa99');
-          batch.top([prev.b, prev.hi, road.hi, road.b], '#aeaa99');
+          top([prev.lo, prev.a, road.a, road.lo], '#aeaa99');
+          top([prev.b, prev.hi, road.hi, road.b], '#aeaa99');
           // Metres along the centreline keep dash and light spacing continuous through bends.
           const uv=[[-1,prev.station],[1,prev.station],[1,station],[-1,station]];
-          batch.top([prev.a, prev.b, road.b, road.a], shade, litSurface.avenue, kind, uv);
-        } else batch.top([prev.lo, prev.hi, road.hi, road.lo], shade);
+          if (singleLane) {
+            const asphaltUV = [[-width / 2, prev.station], [width / 2, prev.station],
+              [width / 2, station], [-width / 2, station]];
+            top([prev.a, prev.b, road.b, road.a], shade, litSurface.streetAsphalt, 0, asphaltUV);
+          } else top([prev.a, prev.b, road.b, road.a], shade, litSurface.avenue, kind, uv);
+        } else top([prev.lo, prev.hi, road.hi, road.lo], shade);
       }
-      if (kind >= 2 && i % (kind >= 4 ? 3 : 5) === 0 && Math.abs(p[0]) < 8000 && p[1] > -9900)
+      if (kind >= 2 && i % (kind >= 4 ? 3 : 5) === 0 && Math.abs(p[0]) < 8000 && p[1] > -9900
+          && (!mainland || bridge || !mainlandRoadWater(geo, ...p)))
         lights.add(...at(width / 2, 4.4), kind >= 4 ? '#ffc685' : '#ffe7c4', kind >= 4 ? 1.55 : 1.1);
       prev = road;
     }
@@ -229,4 +252,5 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
     const mesh = batch.finish(parent, material, '滨海街巷 ' + key);
     if (mesh) mesh.receiveShadow = true;
   }
+  return vegetation.blocks;
 }

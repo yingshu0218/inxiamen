@@ -1,0 +1,50 @@
+[
+  {
+    "site": "荟智一期1号楼西翼",
+    "x": -595,
+    "z": -4395,
+    "lon": 118.11912172,
+    "lat": 24.51955896,
+    "request": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify?geometry=118.11912171507608%2C24.51955895589559&geometryType=esriGeometryPoint&sr=4326&layers=visible&tolerance=2&mapExtent=118.11878171507608%2C24.51921895589559%2C118.11946171507607%2C24.51989895589559&imageDisplay=600%2C600%2C96&returnGeometry=false&f=json",
+    "metadata": {
+      "OBJECTID": "5297376",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250320",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG04",
+      "SOURCE_INFO": "Vivid Advanced",
+      "SOURCE": "Vantor",
+      "SRC_DATE2": "3/20/2025",
+      "MinMapLevel": "12",
+      "MaxMapLevel": "19",
+      "DrawOrder": "80",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  },
+  {
+    "site": "荟智一期庭院",
+    "x": -527,
+    "z": -4404,
+    "lon": 118.11979352,
+    "lat": 24.51963996,
+    "request": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify?geometry=118.11979351906737%2C24.5196399639964&geometryType=esriGeometryPoint&sr=4326&layers=visible&tolerance=2&mapExtent=118.11945351906738%2C24.5192999639964%2C118.12013351906737%2C24.519979963996402&imageDisplay=600%2C600%2C96&returnGeometry=false&f=json",
+    "metadata": {
+      "OBJECTID": "5297376",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250320",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG04",
+      "SOURCE_INFO": "Vivid Advanced",
+      "SOURCE": "Vantor",
+      "SRC_DATE2": "3/20/2025",
+      "MinMapLevel": "12",
+      "MaxMapLevel": "19",
+      "DrawOrder": "80",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  }
+]

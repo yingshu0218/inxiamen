@@ -1,8 +1,7 @@
-// Run from the repository root with node tools/check-huandao.mjs.
+// Run from the repository root with Node and Python 3 + Pillow.
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
-import {Group,MeshStandardMaterial} from 'three';
-import {elevationField} from '../src/geography.js';
+import {DoubleSide,Group,MeshStandardMaterial} from 'three';
+import {loadMainlandRoadGeography} from './mainland-road-geography.mjs';
 import {Flight} from '../src/flight.js';
 import {nearestRoute,routePoint,tourStops} from '../src/route.js';
 import {ObstacleIndex,LampBatch} from '../src/scenery-mesh.js';
@@ -13,17 +12,10 @@ import {lowerPavingChecks} from './check-wuyuan-paving.mjs';
 import {northernChecks} from './check-huandao-north.mjs';
 import {survey} from '../src/coast/layout.js';
 
-const bounds=JSON.parse(readFileSync('public/geo/xiamen-relief.json'));
-const raw=readFileSync('public/geo/xiamen-relief.bin');
-const dem=elevationField(bounds,new Int16Array(raw.buffer,raw.byteOffset,raw.length/2),bounds.metresPerUnit);
-const display=Float32Array.from(new Int16Array(raw.buffer,raw.byteOffset,raw.length/2),v=>{
-  const y=v*bounds.metresPerUnit;
-  return y<=-5?Math.max(-12,y):Math.max(.88,y);
-});
-const geo={islandSurfaceHeightAt:elevationField(bounds,display),heightAt:(x,z)=>Math.max(0,dem(x,z))};
+const geo=loadMainlandRoadGeography();
 const group=new Group(), obstacles=new ObstacleIndex();
 globalThis.document={createElement:()=>({getContext:()=>({fillText(){}})})}; // Sign rasterization belongs to browser QA.
-buildHuandao(group,geo,new MeshStandardMaterial(),new LampBatch(),obstacles);
+buildHuandao(group,geo,new MeshStandardMaterial({side:DoubleSide}),new LampBatch(),obstacles);
 const meshes=group.children.map(mesh=>{
   const positions=mesh.geometry.attributes.position;
   assert(positions.array.every(Number.isFinite));

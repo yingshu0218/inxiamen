@@ -1,69 +1,24 @@
 import plan from './old-town-plan.json' with { type: 'json' };
+import xiagang from './xiagang-plan.json' with { type: 'json' };
+import { measuredPath, ribbon } from './measured-path.js';
+import { xiagangReserved } from './xiagang-layout.js';
 import { inRing } from './scenery-mesh.js';
 
-export { plan };
-const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
-const lerp = (a, b, t) => a + (b - a) * t;
-
-// Use engineering station (metres along the alignment) for paving, plots and furniture.
-export function measuredPath(points) {
-  let length = 0;
-  const spans = [];
-  for (let i = 1; i < points.length; i++) {
-    const [x, z] = points[i - 1];
-    const dx = points[i][0] - x, dz = points[i][1] - z, len = Math.hypot(dx, dz);
-    if (len < .01) continue;
-    spans.push({ x, z, ux: dx / len, uz: dz / len, s: length, len });
-    length += len;
-  }
-  function sample(s) {
-    const d = clamp(s, 0, length);
-    const line = spans.find(k => d <= k.s + k.len) || spans.at(-1);
-    return { x: line.x + line.ux * (d-line.s), z: line.z + line.uz * (d-line.s), ux: line.ux, uz: line.uz };
-  }
-  function nearest(x, z) {
-    let best = Infinity, station = 0, side = 0, ux = 0, uz = 0;
-    for (const k of spans) {
-      const dx = x-k.x, dz = z-k.z;
-      const local = clamp(dx*k.ux+dz*k.uz, 0, k.len);
-      const sq = (dx-local*k.ux)**2 + (dz-local*k.uz)**2;
-      if (sq >= best) continue;
-      best = sq; station = k.s+local; side = dz*k.ux-dx*k.uz; ux = k.ux; uz = k.uz;
-    }
-    return { s: station, distance: Math.sqrt(best), side, ux, uz };
-  }
-  // Miter joins keep a ribbon closed at a bend, including at its sampled vertices.
-  function sections(maxStep) {
-    const rows = [];
-    for (const [i, k] of spans.entries()) {
-      const prev = spans[Math.max(0, i-1)], dot = 1 + prev.ux*k.ux + prev.uz*k.uz;
-      const pieces = Math.ceil(k.len/maxStep);
-      for (let j=0; j<pieces; j++) {
-        const d = k.len*j/pieces;
-        rows.push({x:k.x+d*k.ux, z:k.z+d*k.uz, rx:j ? -k.uz : -(prev.uz+k.uz)/Math.max(.5,dot),
-          rz:j ? k.ux : (prev.ux+k.ux)/Math.max(.5,dot), s:k.s+d});
-      }
-    }
-    const last = sample(length);
-    rows.push({...last, rx:-last.uz, rz:last.ux, s:length});
-    return rows;
-  }
-  return { length, sample, nearest, sections };
-}
-
+export { measuredPath, plan, ribbon };
 export const street = measuredPath(plan.zhongshan);
-export const carriageways = plan.lanes.map(measuredPath);
-export const shore = measuredPath(plan.shoreline);
+export const carriageways = plan.lanes.map((lane, i) => measuredPath([...lane, ...xiagang.avenueEnds[i]]));
+export const shore = measuredPath([...plan.shoreline, ...xiagang.shoreEnd]);
 export const offset = (p, meters) => [p.x - p.uz*meters, p.z + p.ux*meters];
 export const alongFrame = (p, side = 1) => (u, v) => [p.x + side*(p.ux*u - p.uz*v), p.z + side*(p.uz*u + p.ux*v)];
 const inDistrict = (x,z) => x >= -6020 && x <= -4415 && z >= 2040 && z <= 3550;
 export function oldTownReserved(x,z) {
+  if (xiagangReserved(x, z)) return true;
   if (!inDistrict(x,z)) return false;
   return street.nearest(x,z).distance < 25 || shore.nearest(x,z).distance < 12 ||
     carriageways.some(r => r.nearest(x,z).distance < 9) || inRing(x,z,plan.hotel) || inRing(x,z,plan.park) || inRing(x,z,plan.terminal);
 }
 export function replacesStreet(x,z,ux,uz) {
-  if (!inDistrict(x,z)) return false;
+  if (!inDistrict(x,z) && !(x > -4960 && x < -4895 && z > 3530 && z < 3570)) return false;
   for (const path of [street,...carriageways]) {
     const k = path.nearest(x,z);
     if (k.distance < (path===street?5:6.5) && Math.abs(ux*k.ux + uz*k.uz)>.83) return true;
@@ -78,6 +33,8 @@ export function oldTownFootprints(building) {
 
 // The elevation sources include roof returns. Grade the two street corridors
 // on the actual terrain vertices so doors, traffic and the flight surface agree.
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+const lerp = (a, b, t) => a + (b-a)*t;
 export function gradeOldTown(grid, data) {
   const sx=(grid.xmax-grid.xmin)/(grid.width-1), sz=(grid.zmax-grid.zmin)/(grid.height-1);
   const unit=grid.metresPerUnit ?? 1;
@@ -96,18 +53,5 @@ export function gradeOldTown(grid, data) {
       if (quay.side>1.3 && quay.distance<35) h=Math.min(h,lerp(2.8,-6,Math.min(1,(quay.distance-1.3)/16)));
       data[idx]=Math.round(h/unit);
     }
-  }
-}
-
-export function ribbon(batch, rows, left, right, height, color, style = 0, seed = 0) {
-  const pair = (p) => [left,right].map(lateral => {
-    const x=p.x+lateral*p.rx, z=p.z+lateral*p.rz;
-    return [x,height(x,z,p.s,lateral),z];
-  });
-  let prev=pair(rows[0]);
-  for(let i=1;i<rows.length;i++) {
-    const next=pair(rows[i]), a=rows[i-1].s, b=rows[i].s;
-    batch.top([prev[0],prev[1],next[1],next[0]],color,style,seed,[[left,a],[right,a],[right,b],[left,b]]);
-    prev=next;
   }
 }

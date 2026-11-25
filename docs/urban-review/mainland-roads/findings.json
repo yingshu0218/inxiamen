@@ -1,0 +1,1128 @@
+{
+  "records": 10066,
+  "surveyedPoints": 187,
+  "issues": [
+    {
+      "type": "near endpoints",
+      "kind": 2,
+      "p": [
+        -4169,
+        1023
+      ],
+      "to": [
+        -4169,
+        1031
+      ],
+      "metres": 8
+    },
+    {
+      "type": "near endpoints",
+      "kind": 5,
+      "p": [
+        769,
+        -1671
+      ],
+      "to": [
+        770,
+        -1675
+      ],
+      "metres": 4.12
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -5361,
+        133
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -5045,
+        3185
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -5030,
+        3173
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -5032,
+        3164
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -4296,
+        2728
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -3621,
+        2810
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -3609,
+        2817
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -2165,
+        -2848
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -2155,
+        -2855
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1823,
+        1599
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1830,
+        1588
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1664,
+        1432
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -2466,
+        -8208
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1181,
+        -1004
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1144,
+        -1078
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1168,
+        -1015
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -292,
+        -1934
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -263,
+        -1938
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -254,
+        -1893
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1112,
+        -1111
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        9,
+        -288
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        9,
+        -298
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        35,
+        -281
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        1894,
+        551
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        2014,
+        -7920
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        2005,
+        -7911
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        2077,
+        -7714
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        2648,
+        -6926
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        2735,
+        -6815
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1416,
+        1332
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1330,
+        1261
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1139,
+        1079
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        -1144,
+        1074
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 3,
+      "p": [
+        2661,
+        -6924
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5280,
+        2997
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5295,
+        2983
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -2791,
+        -1557
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -2788,
+        -1540
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -2785,
+        -1523
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -2756,
+        -1538
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -2760,
+        -1560
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -2433,
+        -2598
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1972,
+        1857
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1305,
+        2444
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1312,
+        2463
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1196,
+        2631
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1130,
+        2689
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1046,
+        2731
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -972,
+        2784
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -939,
+        2814
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -923,
+        2827
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -892,
+        2853
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -877,
+        2866
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -758,
+        3041
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -661,
+        3103
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -501,
+        3534
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -489,
+        3591
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -483,
+        3608
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -476,
+        3625
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -439,
+        3773
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -492,
+        3898
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -500,
+        3913
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -505,
+        3930
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -508,
+        3949
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1184,
+        -5858
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -501,
+        3940
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -498,
+        3923
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -491,
+        3909
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -482,
+        3894
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -433,
+        3785
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -436,
+        3767
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -473,
+        3619
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -480,
+        3598
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -494,
+        3531
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -492,
+        3494
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -592,
+        3164
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -703,
+        3040
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -855,
+        2871
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -917,
+        2821
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -933,
+        2808
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -967,
+        2778
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1018,
+        2736
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1036,
+        2727
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1127,
+        2681
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1305,
+        2464
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1030,
+        366
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -283,
+        -1933
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -275,
+        -1887
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -272,
+        -1939
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -264,
+        -1890
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        2030,
+        726
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        2031,
+        2252
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        2065,
+        2244
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        5838,
+        -1993
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        5864,
+        -1838
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5169,
+        -387
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5155,
+        -388
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5185,
+        -330
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5183,
+        -336
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5150,
+        -398
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5162,
+        -413
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5027,
+        3151
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -5045,
+        3155
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1938,
+        1662
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -1937,
+        1658
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -590,
+        3190
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -579,
+        3184
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        -589,
+        3177
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 4,
+      "p": [
+        1566,
+        -14
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -4082,
+        3518
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -4092,
+        3506
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -1900,
+        2020
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -1908,
+        2037
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -1889,
+        2030
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -1881,
+        2013
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -1695,
+        1836
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -1680,
+        1828
+      ]
+    },
+    {
+      "type": "surface DEM grade >15%",
+      "kind": 5,
+      "p": [
+        -1686,
+        1812
+      ]
+    }
+  ],
+  "residual": [
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -4936.534965119108,
+      "z": -388.89510464267437,
+      "depth": 0.07749887689990231
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -4936.75,
+      "z": -388.25,
+      "depth": 0.10724954999878378
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -4936.965034880892,
+      "z": -387.60489535732563,
+      "depth": 0.05908181542737623
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -4324.649956754419,
+      "z": 3338.549940537326,
+      "depth": 0.006555057422374944
+    },
+    {
+      "type": "water edge",
+      "kind": -1,
+      "x": -3446.966214160955,
+      "z": -269.7935266099882
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -3280.369903266476,
+      "z": 3326.2443085719033,
+      "depth": 0.058891917404565675
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -3101.25,
+      "z": 3618.68,
+      "depth": 0.12659933471670115
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -3101.25,
+      "z": 3618,
+      "depth": 0.12659933471678642
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -3101.25,
+      "z": 3617.32,
+      "depth": 0.19715936889684826
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -2938.6666666666665,
+      "z": 3525.0833333333335,
+      "depth": 0.0037232216250799866
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -799.3762607789961,
+      "z": 5683.806916384074,
+      "depth": 0.1930932182134555
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -799.75,
+      "z": 5684.375,
+      "depth": 0.19309321821343595
+    },
+    {
+      "type": "terrain near bend",
+      "kind": -1,
+      "x": -800.1237392210039,
+      "z": 5684.943083615926,
+      "depth": 0.19746590360303884
+    },
+    {
+      "type": "water edge",
+      "kind": -1,
+      "x": -2381.6573677026436,
+      "z": -686.662630347389
+    },
+    {
+      "type": "water edge",
+      "kind": -1,
+      "x": -1214.5162944896083,
+      "z": -1001.05746186605
+    },
+    {
+      "type": "water edge",
+      "kind": -1,
+      "x": 6198.44446185298,
+      "z": 569.8578554256329
+    },
+    {
+      "type": "terrain near bend",
+      "kind": 0,
+      "x": -2786.7346805100906,
+      "z": 4175.163560071175,
+      "depth": 0.08182117095344665
+    },
+    {
+      "type": "terrain near bend",
+      "kind": 0,
+      "x": -2788.25,
+      "z": 4175.375,
+      "depth": 0.12750046975504858
+    },
+    {
+      "type": "terrain near bend",
+      "kind": 0,
+      "x": -2789.7653194899094,
+      "z": 4175.586439928825,
+      "depth": 0.0919785875225756
+    },
+    {
+      "type": "terrain near bend",
+      "kind": 0,
+      "x": -211.83333333333334,
+      "z": 3501.5,
+      "depth": 0.017198428050491543
+    },
+    {
+      "type": "terrain near bend",
+      "kind": 0,
+      "x": -210.5324276589009,
+      "z": 3500.694677439637,
+      "depth": 0.14596294058571857
+    },
+    {
+      "type": "terrain near bend",
+      "kind": 1,
+      "x": 2225.1367518681495,
+      "z": 1534.0321011925914,
+      "depth": 0.01034880672784766
+    }
+  ]
+}

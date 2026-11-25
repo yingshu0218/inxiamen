@@ -1,7 +1,8 @@
 import { cylinder, groundY, inRing, litSurface, prism, randomSource } from './scenery-mesh.js';
 import { localFrame, rect, up } from './landmark-forms.js';
 import { pathTube } from './landmark-haicang.js';
-import { alongFrame, carriageways, offset, plan, ribbon, shore } from './old-town-layout.js';
+import { xiagangStreets } from './xiagang-layout.js';
+import { alongFrame, carriageways, offset, plan, ribbon, shore, street } from './old-town-layout.js';
 
 const metal='#b5c2c1', enamel='#edf0df', teal='#497e83', stone='#bab5a8';
 const landingStations=plan.gangways.map(g=>shore.nearest(...g.at(-1)).s);
@@ -145,14 +146,58 @@ function avenueTraffic(geo) {
   return {length,step,at,center:step(.5),surfaceStreet:true};
 }
 
+// Clip sidewalks at mapped intersections. Use
+// the side street’s edges so each opening follows its oblique approach.
+function avenueSidewalk(batch, lane, sections, curb, outer, width) {
+  const mouths = lane === carriageways[0]
+    ? (outer < 0 ? [xiagangStreets[2]] : [])
+    : outer < 0 ? xiagangStreets.slice(0, 3) : [xiagangStreets[2]];
+  const cuts = mouths.map(({ width, path }) => {
+    const start = path.sample(0), end = path.sample(path.length);
+    const mouth = lane.nearest(start.x, start.z).distance < lane.nearest(end.x, end.z).distance ? start : end;
+    return { mouth, width, s: lane.nearest(mouth.x, mouth.z).s };
+  });
+  if (lane === carriageways[1] && outer < 0) {
+    const mouth = street.sample(0);
+    cuts.push({ mouth, width: 10.1, s: lane.nearest(mouth.x, mouth.z).s });
+  }
+  const atSide = (row, width) => [row.x - width * row.rx, row.z - width * row.rz];
+
+  for (let i = 1; i < sections.length; i++) {
+    const a = sections[i - 1], b = sections[i];
+    const cut = cuts.find(({ s }) => s > a.s - 9 && s < b.s + 9);
+    if (!cut) {
+      ribbon(batch, [a, b], outer * 5.32, outer * width, curb, '#c0b6a1', 17);
+      continue;
+    }
+    const { mouth, width: opening } = cut;
+    const lateral = ([x, z]) => (z - mouth.z) * mouth.ux - (x - mouth.x) * mouth.uz;
+    const quad = [atSide(a, -outer * 5.32), atSide(a, -outer * width),
+      atSide(b, -outer * width), atSide(b, -outer * 5.32)];
+    for (const sign of [-1, 1]) {
+      const kept = [];
+      for (let j = 0; j < quad.length; j++) {
+        const p = quad[j], q = quad[(j + 1) % quad.length];
+        const d = sign * lateral(p) - opening / 2, e = sign * lateral(q) - opening / 2;
+        if (d >= 0) kept.push(p);
+        if ((d < 0) !== (e < 0)) {
+          const t = d / (d - e);
+          kept.push([p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t]);
+        }
+      }
+      if (kept.length >= 3) batch.top(kept.map(([x, z]) => [x, curb(x, z), z]), '#c0b6a1', 17);
+    }
+  }
+}
+
 function avenuePaving(batch,geo){
   const asphalt=(x,z)=>roadLevel(geo,x,z), curb=(x,z)=>asphalt(x,z)+.115;
   for(const [i,lane] of carriageways.entries()){
     const sections=lane.sections(7);
     ribbon(batch,sections,-5.32,5.32,asphalt,'#666b69',litSurface.carriageway);
     const outer=i===0?1:-1;
-    ribbon(batch,sections,outer*5.32,outer*6.76,curb,'#c0b6a1',17);
-    ribbon(batch,sections,-outer*5.32,-outer*5.65,curb,'#c4b9a4');
+    avenueSidewalk(batch, lane, sections, curb, outer, 6.76);
+    avenueSidewalk(batch, lane, sections, curb, -outer, 5.65);
     for(const s of plan.crosswalks[i]){
       const xy=alongFrame(lane.sample(s));
       for(let d=-4.68;d<5;d+=.88){
@@ -167,9 +212,11 @@ function avenuePaving(batch,geo){
     const a=[p.x-5.65*p.rx,p.z-5.65*p.rz], b=offset(q,5.65);
     return {s:p.s, a:up(a,curb(...a)), b:up(b,curb(...b)), width:near.distance-11.3};
   });
+  const junctionStart = sea.nearest(...xiagangStreets[2].points[0]).s - 6;
   for(let i=1;i<median.length;i++){
     const a=median[i-1], b=median[i];
     if(Math.min(a.width,b.width)<.08)continue;
+    if (b.s > junctionStart) continue;
     const junction=plan.medianBreaks.some(s=>s>a.s-6.5 && s<b.s+6.5);
     const color=junction?'#777b73':b.width>1.25?'#7f8b62':'#b5aa96';
     batch.top([a.a,a.b,b.b,b.a],color);

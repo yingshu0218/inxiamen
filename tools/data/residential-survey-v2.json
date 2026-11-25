@@ -1,0 +1,20 @@
+{
+  "credit": "Contains modified Copernicus Sentinel data 2026",
+  "pixelGrid": "EPSG:32650; pixel-corner coordinates in the 10 m crops",
+  "sites": [
+    {"id": "2021P02", "name": "中海国贸上城", "expectedBuildings": 15, "sourceScenes": ["S2C_50RPN_20261029_0_L2A", "S2A_50RPN_20261110_0_L2A"], "utmUpperLeft": [617130, 2708540], "blockPoint": [3416, -492], "boundaryWay": 1130604258, "projectSource": "https://www.xmzaxh.cn/art/0/689.html", "volumes": [
+      {"id": "2021P02-s2-01", "pixelCenter": [14.0, 12.6], "modelLengthM": 34, "modelDepthM": 14, "axisDegrees": 8, "height": 45, "ring": [[3251.5, -549.5], [3285.0, -544.5], [3287.0, -558.5], [3253.5, -563.5]]},
+      {"id": "2021P02-s2-02", "pixelCenter": [22.2, 13.5], "modelLengthM": 34, "modelDepthM": 14, "axisDegrees": 8, "height": 45, "ring": [[3333.0, -540.0], [3367.0, -535.0], [3369.0, -549.0], [3335.5, -554.0]]},
+      {"id": "2021P02-s2-03", "pixelCenter": [27.9, 14.3], "modelLengthM": 29, "modelDepthM": 14, "axisDegrees": 8, "height": 45, "ring": [[3392.5, -531.0], [3421.0, -527.0], [3423.5, -540.5], [3394.5, -545.0]]},
+      {"id": "2021P02-s2-04", "pixelCenter": [18.6, 18.4], "modelLengthM": 30, "modelDepthM": 16, "axisDegrees": 8, "height": 45, "ring": [[3298.5, -490.0], [3328.5, -485.5], [3330.5, -501.0], [3301.0, -505.5]]},
+      {"id": "2021P02-s2-05", "pixelCenter": [25.45, 19.6], "modelLengthM": 32, "modelDepthM": 15, "axisDegrees": 8, "height": 45, "ring": [[3366.0, -478.0], [3397.5, -473.0], [3400.0, -488.0], [3368.5, -492.5]]},
+      {"id": "2021P02-s2-06", "pixelCenter": [39.3, 22.1], "modelLengthM": 32, "modelDepthM": 15, "axisDegrees": 8, "height": 45, "ring": [[3504.0, -451.5], [3536.0, -447.0], [3538.0, -461.5], [3506.5, -466.5]]}
+    ]},
+    {"id": "wuyuan-haiyue", "name": "中交建发五缘海悦", "expectedBuildings": 14, "expectedBuildingsBasis": "unconfirmed-sales-count", "completionPeriod": "2025-H1", "completionSource": "https://dataclouds.cninfo.com.cn/shgonggao/2025/2025-08-30/f2640d1784ca11f09287fa163e957f7a.pdf", "sourceScenes": ["S2C_50RPN_20261029_0_L2A", "S2A_50RPN_20261110_0_L2A", "S2B_50RPN_20261113_0_L2A"], "utmUpperLeft": [617280, 2714760], "subarea": [[3577.5, -6750.5], [3574.0, -6747.5], [3530.0, -6697.5], [3528.5, -6681.0], [3538.0, -6667.0], [3585.5, -6617.5], [3596.0, -6613.0], [3675.5, -6615.5], [3682.0, -6617.5], [3705.5, -6631.5], [3710.5, -6650.5], [3702.0, -6664.5], [3619.0, -6761.5], [3601.5, -6764.5]], "boundaryRoadWays": [128826999, 128827043], "projectSource": "https://www.cndrealty.com/project.html", "volumes": [
+      {"id": "wuyuan-haiyue-s2-01", "pixelCenter": [26.95, 17.8], "modelLengthM": 28, "modelDepthM": 14, "axisDegrees": -31, "height": 36, "ring": [[3591.5, -6726.5], [3616.0, -6740.5], [3608.5, -6752.5], [3584.5, -6738.5]]},
+      {"id": "wuyuan-haiyue-s2-02", "pixelCenter": [22.6, 22.8], "modelLengthM": 28, "modelDepthM": 14, "axisDegrees": -31, "height": 36, "ring": [[3548.0, -6676.5], [3572.0, -6691.0], [3565.0, -6703.0], [3540.5, -6688.5]]},
+      {"id": "wuyuan-haiyue-s2-03", "pixelCenter": [27.4, 27.7], "modelLengthM": 28, "modelDepthM": 14, "axisDegrees": -31, "height": 36, "ring": [[3595.5, -6627.0], [3619.5, -6641.5], [3612.5, -6653.5], [3588.0, -6639.0]]},
+      {"id": "wuyuan-haiyue-s2-04", "pixelCenter": [35.35, 27.4], "modelLengthM": 27, "modelDepthM": 14, "axisDegrees": -31, "height": 36, "ring": [[3675.0, -6629.5], [3698.5, -6643.5], [3691.5, -6655.5], [3668.0, -6641.5]]}
+    ]}
+  ]
+}

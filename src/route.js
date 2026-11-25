@@ -10,6 +10,7 @@ import { civicPoint, dongduPoint, governmentPoint, pearlCentre } from './west-la
 import { mixcCentre, nanhuCentre, sportsCentre } from './downtown-landmark-layout.js';
 import { parkViews } from './parks/views.js';
 import { eastDistrictViews } from './east-district-layout.js';
+import { islandWorkplaceViews } from './island-workplace-views.js';
 import { lianbanViews } from './lianban-layout.js';
 import { ccMallViews, seaMallViews, smMallViews } from './mall-landmark-layout.js';
 import { sunlight, summitLevel, summitPoint } from './sunlight-layout.js';
@@ -466,7 +467,12 @@ export const venueViews = [
     portraitView: { x: -2634, z: 8, y: 39 },
   },
   ...parkViews,
+  { id:'torch-huizhi', name:'火炬园 · 荟智空间', kind:'俯看研发楼、光伏屋面和楼间庭院',
+    x:-553,z:-4402,focusHeight:40,fov:47,view:{x:-733,y:213,z:-4296},portraitView:{x:-756,y:263,z:-4280} },
   ...eastDistrictViews.filter(site => !site.parent),
+  { id:'winland-ifc', name:'五通 · 英蓝国际金融中心', kind:'从滨海侧看四塔、裙楼与高空连桥',
+    x:6582,z:-3098,focusHeight:100,fov:43,view:{x:7008,y:246,z:-3098},portraitView:{x:7160,y:325,z:-3098} },
+  ...islandWorkplaceViews,
   ...lianbanViews,
   ...smMallViews,
   ...ccMallViews,

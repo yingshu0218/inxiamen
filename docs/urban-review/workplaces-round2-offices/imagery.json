@@ -1,0 +1,98 @@
+[
+  {
+    "site": "英蓝北外塔",
+    "x": 6620,
+    "z": -3202,
+    "lon": 118.19040209,
+    "lat": 24.50882088,
+    "request": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify?geometry=118.19040209444773%2C24.50882088208821&geometryType=esriGeometryPoint&sr=4326&layers=visible&tolerance=2&mapExtent=118.19006209444774%2C24.508480882088207%2C118.19074209444773%2C24.50916088208821&imageDisplay=600%2C600%2C96&returnGeometry=false&f=json",
+    "metadata": {
+      "OBJECTID": "5131037",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250806",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG03",
+      "SOURCE_INFO": "Vivid Advanced",
+      "SOURCE": "Vantor",
+      "SRC_DATE2": "8/6/2025",
+      "MinMapLevel": "12",
+      "MaxMapLevel": "18",
+      "DrawOrder": "80",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  },
+  {
+    "site": "英蓝中央塔与连桥",
+    "x": 6554,
+    "z": -3111,
+    "lon": 118.18975005,
+    "lat": 24.5080018,
+    "request": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify?geometry=118.18975004939735%2C24.50800180018002&geometryType=esriGeometryPoint&sr=4326&layers=visible&tolerance=2&mapExtent=118.18941004939735%2C24.507661800180017%2C118.19009004939734%2C24.50834180018002&imageDisplay=600%2C600%2C96&returnGeometry=false&f=json",
+    "metadata": {
+      "OBJECTID": "5131037",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250806",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG03",
+      "SOURCE_INFO": "Vivid Advanced",
+      "SOURCE": "Vantor",
+      "SRC_DATE2": "8/6/2025",
+      "MinMapLevel": "12",
+      "MaxMapLevel": "18",
+      "DrawOrder": "80",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  },
+  {
+    "site": "英蓝南外塔",
+    "x": 6620,
+    "z": -3020,
+    "lon": 118.19040209,
+    "lat": 24.50718272,
+    "request": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify?geometry=118.19040209444773%2C24.507182718271828&geometryType=esriGeometryPoint&sr=4326&layers=visible&tolerance=2&mapExtent=118.19006209444774%2C24.506842718271827%2C118.19074209444773%2C24.50752271827183&imageDisplay=600%2C600%2C96&returnGeometry=false&f=json",
+    "metadata": {
+      "OBJECTID": "5131037",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250806",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG03",
+      "SOURCE_INFO": "Vivid Advanced",
+      "SOURCE": "Vantor",
+      "SRC_DATE2": "8/6/2025",
+      "MinMapLevel": "12",
+      "MaxMapLevel": "18",
+      "DrawOrder": "80",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  },
+  {
+    "site": "厦航交叉口西南样点",
+    "x": 5330,
+    "z": -3470,
+    "lon": 118.17765758,
+    "lat": 24.51123312,
+    "request": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify?geometry=118.17765757755384%2C24.51123312331233&geometryType=esriGeometryPoint&sr=4326&layers=visible&tolerance=2&mapExtent=118.17731757755385%2C24.51089312331233%2C118.17799757755384%2C24.51157312331233&imageDisplay=600%2C600%2C96&returnGeometry=false&f=json",
+    "metadata": {
+      "OBJECTID": "5131037",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250806",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG03",
+      "SOURCE_INFO": "Vivid Advanced",
+      "SOURCE": "Vantor",
+      "SRC_DATE2": "8/6/2025",
+      "MinMapLevel": "12",
+      "MaxMapLevel": "18",
+      "DrawOrder": "80",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  }
+]

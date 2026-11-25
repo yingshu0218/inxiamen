@@ -1,5 +1,6 @@
 import { baichengGrade } from './coast/shore.js';
 import { landscapeGrades } from './parks/bay-fude-layout.js';
+import { xiagangGrade, xiagangGradeBounds } from './xiagang-layout.js';
 import { inRing } from './scenery-mesh.js';
 
 // Local 5 m display meshes derived from the existing data. Bounds follow the
@@ -70,7 +71,10 @@ export function refineShoreTerrain(lakes, coastDistance, baseHeight, elevationFi
     return Math.min(.37 + shore * .17, original);
   }
   for (const bounds of coastSites) sites.push({ bounds, grade: marineGrade });
-  sites.push(...landscapeGrades, baichengGrade(coastDistance));
+  sites.push(...landscapeGrades, baichengGrade(coastDistance), {
+    bounds: xiagangGradeBounds,
+    grade: (x, z, h) => xiagangGrade(x, z, h, baseHeight, coastDistance),
+  });
   return sites.map(({ bounds, grade }) => {
     const [xmin, zmin, xmax, zmax] = bounds;
     const width = (xmax - xmin) / step + 1, height = (zmax - zmin) / step + 1;

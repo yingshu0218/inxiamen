@@ -8,7 +8,7 @@ import { hubinTrees, plan as hubin } from './hubin-layout.js';
 
 // These positions were sampled from the optical tree cover and cleared of streets and footprints.
 // Distant individual crowns use a depth-tested cutout; nearby palms and large banyans remain meshes.
-export function addGroves(parent, geo, packed, islandCover, bankTrees, atlas, darkness, frame, obstacles, plantings=[]) {
+export function addGroves(parent, geo, packed, islandCover, bankTrees, atlas, darkness, frame, obstacles, plantings, roadVegetationBlocked) {
   atlas.colorSpace = THREE.SRGBColorSpace;
   atlas.anisotropy = 4;
   const tileSize = 2050,
@@ -32,6 +32,7 @@ export function addGroves(parent, geo, packed, islandCover, bankTrees, atlas, da
     if ((bits & 16384) || (!island && x>=patch.xmin && x<=patch.xmax && z>=patch.zmin && z<=patch.zmax)) continue;
     const wet=locations===bankTrees || locations===cityTrees || locations===planted ? geo.waterAt(x,z)!==undefined : geo.coverAt(x,z)===0;
     if (airportWorksReserved(frame,x,z) || (locations!==planted && landmarkReserved(x,z)) || oldTownReserved(x,z) || siliReserved(x,z) || wet
+        || (locations !== planted && roadVegetationBlocked(x, z, Math.min(5, size * .30)))
         || obstacles.heightAt(x,z)>geo.heightAt(x,z)+2) continue;
     const h = geo.heightAt(x, z),
       se = Math.abs((Math.sin(x * 17.17 + z * 0.914) * 7819.13) % 1);

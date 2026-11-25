@@ -151,13 +151,14 @@ export function treeInstances(parent, places, palm, random = rnd) {
   }
 }
 
-export function vegetate(parent, geo, airport, obstacles, material) {
+export function vegetate(parent, geo, airport, obstacles, material, roadVegetationBlocked) {
   const trees = [],
     palms = [],
     props = new MeshBatch();
   function plant(x, z, scale, palm = false, planted = false) {
     if (
-      (!planted && (geo.coverAt(x, z) === 0 || landmarkReserved(x,z) || oldTownReserved(x,z))) ||
+      (!planted && (geo.coverAt(x, z) === 0 || landmarkReserved(x,z) || oldTownReserved(x,z)
+        || roadVegetationBlocked(x, z, scale * 2.2))) ||
       airportWorksReserved(airport, x, z) ||
       obstacles.heightAt(x, z) > geo.heightAt(x, z) + 2
     )

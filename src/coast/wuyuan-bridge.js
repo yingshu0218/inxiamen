@@ -43,7 +43,7 @@ function bridgeRows(ground){
   return rows;
 }
 
-export function buildWuyuanBridge(group,ground,material,lights,obstacles){
+export function buildWuyuanBridge(group,ground,material,lights,obstacles,westRoadTerrain=ground){
   const deck=new MeshBatch(),steel=new MeshBatch(),rows=bridgeRows(ground);
   const total=rows.at(-1).s;
   // The centre between the two main arch footings, located on the January aerial.
@@ -58,8 +58,16 @@ export function buildWuyuanBridge(group,ground,material,lights,obstacles){
   function corner(f,k,offset,lift=0){
     const [cx,cz]=f.lanes[k],[nx,nz]=f.normals[k];
     const x=cx+nx*offset,z=cz+nz*offset,west=Math.max(0,1-f.s/32);
-    // The western street follows transverse terrain; the eastern joint is level.
-    return [x,f.height[k]+west*(ground(x,z)-ground(cx,cz))+lift,z];
+    // Match the western approach's rendered roadbed across the joint and
+    // blend back into the raised deck profile over its first 32 metres.
+    const crossfall=west ? west*(westRoadTerrain(x,z)-ground(cx,cz)) : 0;
+    return [x,f.height[k]+crossfall+lift*(1-west),z];
+  }
+  function medianTriangle(a,b,c){
+    // The staggered western joints start with overlapping inner shoulders.
+    // A reversed triangle there folds the median back over the paved lane.
+    const up=(b[2]-a[2])*(c[0]-a[0])-(b[0]-a[0])*(c[2]-a[2]);
+    if(up>0)deck.face([a,b,c],'#aaa99b');
   }
   let previous,lightAt=30;
   for(const f of rows){
@@ -83,7 +91,12 @@ export function buildWuyuanBridge(group,ground,material,lights,obstacles){
         steel.face([a.boundary,b.boundary,lower(b.boundary),lower(a.boundary)],concrete);
         steel.face([a.boundary,a.rail,b.rail,b.boundary],'#c9cdc5');
       }
-      deck.top([previous[0].inner,previous[1].inner,sides[1].inner,sides[0].inner],'#aaa99b');
+      if(west>0){
+        medianTriangle(previous[0].inner,sides[0].inner,previous[1].inner);
+        medianTriangle(previous[1].inner,sides[0].inner,sides[1].inner);
+      }else{
+        deck.top([previous[0].inner,previous[1].inner,sides[1].inner,sides[0].inner],'#aaa99b');
+      }
       const footprint=[previous[0].boundary,sides[0].boundary,sides[1].boundary,previous[1].boundary];
       obstacles.add(footprint.map(([x,,z])=>[x,z]),Math.max(...footprint.map(p=>p[1]))+.9);
       const underside=footprint.map(([x,y,z])=>[x,y-1.3,z]);
