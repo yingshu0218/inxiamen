@@ -10,6 +10,7 @@ import { civicPoint, dongduPoint, governmentPoint, pearlCentre } from './west-la
 import { mixcCentre, nanhuCentre, sportsCentre } from './downtown-landmark-layout.js';
 import { parkViews } from './parks/views.js';
 import { eastDistrictViews } from './east-district-layout.js';
+import { islandWorkplaceViews } from './island-workplace-views.js';
 import { lianbanViews } from './lianban-layout.js';
 import { ccMallViews, seaMallViews, smMallViews } from './mall-landmark-layout.js';
 import { sunlight, summitLevel, summitPoint } from './sunlight-layout.js';
@@ -467,6 +468,7 @@ export const venueViews = [
   },
   ...parkViews,
   ...eastDistrictViews.filter(site => !site.parent),
+  ...islandWorkplaceViews,
   ...lianbanViews,
   ...smMallViews,
   ...ccMallViews,
