@@ -1,0 +1,41 @@
+{
+  "source": "Independent vertical mesh probes at three prior failed points using current shared source and production dist geography, with source-loaded road and terrain triangle meshes. The top matching layer is verified in the relevant asphalt or bike batch. Browser low-altitude pictures supply visual confirmation.",
+  "results": [
+    {
+      "id": "east-vehicle-turn",
+      "point": [
+        5147.267,
+        -6648.167
+      ],
+      "pavement": 2.349,
+      "terrain": 1.878,
+      "afterClearance": 0.471,
+      "previousClearance": -0.307,
+      "topInPavingBatchIsExpected": true
+    },
+    {
+      "id": "east-shared-path",
+      "point": [
+        5044.077,
+        -6693.261
+      ],
+      "pavement": 2.208,
+      "terrain": 1.698,
+      "afterClearance": 0.51,
+      "previousClearance": -0.298,
+      "topInPavingBatchIsExpected": true
+    },
+    {
+      "id": "west-shared-path",
+      "point": [
+        4606.8,
+        -6882.7
+      ],
+      "pavement": 2.265,
+      "terrain": 1.695,
+      "afterClearance": 0.57,
+      "previousClearance": -0.213,
+      "topInPavingBatchIsExpected": true
+    }
+  ]
+}

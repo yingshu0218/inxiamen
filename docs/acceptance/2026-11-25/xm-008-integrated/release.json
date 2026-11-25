@@ -1,0 +1,62 @@
+{
+  "lobby": "http://127.0.0.1:5187/",
+  "builtAt": "2026-11-25T16:15:20.683729+08:00",
+  "publishedAt": "2026-11-25T16:15:20.848220+08:00",
+  "assets": {
+    "index.html": {
+      "sha256": "10b65efe144b26847877c80ddc5b7fb4942a60b4fdc8120578d8ba449be3c0ec",
+      "http": 200,
+      "bytes": 16707
+    },
+    "assets/arrival-terrain-C-_4iSwc.js": {
+      "sha256": "e46d4acc2be1bc6e1dc1f284134be795da5526de7e76875a959316358c2f74e5",
+      "http": 200,
+      "bytes": 1250
+    },
+    "assets/dreamliner-B3pAojlW.js": {
+      "sha256": "c30809dcca22c445372ba7544e461a88872ffdf661fd9f0817cd17908979de9c",
+      "http": 200,
+      "bytes": 48465
+    },
+    "assets/game-DKtNn0Dx.js": {
+      "sha256": "64d7677a0853d9a11e0e220e914d04d28764a33b83ec373f1f54ac8e42d3cdae",
+      "http": 200,
+      "bytes": 845915
+    },
+    "assets/index-CYZ06jiY.js": {
+      "sha256": "8c81f3e84cdefe41f4beeeadfa6994a4039bc968c4cf5b0e2eb45ff05ca3a3f6",
+      "http": 200,
+      "bytes": 195521
+    },
+    "assets/index-lUNLeYXp.css": {
+      "sha256": "bdbadd6a8dbd7a901969f3b77581cf3c193eefe522f2f1f39c20ab8243b11cf6",
+      "http": 200,
+      "bytes": 17297
+    },
+    "assets/sunlight-layout-qT5a4tSe.js": {
+      "sha256": "1acc5ca235f78a3cc645104e9d7665cb8421784433cfeb897d1470c4d7217f6b",
+      "http": 200,
+      "bytes": 754899
+    },
+    "geo/gulangyu-heights.bin": {
+      "sha256": "33a93c85dc843768c8b9f479989515ccec191bbc2ecf4fd1fd6deacdaadd36ef",
+      "http": 200,
+      "bytes": 109032
+    },
+    "geo/city-layout.bin": {
+      "sha256": "3224a2cfab998ad1ac009b51422d43f219887b07947ab4896aaf690c5771d60f",
+      "http": 200,
+      "bytes": 1611942
+    },
+    "geo/urban-streets.json": {
+      "sha256": "fe3af758529e7a8148c44c45c870958dfeebde4c383e6a62f5bd157317791585",
+      "http": 200,
+      "bytes": 631724
+    },
+    "geo/coast-distance.png": {
+      "sha256": "9310c3068cf41c4cd316df1ff46f244ce745c1328c84b8ef34678c8918c82f1b",
+      "http": 200,
+      "bytes": 645403
+    }
+  }
+}

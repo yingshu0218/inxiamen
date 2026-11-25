@@ -1,0 +1,74 @@
+[
+  {
+    "sample": "艾德航空工业园楼群",
+    "lonLat": [
+      118.14025,
+      24.54029
+    ],
+    "query": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/identify?f=json&geometry=118.14025%2C24.54029&geometryType=esriGeometryPoint&sr=4326&layers=all%3A4&mapExtent=118.13825%2C24.53829%2C118.14224999999999%2C24.542289999999998&imageDisplay=1200%2C900%2C96&tolerance=1&returnGeometry=false",
+    "source": {
+      "OBJECTID": "5297767",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250211",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG01",
+      "FROM_CACHE_LEVEL": "12",
+      "TO_CACHE_LEVEL": "19",
+      "SOURCE_INFO": "Vivid Advanced",
+      "DRAW_ORDER": "80",
+      "DATE": "2/11/2025",
+      "SOURCE": "Vantor",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  },
+  {
+    "sample": "艾德航空产业园楼群",
+    "lonLat": [
+      118.13917,
+      24.53902
+    ],
+    "query": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/identify?f=json&geometry=118.13917%2C24.53902&geometryType=esriGeometryPoint&sr=4326&layers=all%3A4&mapExtent=118.13717%2C24.537020000000002%2C118.14116999999999%2C24.54102&imageDisplay=1200%2C900%2C96&tolerance=1&returnGeometry=false",
+    "source": {
+      "OBJECTID": "5297767",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250211",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG01",
+      "FROM_CACHE_LEVEL": "12",
+      "TO_CACHE_LEVEL": "19",
+      "SOURCE_INFO": "Vivid Advanced",
+      "DRAW_ORDER": "80",
+      "DATE": "2/11/2025",
+      "SOURCE": "Vantor",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  },
+  {
+    "sample": "厦门国际航材中心",
+    "lonLat": [
+      118.14335,
+      24.54035
+    ],
+    "query": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/identify?f=json&geometry=118.14335%2C24.54035&geometryType=esriGeometryPoint&sr=4326&layers=all%3A4&mapExtent=118.14135%2C24.53835%2C118.14535%2C24.54235&imageDisplay=1200%2C900%2C96&tolerance=1&returnGeometry=false",
+    "source": {
+      "OBJECTID": "5297767",
+      "Shape": "Polygon",
+      "DATE (YYYYMMDD)": "20250211",
+      "RESOLUTION (M)": "0.34",
+      "ACCURACY (M)": "8.47",
+      "DESCRIPTION": "LG01",
+      "FROM_CACHE_LEVEL": "12",
+      "TO_CACHE_LEVEL": "19",
+      "SOURCE_INFO": "Vivid Advanced",
+      "DRAW_ORDER": "80",
+      "DATE": "2/11/2025",
+      "SOURCE": "Vantor",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  }
+]

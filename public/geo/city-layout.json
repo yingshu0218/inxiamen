@@ -1,0 +1,112 @@
+{
+  "file": "city-layout.bin",
+  "features": 31221,
+  "sourceRecords": {
+    "image": 24166,
+    "map": 8384
+  },
+  "osmOutline": 8269,
+  "mappedHeight": 253,
+  "courtyards": 1402,
+  "localHeight": 8372,
+  "imageOutline": 20144,
+  "imageHeight": 22588,
+  "frontageOutline": 1154,
+  "publishedHeight": 8,
+  "fusion": {
+    "thinImageFragmentsRemoved": 368,
+    "spikedImageOutlinesTrimmed": 87,
+    "splitMappedOutline": 109,
+    "heightTransferred": 2402,
+    "waterExcluded": 102,
+    "unlikelyLakeCanopyRoof": 1
+  },
+  "coordinateUnitMetres": 0.5,
+  "heightUnitMetres": 0.1,
+  "heightSources": {
+    "0": "nearby similar footprints or conservative fallback",
+    "1": "remote sensing estimate",
+    "2": "mapped height or levels",
+    "3": "published tower height, matched inside footprint"
+  },
+  "sources": [
+    "/geo/urban-buildings.json",
+    "/geo/tower-heights.json",
+    "/geo/credits.json"
+  ],
+  "overtureOutline": 1645,
+  "districtBatches": {
+    "wucun": {
+      "matched": 160,
+      "newOrFrontage": 317,
+      "reservedSpaceCuts": 170,
+      "uncorroboratedFrontage": 27,
+      "regroupedExistingHeight": 1,
+      "imageHeight": 160,
+      "estimatedHeight": 317,
+      "input": 1024,
+      "overture": 477,
+      "removed": 383,
+      "output": 1268
+    },
+    "zhongshan": {
+      "newOrFrontage": 373,
+      "matched": 61,
+      "reservedSpaceCuts": 178,
+      "uncorroboratedFrontage": 23,
+      "regroupedExistingHeight": 16,
+      "estimatedHeight": 373,
+      "imageHeight": 61,
+      "input": 832,
+      "overture": 434,
+      "removed": 276,
+      "output": 1175
+    },
+    "huli": {
+      "matched": 260,
+      "newOrFrontage": 315,
+      "reservedSpaceCuts": 60,
+      "imageHeight": 260,
+      "estimatedHeight": 315,
+      "input": 917,
+      "overture": 575,
+      "removed": 292,
+      "output": 1260
+    },
+    "jimei": {
+      "newOrFrontage": 55,
+      "mainlandImageAdditions": 17,
+      "mainlandHeightTransfers": 24,
+      "imageHeight": 3,
+      "estimatedHeight": 52,
+      "input": 39,
+      "overture": 55,
+      "removed": 0,
+      "output": 111
+    }
+  },
+  "overtureRelease": "2026-11-18.0",
+  "bridgeDistricts": {
+    "lvquan": {
+      "sourceParts": 3,
+      "continuousRoofs": 1,
+      "estimatedHeight": 1
+    },
+    "lehai": {
+      "plots": 9,
+      "plotAreaM2": 190037,
+      "existingIntersecting": 0,
+      "added": 124,
+      "overtureOutline": 106,
+      "imageOutline": 18,
+      "modeledHeight": 51,
+      "mappedHeight": 0,
+      "estimatedHeight": 73
+    },
+    "xianganD07": {
+      "interpretedOutline": 8,
+      "estimatedHeight": 8
+    }
+  },
+  "interpretedOutline": 9
+}

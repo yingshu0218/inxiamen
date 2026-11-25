@@ -1,0 +1,30 @@
+{
+  "neicuoao-coast-640.webm": {
+    "viewport": [
+      640,
+      360
+    ],
+    "decodedFrames": 103,
+    "durationFromFirstToLast": 4.306,
+    "decodedFps": 23.69,
+    "animationCallbacks": 127,
+    "medianMs": 33.4,
+    "p95Ms": 50.1
+  },
+  "neicuoao-coast.webm": {
+    "viewport": [
+      800,
+      450
+    ],
+    "decodedFrames": 81,
+    "durationFromFirstToLast": 8.224,
+    "decodedFps": 9.73,
+    "animationCallbacks": 96,
+    "medianMs": 33.3,
+    "p95Ms": 77.5
+  },
+  "continuousToLane": {
+    "samples": 176,
+    "metres": 3019.1
+  }
+}

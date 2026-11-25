@@ -1,0 +1,273 @@
+{
+  "checked": "2026-11-24T17:07:51.589Z",
+  "anchorColumns": [
+    "x",
+    "z",
+    "lon",
+    "lat",
+    "rawTerrainY",
+    "obstacleY"
+  ],
+  "baseBuildingRecords": 31221,
+  "tally": {
+    "一期": {
+      "masses": 9,
+      "triangles": 1989,
+      "vertices": 4035,
+      "bboxXYZ": [
+        [
+          -1555.26,
+          6.44,
+          4853.81
+        ],
+        [
+          -1194.75,
+          60.19,
+          5352.56
+        ]
+      ],
+      "suppressedBaseRecords": 19,
+      "anchorResults": [
+        [
+          -1471,
+          5081,
+          118.110467,
+          24.434266,
+          10.57,
+          40.46
+        ],
+        [
+          -1360,
+          4905,
+          118.111564,
+          24.435851,
+          8.8,
+          53.3
+        ],
+        [
+          -1432,
+          5310,
+          118.110853,
+          24.432205,
+          11.58,
+          33.72
+        ]
+      ]
+    },
+    "二期": {
+      "masses": 37,
+      "triangles": 9153,
+      "vertices": 18823,
+      "bboxXYZ": [
+        [
+          4590.26,
+          13.91,
+          -1555.26
+        ],
+        [
+          5833.98,
+          79.68,
+          -692.81
+        ]
+      ],
+      "suppressedBaseRecords": 41,
+      "anchorResults": [
+        [
+          4918,
+          -1279,
+          118.173587,
+          24.491512,
+          41.46,
+          62.68
+        ],
+        [
+          5025,
+          -1062,
+          118.174644,
+          24.489559,
+          27.05,
+          45.14
+        ],
+        [
+          5353,
+          -836,
+          118.177885,
+          24.487525,
+          22.4,
+          47.36
+        ]
+      ]
+    },
+    "观音山": {
+      "masses": 33,
+      "triangles": 2962,
+      "vertices": 5874,
+      "bboxXYZ": [
+        [
+          5945,
+          6.95,
+          -2165
+        ],
+        [
+          6811.71,
+          275.1,
+          -786.27
+        ]
+      ],
+      "suppressedBaseRecords": 70,
+      "anchorResults": [
+        [
+          6289,
+          -1634,
+          118.187132,
+          24.494707,
+          33.66,
+          243.51
+        ],
+        [
+          6643,
+          -2085,
+          118.190629,
+          24.498767,
+          11.89,
+          275.1
+        ],
+        [
+          6670,
+          -1536,
+          118.190896,
+          24.493825,
+          10.62,
+          115.37
+        ]
+      ]
+    }
+  },
+  "roadComparison": {
+    "phaseOneNorth": {
+      "samples": 40,
+      "maxMetres": 0.63
+    },
+    "guanriInbound": {
+      "samples": 91,
+      "maxMetres": 0.84
+    },
+    "guanriOutbound": {
+      "samples": 86,
+      "maxMetres": 0.6
+    },
+    "wanghai": {
+      "samples": 88,
+      "maxMetres": 0.92
+    }
+  },
+  "roadCoastMinimumVertexDistanceMetres": 63.55,
+  "frames": {
+    "software-one": {
+      "focus": [
+        -1405,
+        5108,
+        118.111119,
+        24.434023
+      ],
+      "view": {
+        "x": -1730,
+        "y": 331,
+        "z": 5630
+      },
+      "wideTerrainClearance": 331,
+      "portraitTerrainClearance": 470
+    },
+    "software-one-north": {
+      "focus": [
+        -1366,
+        5002,
+        118.111505,
+        24.434977
+      ],
+      "view": {
+        "x": -1522,
+        "y": 178,
+        "z": 5235
+      },
+      "wideTerrainClearance": 167.11,
+      "portraitTerrainClearance": 227.46
+    },
+    "software-two": {
+      "focus": [
+        5210,
+        -1130,
+        118.176472,
+        24.490171
+      ],
+      "view": {
+        "x": 4820,
+        "y": 930,
+        "z": -390
+      },
+      "wideTerrainClearance": 911.22,
+      "portraitTerrainClearance": 1201.44
+    },
+    "software-two-west": {
+      "focus": [
+        4678,
+        -1403,
+        118.171216,
+        24.492628
+      ],
+      "view": {
+        "x": 4468,
+        "y": 180,
+        "z": -1274
+      },
+      "wideTerrainClearance": 143.2,
+      "portraitTerrainClearance": 219.94
+    },
+    "guanyinshan": {
+      "focus": [
+        6700,
+        -1530,
+        118.191192,
+        24.493771
+      ],
+      "view": {
+        "x": 7990,
+        "y": 360,
+        "z": -1020
+      },
+      "wideTerrainClearance": 360,
+      "portraitTerrainClearance": 584
+    },
+    "guanyinshan-business": {
+      "focus": [
+        6343,
+        -1772,
+        118.187665,
+        24.49595
+      ],
+      "view": {
+        "x": 6825,
+        "y": 275,
+        "z": -1305
+      },
+      "wideTerrainClearance": 262.24,
+      "portraitTerrainClearance": 390.6
+    }
+  },
+  "entries": {
+    "software-one": 200,
+    "software-one-north": 200,
+    "software-two": 200,
+    "software-two-west": 200,
+    "guanyinshan": 200,
+    "guanyinshan-business": 200
+  },
+  "portraitChecks": "9:16, static terrain clearance",
+  "browserRun": false,
+  "hashes": {
+    "index.html": "24af2ccf909cbd2252ce049dd765582e4de3b47fa2bda76e51f70699cdcf3d62",
+    "assets/index-DNL8QYMw.js": "5fe420381280e4b6c5bd4851ea2bee6eec6b240d79df453c171a8f0cc37bf082",
+    "assets/game-CV8TvDiZ.js": "0acd28f776ee8260d2d3b1ae4d6ebb77f020cdc59cd72b6c7afdaa1c94a345b4",
+    "geo/city-layout.bin": "3224a2cfab998ad1ac009b51422d43f219887b07947ab4896aaf690c5771d60f"
+  }
+}

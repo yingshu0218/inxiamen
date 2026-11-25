@@ -1,0 +1,95 @@
+{
+  "task": "XM-008",
+  "method": "离线读取实际注册集合、核对 M 菜单绑定、运行航段初始化并检查正式构建分块",
+  "result": "三条注册名称、ID 和菜单绑定正确，无需修改注册数据。",
+  "build": {
+    "command": "npm_config_offline=true npm run build",
+    "result": "通过",
+    "generatedAt": "2026-11-24T17:00:33.432Z",
+    "sha256": {
+      "dist/index.html": "b0f0b50093fc9fbfaf0489c3abf5536558728e004f73fee3f9c33894315d93b9",
+      "dist/assets/index-Cgv7dvd4.js": "dadc8f742abc6b39e74095d4846833d8139464306e48ba3e1123a3247a00d124",
+      "dist/assets/game-B_9O4xTo.js": "e14e9a96ea67b1d2b15f88b5169766e10c36b1657bee041db72e7b8fb2f29189"
+    }
+  },
+  "routes": [
+    {
+      "query": "?tour=island",
+      "menu": [
+        "鼓浪屿"
+      ],
+      "expectedInitialHud": "鼓浪屿",
+      "parent": null,
+      "registrations": 1,
+      "menuResolvesToSameRecord": true,
+      "buildIdAndNameMatches": 1,
+      "type": "轻型机原航段",
+      "focusXZ": [
+        -6252.359,
+        3318.557
+      ]
+    },
+    {
+      "query": "?tour=gulangyu",
+      "menu": [
+        "鼓浪屿",
+        "全岛鸟瞰"
+      ],
+      "expectedInitialHud": "全岛鸟瞰",
+      "parent": "island",
+      "registrations": 1,
+      "menuResolvesToSameRecord": true,
+      "buildIdAndNameMatches": 1,
+      "type": "自由观景机位",
+      "focusXZ": [
+        -6340,
+        3615
+      ]
+    },
+    {
+      "query": "?tour=sanqiutian",
+      "menu": [
+        "鼓浪屿",
+        "三丘田码头"
+      ],
+      "expectedInitialHud": "三丘田码头",
+      "parent": "island",
+      "registrations": 1,
+      "menuResolvesToSameRecord": true,
+      "buildIdAndNameMatches": 1,
+      "type": "自由观景机位",
+      "focusXZ": [
+        -6092,
+        3018
+      ]
+    }
+  ],
+  "geographicFallbackAtSpawn": {
+    "selected": "island",
+    "phase": "tour",
+    "aircraftXZ": [
+      -6017.529,
+      3038.585
+    ],
+    "altitudeMetres": 113,
+    "nearestPlace": "三丘田码头",
+    "nearestDistanceMetres": 77.264,
+    "focus": "八卦楼",
+    "focusDistanceMetres": 365.417
+  },
+  "browserVerification": {
+    "owner": "XM-011",
+    "status": "待实机复验",
+    "steps": [
+      "从大厅进入轻型机，按 M 选择「鼓浪屿」，关闭地图后读取首屏 HUD。",
+      "在同一正式构建用 ?tour=island 直达，核对首屏同为「鼓浪屿」，继续飞行后地名能随位置更新。",
+      "单独选择「三丘田码头」和「全岛鸟瞰」，首屏分别显示各自名称。"
+    ]
+  },
+  "previousObservations": [
+    "island.ndjson:1",
+    "island.ndjson:6",
+    "island.ndjson:14",
+    "hud-recheck.ndjson:3"
+  ]
+}

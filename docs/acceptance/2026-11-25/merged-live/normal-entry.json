@@ -1,0 +1,20 @@
+{
+  "page": "http://127.0.0.1:5187/",
+  "resources": [
+    [
+      "/assets/index-CuoKdw8C.js",
+      200
+    ],
+    [
+      "/assets/sunlight-layout-D4zc91jV.js",
+      200
+    ],
+    [
+      "/assets/game-COjByyfW.js",
+      200
+    ]
+  ],
+  "place": "高崎机场",
+  "phase": "跑道准备 · 手动驾驶",
+  "errors": []
+}

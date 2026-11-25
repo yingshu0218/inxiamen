@@ -1,0 +1,432 @@
+{
+  "derivedGeography": {
+    "data": "OpenFreeMap · © OpenMapTiles · © OpenStreetMap contributors. CMAB V7 by Yecheng Zhang, Huimin Zhao and Ying Long (CC BY 4.0). Contains modified Copernicus Sentinel data 2025.",
+    "osmSnapshot": "2026-11-15",
+    "osmLicense": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "sources": "/geo/credits.json",
+    "processing": "city-layout.bin merges mapped building parts and imagery-derived roof outlines with estimated infill frontages inside mapped residential and commercial areas. The local mapped networks and hydrography are in urban-streets.json and inland-water.json. The street, water and building database extracts derived from OpenStreetMap are available under ODbL 1.0. See the geographic credits for individual sources, attribution and modifications.",
+    "cityLayout": "/geo/city-layout.json",
+    "lakeBanks": "Riparian canopy positions combine mapped woodland and parkland, Sentinel-2 optical vegetation and the new water, road and roof masks. Individual trees are approximate.",
+    "oldTown": "The street alignments, foreshore, park, hotel, customs building, terminal, pontoons and gangways in src/old-town-plan.json derive from © OpenStreetMap contributors, ODbL 1.0. Shop lots, facade details and landscaping are reconstructed. tools/prepare-old-town.py reproduces this extract.",
+    "railway": "src/railway-plan.json derives the station outline, squares, ancillary buildings, five platform extents and the nine track alignments from © OpenStreetMap contributors, ODbL 1.0. Coordinates are transformed to local metres, simplified, and adjusted locally to clear platform edges. Heights and train movements are reconstructed for the game.",
+    "gaoqiRailway": {
+      "data": "src/gaoqi-railway-plan.json derives the Gaoqi yards, sections of the Yingtan–Xiamen and Dongdu Port railways, platform outlines and selected buildings from © OpenStreetMap contributors (ODbL 1.0, API extract 2026-11-25). tools/prepare-gaoqi-railway.py extracts the features into the game's metre grid.",
+      "imagery": "Vantor imagery acquired 2025-03-20, served through Esri World Imagery, was consulted for the Gaoqi railway yards, station-house roofs, forecourt and approach roads. The imagery is not bundled in the game.",
+      "references": [
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+        "https://fgw.fujian.gov.cn/ztzl/tljsbgs/fjstlfzqk/fjtljscg/202602/t20260213_7098341.htm",
+        "https://www.xmrd.gov.cn/rdlz/dbjygk/jyhfh/201604/t20160422_4884226.htm"
+      ],
+      "reconstruction": "Building heights, railway elevations, catenary, finishes and freight car placement are reconstructed. The red roof lettering is documented in archival photographs. Its present condition is unverified, so the current scene identifies the station in the HUD."
+    },
+    "wucun": "src/wucun-plan.json and wucun-ground.webp derive carriageways, the BRT alignment, parcels and selected footprints from © OpenStreetMap contributors, ODbL 1.0. tools/prepare-wucun.py generates the extract and ground artwork. Architectural heights, façades, pedestrian bridges, road markings, lighting and moving vehicles are reconstructed for the game.",
+    "northernCrossings": "src/north-crossings-plan.json contains centerlines and approach ramps derived from © OpenStreetMap contributors (ODbL 1.0, API extract 2026-11-24). The two directional ways are paired into an alignment, simplified and projected at runtime onto the game's metre grid. Esri World Imagery was consulted as a visual comparison for shoreline contacts and retaining embankments.",
+    "brt": {
+      "data": "src/brt-plan.json uses route ways and boarding areas from © OpenStreetMap contributors, ODbL 1.0, extracted 2026-11-24. tools/prepare-brt.py reproduces the extract in local metres.",
+      "relations": ["https://www.openstreetmap.org/relation/2334379", "https://www.openstreetmap.org/relation/2378231"],
+      "references": [
+        "https://www.chinautc.com/upload/accessorychinautc/pdf/2010699284260393.pdf",
+        "https://ishare.ifeng.com/c/s/7nx72EEsMp5",
+        "https://commons.wikimedia.org/wiki/File:Xiamen-station-BRT.jpg",
+        "https://commons.wikimedia.org/wiki/File:(CHN-Fujian)_Xiamen_Bus_Rapid_Transit_%E9%97%BDD05397D_BRT1_2025-03-20.jpg",
+        "https://www.chinabuses.com/supply/2026/0615/article_119514.html",
+        "https://www.xiamenairport.com.cn/jcjt/jtzy-ldjc.aspx",
+        "https://www.xmklm.com.cn/info/2081/38511.htm"
+      ],
+      "reconstruction": "The box girders, vase-shaped piers, station roofs and interchange levels follow the design report and visual references. Bearing placement, stair clearances, electric bus details, elevation profiles, island branch turnarounds and headways are reconstructed for the game."
+    }
+  },
+  "art": "Landmarks, airport structures, vessels, street furniture, roof finishes, facades and vegetation are rendered for this game. Heights with no source record are estimated. Individual roof shapes and illuminated windows are artistic reconstructions.",
+  "night": "Night emission follows the merged building footprints and mapped road network. The lighting of individual buildings, bridges, windows and the moon is an artistic reconstruction.",
+  "island": {
+    "terrain": "Gulangyu uses local z14 Mapzen Terrarium samples on a 10 m mesh. Xiamen Island uses a 25 m mesh derived from Copernicus GLO-30. The outlying terrain uses the original 50 m mesh.",
+    "layout": "The Gulangyu shoreline in /geo/islands.json and the paths, reef, heritage footprints and ferry structures in src/gulangyu-plan.json derive from © OpenStreetMap contributors (API extract 2026-11-24). tools/prepare-gulangyu-sites.py extracts the mapped ways and projects them into local metres. The north berth was updated from the ferry operator's post-reconstruction photographs and filing.",
+    "coastlineWays": ["https://www.openstreetmap.org/way/164669117", "https://www.openstreetmap.org/way/993673314"],
+    "landscape": "gulangyu-ground.webp and gulangyu-cover.bin use the bundled OpenFreeMap/OpenMapTiles land-cover, street and building data and Copernicus Sentinel optical imagery credited above. Individual trees, coastal rocks, roof profiles, arcades, pavement and lighting are artistic reconstructions.",
+    "license": "https://opendatacommons.org/licenses/odbl/1-0/"
+  },
+  "landmarkReferences": [
+    {
+      "site": "厦门高崎国际机场",
+      "imagery": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+      "aerodromeChart": "https://opennav.jp/pdf/ZSAM/ZSAM-1.pdf",
+      "buildingReference": "https://www.sachsen.com.cn/index.php/Index/cases_show?id=103&mid=3",
+      "map": ["https://www.openstreetmap.org/way/216568922", "https://www.openstreetmap.org/way/326732171"],
+      "pavementGeometry": "tools/prepare-airport-pavement.py merges runway, drawn apron and taxiway footprints into disjoint surfaces. Terminal access ramps follow the mapped public streets.",
+      "landsideReferences": ["https://www.xmcredit.cn/news/newsdetail?id=21623", "https://globalgt.ceair.com/global/static/Announcement/TravelTips/AirportInformations/airportinfo/X_Ariport/", "https://www.archina.com/index.php?a=show&g=works&id=3295&m=index"],
+      "landsideReconstruction": "The T3 garden and T4 surface parking and open lawn follow aerial imagery and public descriptions. Terrace slopes, marked bays and planted islands are drawn at scene scale.",
+      "reconstruction": "Airfield surfaces and terminal footprints were traced against Esri World Imagery, with selected taxiway centre lines, the T4 footprint and T4 gate references checked against © OpenStreetMap contributors (ODbL 1.0). The game models roof and façade details, the tower, apron equipment, parked aircraft and lighting."
+    },
+    {
+      "site": "海沧大桥",
+      "owner": "https://www.xmlqgc.com/About/detail/27494",
+      "engineering": "https://ptmc.tongji.edu.cn/yyljs/article/pdf/200403001"
+    },
+    {
+      "site": "翔安大桥",
+      "centerlines": ["https://www.openstreetmap.org/way/1021369642", "https://www.openstreetmap.org/way/1021369643"],
+      "engineering": "https://jtyst.fujian.gov.cn/fjjtgczj/zjgl/jjyj/202307/P020230704616690535834.pdf",
+      "middleFairway": "https://jtyst.fujian.gov.cn/zwgk/jtyw/gzdt/202204/t20220411_5887138.htm",
+      "spanSequence": "https://www.fjdaily.com/app/content/2022-04/07/content_1394683.html",
+      "marineMarks": "https://pnp.chart.msa.gov.cn/CorrectionPdf/Download/59e94892-3273-47e3-b7f6-3a226607a81a?y=2024",
+      "photo": "https://xm.fjsen.com/2023-01/20/content_31231798.htm",
+      "inscription": {
+        "calligrapher": "林胤祺",
+        "unveiling": "https://news.xmnn.cn/xmxw/202305/t20230501_77000.html",
+        "brushOriginalAndAerialPhoto": "https://xm.fjsen.com/2023-05/02/content_31306222.htm",
+        "reconstruction": "The original brush outlines and the red inscription on the 9 by 3 metre board follow the unveiling and the selection gallery. The location between the main deck and a ramp at the Xiang'an end is estimated from the aerial photograph. The column and engraving depths are estimated."
+      },
+      "reconstruction": "The eight-lane single steel box girder, three fairway areas and the middle unit's 90/90/150/150/90/90 m sequence follow the public records. Bridge elevations, the exact planting of piers, outer fairway spans, junction levels and scene lighting are estimated."
+    },
+    {
+      "site": "集美大桥",
+      "centerlines": ["https://www.openstreetmap.org/way/405167169", "https://www.openstreetmap.org/way/405167172"],
+      "ownerAndPhotos": "https://www.xmlq.com.cn/About/detail/13265",
+      "engineering": "https://oss.fjhb.org/202111/16/211116055357352.pdf",
+      "interchangePhoto": "https://www.xmnn.cn/xxpd/jrbk/202212/t20221202_52664.html",
+      "inscription": {
+        "calligrapher": "江泽民",
+        "openingArchive": "https://news.sina.com.cn/c/2008-07-02/083414104504s.shtml",
+        "archivalPlaqueAndSouthSideDamage": "https://news.ijjnews.com/system/2016/02/29/010942336.shtml",
+        "reconstruction": "The map marks this scene as a reconstruction of the 2008 opening plaque. The red title, signature and fluted pedestal follow archival photographs. Opening coverage records markers at both ends. The north-bank position and dimensions are estimates, and the present condition of the north-bank plaque is unverified. The island-side plaque was damaged in 2016."
+      },
+      "reconstruction": "The mapped curve and the central two BRT lanes between three highway lanes in each direction follow the owner and environmental report. The Lehai Road widening and the North Airport approach are simplified. Pier intervals, elevations and lamp positions are estimated from photographs and the game terrain."
+    },
+    {
+      "site": "厦门大桥",
+      "centerlines": ["https://www.openstreetmap.org/way/179408288", "https://www.openstreetmap.org/way/346692349"],
+      "mainSpans": "https://www.fheb.cn/html/special/2023/0522/178.html",
+      "sixLaneUpgrade": "https://jtyst.fujian.gov.cn/zwgk/jtyw/gzdt/202112/t20211222_5798427.htm",
+      "photo": "https://www.fjdaily.com/app/content/2021-12/19/content_1254099.html",
+      "inscription": {
+        "calligrapher": "江泽民",
+        "openingArchive": "https://www.rmrb.zhouenlai.info/人民日报（1946-2003）/1991/12/1991-12-20.htm",
+        "bridgeheadParkAndReliefPhoto": "https://www.fjdaily.com/app/content/2023-01/31/content_1758060.html",
+        "frontPhoto": "https://www.china-qiao.com/ql19/xmql/pic_xm/xmql001_02.jpg",
+        "reconstruction": "The gilded raised brush lettering and pink granite follow the Gaoqi bridgehead park photographs. The exact position in the park, proportions and relief depth are estimated."
+      },
+      "reconstruction": "The model uses paired rectangular piers for the 46 divisions of the 45 m continuous box girder, a central joint, and the current six-lane deck. The start station of the span grid, elevations, ramp transitions and lighting are estimated."
+    },
+    {
+      "site": "高集海堤（厦门海堤高崎至集美段）",
+      "centerlines": ["https://www.openstreetmap.org/way/723182913", "https://www.openstreetmap.org/way/1146408929", "https://www.openstreetmap.org/way/627497902", "https://www.openstreetmap.org/way/521564651"],
+      "openingsAndPhoto": "https://www.xinhuanet.com/20240223/8aa5b086923247038aecb20e18e739ad/c.html",
+      "currentTraffic": "https://xm.fjsen.com/wap/2026-09/03/content_32246343.htm",
+      "stationPlan": "https://www.openstreetmap.org/way/1548794478",
+      "stationPhoto": "https://commons.wikimedia.org/wiki/File:Exterior,_Jimei_School_Village_Station,_Xiamen_Metro_20230624-01.jpg",
+      "inscription": {
+        "calligrapher": "朱德",
+        "text": "移山填海",
+        "history": "https://data.fjdsfzw.org.cn/upload/Annals/2011/交通志/epub/ops/30.htm",
+        "monumentLocation": "https://www.openstreetmap.org/node/8413487013",
+        "monumentPhoto": "https://commons.wikimedia.org/wiki/File:Monument_of_Xiamen_Causeway1.jpg",
+        "monumentPhotoAuthor": "大禾花",
+        "licence": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reconstruction": "The gaoji brush outlines in src/north-inscription-strokes.json adapt 大禾花’s photo under CC BY-SA 4.0 through perspective correction and vector tracing. The front title and signature are modeled at the mapped Gaoqi memorial. The orientation, stair and stone profiles are estimated from photographs."
+      },
+      "reconstruction": "The Gaoqi and Jimei openings are modeled at 850 m and 210 m along the causeway. The remaining stone-faced embankment, two road lanes, cycling path and separate Metro Line 1 viaduct follow the mapped arrangement. Exact gap edges, slopes, deck levels, rail vehicles and lamps are estimated."
+    },
+    {
+      "site": "演武大桥与观景平台",
+      "owner": "https://www.xmlq.com.cn/About/detail/13261",
+      "engineering": "https://ptmc.tongji.edu.cn/yyljs/article/pdf/200401006",
+      "map": ["https://www.openstreetmap.org/way/1551188286", "https://www.openstreetmap.org/way/1551188281", "https://www.openstreetmap.org/way/177861882", "https://www.openstreetmap.org/way/177861933", "https://www.openstreetmap.org/way/1329802045", "https://www.openstreetmap.org/way/1329802046", "https://www.openstreetmap.org/way/488970153", "https://www.openstreetmap.org/way/488970155", "https://www.openstreetmap.org/way/1178645233"],
+      "imagery": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+      "earlyAerial": "https://www.chinanews.com/tp/hd2011/2017/04-07/730980.shtml",
+      "provincialContext": "https://www.fujian.gov.cn/zwgk/ztzl/sxzygwzxsgzx/sdjj/wvjj/202311/t20231102_6289352.htm",
+      "starPassage2022": "https://news.xmnn.cn/xmxw/202211/t20221113_49416.html",
+      "reviewed2026": ["https://www.wenweipo.com/s/202608/30/AP6a933c4de4b0c1e50026bef4.html", "https://cta.org.cn/html/a/cont/19151", "https://xm.fjsen.com/2026-08/12/content_32234277.htm", "https://xmbaicheng.com/News/list/13121/1"],
+      "repairApproval2026": "https://news.xmnn.cn/xmxw/202606/t20260630_437175.html",
+      "reconstruction": "OpenStreetMap geometry was extracted on 2026-11-25 and checked against Esri World Imagery, whose local capture date was unverified. The April 2017 aerial publication records the original crescent geometry. The November 2022 report records the completed Starlight Coast and twelve No. 2 entrance portals. August 2026 coverage confirms the three entrances and Starlight Coast's continued use. The image capture dates in the August coverage are unstated. The October 2026 maintenance report and June repair approval do not establish completed visible changes to the bridge. The mesh includes the 26 m through deck, 1.6 m fish-belly beam profile, oval piers, Chenggong and Yanwu interchange ramps, the Baicheng landings, and the three lookout accesses. Grades, pier locations and spacing, rail profiles, local paving, the placement and dimensions of the portals, night lighting, and minor landside paths are estimated."
+    },
+    {
+      "site": "世茂海峡双子塔",
+      "architect": "https://www.gensler.com/projects/xiamen-shimao-straits-tower",
+      "owner": "https://www.shimaogroup.com/smlist/wap_view.php?aid=254"
+    },
+    {
+      "site": "八卦楼",
+      "heritage": "https://whc.unesco.org/en/documents/158224/",
+      "photo": "https://www.fjdaily.com/app/content/2023-05/06/content_1872600.html",
+      "restorationReopened20240206": "https://www.fjdaily.com/app/content/2024-02/06/content_2343957.html",
+      "shutters": "https://www.fjdaily.com/app/content/2024-02/03/content_2337014.html",
+      "skylinePhoto20260822": "https://i.ifeng.com/c/8xfKCzsb6x2"
+    },
+    {
+      "site": "黄荣远堂 · 中国唱片博物馆",
+      "heritagePhoto2010": "https://whc.unesco.org/en/documents/158225/",
+      "frontPhoto20250209": "https://commons.wikimedia.org/wiki/File:鼓浪屿黄荣远堂.jpg",
+      "useReported20260710": "https://www.fujian.gov.cn/zwgk/ztzl/sxzygwzxsgzx/flsxkmh/202607/t20260710_7176227.htm",
+      "plan": ["https://www.openstreetmap.org/way/642493152", "https://www.openstreetmap.org/way/1243692709"],
+      "reconstruction": "Mapped main footprint. Estimated elevations, stucco colours, courtyard edge, planting and unfaced sides."
+    },
+    {
+      "site": "鼓浪屿 · 三丘田、钢琴及内厝澳码头",
+      "operatorPhotos": ["https://www.xmferry.com/xwzx/chbfc/mtfc/22266.htm", "https://www.xmferry.com/xwzx/chbfc/mtfc/22263.htm", "https://www.xmferry.com/xwzx/chbfc/mtfc/22269.htm"],
+      "rebuiltNorthBerth": "https://www.governbond.org.cn/uploadFiles/3502/attachFiles/202308/bfbdcf95-e41d-4bfa-a22d-8646b1632790.pdf",
+      "maps": ["https://www.openstreetmap.org/way/718086997", "https://www.openstreetmap.org/way/732161909", "https://www.openstreetmap.org/way/1010019541"],
+      "reconstruction": "Berth placement and access bridges follow the maps and operator images. The rebuilt Sanqiutian pontoon is modeled at 90 by 15 metres with five covered passenger bridges. Roof curves, signage, finishes, deck equipment and moored vessels are scenic interpretations."
+    },
+    {
+      "site": "鼓浪屿 · 三一堂、天主堂、海天堂构与美国领事馆旧址",
+      "heritagePhotos": ["https://whc.unesco.org/en/documents/158200/", "https://whc.unesco.org/en/documents/158243/", "https://whc.unesco.org/en/documents/158191/"],
+      "heritagePlans": "https://whc.unesco.org/document/155717",
+      "reconstruction": "The mapped building plans and heritage photographs guide the massing. Heights without a recorded elevation, facades, courtyards, windows and night lighting are reconstructed."
+    },
+    {
+      "site": "皓月园 · 覆鼎岩与郑成功像",
+      "map": "https://www.openstreetmap.org/node/1762860406",
+      "statuePhoto": "https://commons.wikimedia.org/wiki/File:Zheng_Chenggong.JPG",
+      "heights": "https://rdnet.taichung.gov.tw/media/796485/%E6%BE%B3%E9%96%80-%E5%BB%88%E9%96%80%E8%80%83%E5%AF%9F%E5%8F%8A%E8%A7%80%E6%91%A9%E5%9C%B0%E6%96%B9%E5%BB%BA%E8%A8%AD%E5%A0%B1%E5%91%8A.pdf",
+      "reconstruction": "The original modeled sculpture is 15.7 m high on a 29.5 m rock. Facial details, folds, viewing terrace and stairs are reconstructed for the game."
+    },
+    {
+      "site": "日光岩",
+      "rockAndLookout": ["https://www.openstreetmap.org/way/905748511", "https://www.openstreetmap.org/way/1526504622", "https://www.openstreetmap.org/way/1526504626"],
+      "eastCliffAndTemple": ["https://www.openstreetmap.org/node/13912926581", "https://www.openstreetmap.org/way/1526504646"],
+      "summitPhotos": ["https://commons.wikimedia.org/wiki/File:Sunlight_Rock_2.jpg", "https://commons.wikimedia.org/wiki/File:日光岩顶峰和山下的鼓浪屿与思明区_7.jpg", "https://commons.wikimedia.org/wiki/File:Sunlight_Rock_(20170120131114).jpg", "https://commons.wikimedia.org/wiki/File:Gulangyu_sunlight_rock_2011_12.jpg"],
+      "ridgeWalkAndViewpoints": ["https://www.openstreetmap.org/way/1526504630", "https://www.openstreetmap.org/way/1526504631", "https://www.openstreetmap.org/way/1526504632", "https://www.openstreetmap.org/way/1526504633", "https://www.openstreetmap.org/node/1762860266", "https://www.openstreetmap.org/node/13912926516"],
+      "surfaceDetail": "Rock Boulder Dry by Dimitrios Savva and Rico Cilliers, Poly Haven (CC0). The luminance and OpenGL normal XY channels are packed locally and projected onto the modeled rocks. https://polyhaven.com/a/rock_boulder_dry",
+      "eastCliffPhoto": "https://commons.wikimedia.org/wiki/File:鼓浪屿日光岩摩崖石刻.JPG",
+      "templePhotos": ["https://commons.wikimedia.org/wiki/File:Sunlight_Rock_Temple_1.jpg", "https://commons.wikimedia.org/wiki/File:Sunlight_Rock_Temple_2.jpg"],
+      "summitElevation": "https://report.ndc.gov.tw/ReportFront/PageSystem/reportFileDownload/C09902555/001",
+      "reconstruction": "The summit is modeled at 92.7 m. Mapped rock outlines, paths, viewpoints and temple footprints guide the layout. The boulder profiles, intermediate platform elevations, railings, masonry, vegetation and night lighting are approximated from photographs for the game. The inscriptions use newly typeset glyphs arranged after the east cliff photograph."
+    },
+    {
+      "site": "菽庄花园",
+      "heritage": "https://mzj.sh.gov.cn/lnb-lyxx/20260616/19ddd401ff844b559dab2365524d0b35.html",
+      "westGatePhoto20231022": "https://commons.wikimedia.org/wiki/File:20231022_Shuzhuang_Huayuan.jpg",
+      "shorePlan": ["https://www.openstreetmap.org/way/1526657613","https://www.openstreetmap.org/way/1243692687","https://www.openstreetmap.org/way/1526657604"],
+      "reconstruction": "Retaining wall follows the mapped line and is tied to the terrain. Bridge spans, deck levels, roofs, rock fissures and individual masonry courses are modeled estimates."
+    },
+    {
+      "site": "南普陀寺 · 殿堂、万寿塔与放生池",
+      "architecture": "https://xm.fjdsfzw.org.cn/2023-09-02/content_139384.html",
+      "map": "https://www.openstreetmap.org/#map=18/24.4437/118.0921"
+    },
+    {
+      "site": "厦门大学思明校区 · 建南、群贤、嘉庚楼群、芙蓉湖与白城校门",
+      "campusMap": "https://admissions.xmu.edu.cn/cn/info/1013/2642.htm",
+      "roadPlan": "https://baowei.xmu.edu.cn/info/1011/1107.htm",
+      "architecture": "https://archt.xmu.edu.cn/info/1013/11543.htm",
+      "jiannanAnd2016Restoration": "https://news.xmu.edu.cn/info/1771/473241.htm",
+      "qunxian": "https://archt.xmu.edu.cn/info/1013/11863.htm",
+      "jiagengAnd2001Opening": "https://jjc.xmu.edu.cn/info/1018/53811.htm",
+      "baichengGatePhoto20260203": "https://commons.wikimedia.org/wiki/File:厦门大学白城校门.jpg",
+      "yanwu2017Completion": "https://tyjxb.xmu.edu.cn/info/1050/1512.htm",
+      "yanwuAndSongenPhoto20260906": "https://news.xmu.edu.cn/info/1002/533682.htm",
+      "shangxian202611CompetitionProgramme": "https://tyjxb.xmu.edu.cn/info/1029/16198.htm",
+      "studentServicesConstruction20261024": "https://jjc.xmu.edu.cn/info/1020/56611.htm",
+      "campusFootprint": "https://www.openstreetmap.org/way/154986493",
+      "furongLake": "https://www.openstreetmap.org/relation/2372185",
+      "coverage": "OSM checked on 2026-11-25. Campus roads, named building groups and shorelines were compared against official plans and World Imagery. Acquisition date of the imagery mosaic is unverified. The 2026 student-services construction report confirms a work in progress; its precise site and completed facade are unverified.",
+      "estimates": "Heights (including the roughly 90 m in-game Song’en tower), wing and roof dimensions, stairs, gate opening and positions of vegetation and furniture are reconstructed. The sports surfaces use approximate levels and lane dimensions. Other campus areas use the general building and terrain data. The arcade and gate are exterior models."
+    },
+    {
+      "site": "白鹭洲公园 · 白鹭女神",
+      "sculptorInterview": "https://www.fjdaily.com/app/content/2022-03/15/content_1358031.html",
+      "parkBoundary": "https://www.openstreetmap.org/relation/17975677"
+    },
+    {
+      "site": "中山路 · 骑楼与鹭江宾馆",
+      "archive": "https://xm.fjdsfzw.org.cn/2024-12-27/content_152978.html",
+      "hotelFootprint": "https://www.openstreetmap.org/way/484696392"
+    },
+    {
+      "site": "厦门轮渡码头",
+      "operator": "https://www.xmferry.com/mtjjt/shmldmt/mtjj/index.htm",
+      "terminalPhoto": "https://www.xmferry.com/xwzx/chbfc/mtfc/22251.htm",
+      "terminalFootprint": "https://www.openstreetmap.org/way/732161916"
+    },
+    {
+      "site": "鹭江道 · 海滨公园与旧海关钟楼",
+      "archiveAndPhotos": "https://xm.fjdsfzw.org.cn/2024-11-13/content_152911.html",
+      "customsFootprint": "https://www.openstreetmap.org/way/1035586789",
+      "parkBoundary": "https://www.openstreetmap.org/way/539949217"
+    },
+    {
+      "site": "湖滨北路 · 厦门广播电视中心与体育中心体育场",
+      "westFacadeAndDishes": "https://commons.wikimedia.org/wiki/File:Xiamen_Media_Group_headquarters.jpg",
+      "entrancePhoto": "https://www.qibenlaw.cn/index.php?c=show&id=120",
+      "towerReconstruction": "The lake-facing mullions, stepped plinth, seven-column east elevation and rooftop openings were modeled from the linked photographs and mapped frontage. Setbacks, rear roof heights, rear windows and sash positions are estimates.",
+      "buildingFootprint": "https://www.openstreetmap.org/way/539711834",
+      "stadiumFootprint": "https://www.openstreetmap.org/way/165644302",
+      "busStopLocations": ["https://www.openstreetmap.org/node/4363184472", "https://www.openstreetmap.org/node/4812729671"],
+      "telecomExterior": "https://fj.sina.com.cn/news/b/2020-05-01/detail-iirczymi9376852.shtml",
+      "telecomShop": "https://www.xmnn.cn/xxpd/xxlb/202512/t20251205_381698.html",
+      "mobileProduction": "https://comm.xmu.edu.cn/info/2221/63592.htm",
+      "curtainWall": "hubin-reflection.webp is an original six-layer day/night panoramic reconstruction generated from the local terrain, mapped city footprints, park trees and lake outlines using tools/prepare-hubin.py. The transparent sky is supplied by the live atmosphere. The two bus shelters, grounds and lighting are artistic reconstructions.",
+      "stadiumScoreboard": "https://tyj.fj.gov.cn/ztzl/mcll/bmls/202604/t20260415_7124924.htm"
+    },
+    {
+      "site": "厦门站 · 南北站房、广场与铁路站场",
+      "buildingFootprint": "https://www.openstreetmap.org/way/164551392",
+      "stationHistory": "https://m.thepaper.cn/newsDetail_forward_3636591",
+      "southFacadePhoto": "https://commons.wikimedia.org/wiki/File:New_Xiamen_Railway_Station_South_Square.jpg",
+      "northFacadePhoto": "https://commons.wikimedia.org/wiki/File:Northern_square_of_Xiamen_Railway_Station_20260805.jpg",
+      "platformPhoto": "https://commons.wikimedia.org/wiki/File:New_Xiamen_Railway_Station_Platforms.jpg"
+    },
+    {
+      "site": "梧村街区 · 厦禾路、站南路、商场与快速公交",
+      "stationRoads": "https://fjnews.fjsen.com/node_160285_2.htm",
+      "brtAlignment": "https://www.openstreetmap.org/way/178136080",
+      "brtPhoto": "https://commons.wikimedia.org/wiki/File:Xiamen-BRT-Railway_station..JPG",
+      "yuyueOwner": "https://www.yuzhou-group.com/industry.aspx?id=336&type=21",
+      "robinsonFootprint": "https://www.openstreetmap.org/way/1336352386",
+      "busYardFootprint": "https://www.openstreetmap.org/way/1460191177",
+      "schoolFootprint": "https://www.openstreetmap.org/way/1362815611"
+    },
+    {
+      "site": "厦门国际会议展览中心 · 主馆、展厅与滨海廊台",
+      "operatorAerial": "https://www.xicec.com/venueIntroduction/xicec",
+      "mainHallFootprint": "https://www.openstreetmap.org/way/326732173",
+      "northAndSouthHalls": ["https://www.openstreetmap.org/way/286527185", "https://www.openstreetmap.org/way/326732174"],
+      "seafrontFootprint": "https://www.openstreetmap.org/way/326732172"
+    },
+    {
+      "site": "厦门海峡大剧院",
+      "footprint": "https://www.openstreetmap.org/way/1130611208",
+      "construction": "https://zjt.fujian.gov.cn/ztzl/fjsjzygzlfzzl/dbxmzs/202410/P020241008402042578869.pdf",
+      "exteriorLighting": "https://www.tonslight.com/ec99/rwd1762/artnculture.asp?newsno=14"
+    },
+    {
+      "site": "厦门文化艺术中心 · 图书馆、博物馆、科技馆与文化馆",
+      "footprints": [
+        "https://www.openstreetmap.org/way/168406236",
+        "https://www.openstreetmap.org/way/168406230",
+        "https://www.openstreetmap.org/way/168406228",
+        "https://www.openstreetmap.org/way/539711821"
+      ],
+      "conversion": "https://reliance.com.cn/cases_show.asp?id=36",
+      "museumEntrance": "https://www.fj.gov.cn/english/cultureandtravel/attractions/202503/t20250311_6777625.htm"
+    },
+    {
+      "site": "东渡客运码头 · 候船楼、浮码头与廊桥",
+      "operator": "https://m.xmferry.com/mtjjt/xgmt/21796.htm",
+      "architecture": "https://ukbusinessinchina.com/sites/default/files/companyPdf/2020/09/06/23245d84e2a006cf72e7a0326875465f.pdf",
+      "footprint": "https://www.openstreetmap.org/way/160424437",
+      "pontoons": [
+        "https://www.openstreetmap.org/way/128680498",
+        "https://www.openstreetmap.org/way/128680506",
+        "https://www.openstreetmap.org/way/128680486",
+        "https://www.openstreetmap.org/way/128680501"
+      ]
+    },
+    {
+      "site": "狐尾山气象台 · 海上明珠观光塔与球幕影院",
+      "contractor": "https://www.jsti.com/news/newsinfo/2867.html",
+      "towerElevation": "https://fj.people.com.cn/n2/2022/0214/c181466-35133309.html",
+      "footprints": [
+        "https://www.openstreetmap.org/way/274468380",
+        "https://www.openstreetmap.org/way/274468382",
+        "https://www.openstreetmap.org/way/274468379"
+      ],
+      "reconstruction": "The tower profile, upper radome and dome cinema follow photographs. The mount is fitted to the game's terrain so the tower crest reaches the published approximate elevation."
+    },
+    {
+      "site": "厦门市政府与人民会堂",
+      "governmentFront": "https://commons.wikimedia.org/wiki/File:City_Hall_of_Xiamen_City.jpg",
+      "assemblyHallFront": "https://www.huitu.com/photo/show/20210803/081123912020.html",
+      "footprints": [
+        "https://www.openstreetmap.org/way/160424443",
+        "https://www.openstreetmap.org/way/544546692",
+        "https://www.openstreetmap.org/way/544546694"
+      ]
+    },
+    {
+      "site": "厦门体育中心 · 综合健身馆",
+      "operator": "https://www.xmtycyjt.com/industrychangguan.html",
+      "footprint": "https://www.openstreetmap.org/way/1347536889",
+      "reconstruction": "The twin roofs and central terrace are estimated from aerial and ground photographs."
+    },
+    {
+      "site": "厦门万象城 · 商场、双塔与跨街连廊",
+      "phaseOneDesign": "https://www.credaward.com/project/179306/",
+      "officeTowerHeights": "https://cominchina.org/nd.jsp?id=433",
+      "phaseTwoDesign": "https://elandscript.com/portfolio/Xiamen",
+      "bridgeOpening": "https://news.xmnn.cn/bwkb/202605/t20260530_431558.html",
+      "datedEvidence": [
+        { "date": "2026-05-29", "event": "二期与两期连廊启用", "coverage": "湖滨南路北侧商业体、两期连通。开业报道确认总长94.4米。", "source": "https://fdi.swt.fujian.gov.cn/show-30504.html" },
+        { "date": "2026-05-29", "event": "开业活动", "coverage": "开业现场公开报道所见的红色立面、沿街退让与三层连廊。", "source": "https://www.sohu.com/a/1032235185_119216" },
+        { "date": "2026-06-11", "event": "承建单位文章确认此前已竣工验收及投用", "coverage": "56米主跨、张弦梁。文章未给出具体验收日。", "source": "https://www.zqbao.com.cn/news/16268.html" }
+      ],
+      "bridgeFloor": "https://dzb.sunnews.cn/m/html/2026-01/22/content_836974.htm?div=-1",
+      "phaseTwoCladding": "https://www.winsom.com.cn/newsdetail_12093_42_42.html",
+      "footprints": [
+        "https://www.openstreetmap.org/way/1037865385",
+        "https://www.openstreetmap.org/way/1037865386",
+        "https://www.openstreetmap.org/way/1037900579",
+        "https://www.openstreetmap.org/way/1037900580"
+      ],
+      "reconstruction": "保留一期地图占地、办公双塔和主屋顶花园。二期重描沿路裙楼轮廓、陶红竖片、屋顶平台与商业基座上的三座塔楼，并按开业照片修正东侧加油站低棚。连廊以56米主跨和94.4米总长对齐两处三层落点。二期边界、拐点坐标、塔高和屋顶细部为影像估算。航片原始拍摄日未标注。"
+    },
+    {
+      "site": "南湖公园 · 桃花岛、湖亭与后埭溪步桥",
+      "parkBoundary": "https://www.openstreetmap.org/way/431429156",
+      "creek": "https://www.openstreetmap.org/way/788081755",
+      "creekBridge": "https://www.fjdaily.com/app/content/2026-03/23/content_3981217.html",
+      "mappedCrossing": "https://www.openstreetmap.org/way/835755732",
+      "datedEvidence": [
+        { "date": "2025-08-01", "event": "截至报道日，桥梁已完工验收", "coverage": "20米长、3.4米宽，钢构、弧形铝板和竹木面。验收具体日与报道照片的拍摄日未注明。", "source": "https://news.xmnn.cn/xmxw/202508/t20250801_357097.html" },
+        { "date": "2026-03-21", "event": "截至报道日，东西园连通通道已投用", "coverage": "可通行的桥、东西两翼及与环湖步道的连接。实际投用日和照片的拍摄日未注明。", "source": "https://finance.sina.com.cn/wm/2026-03-21/doc-inhrtymv5894735.shtml" }
+      ],
+      "reconstruction": "保留桃花岛、湖亭和原有石桥。新钢桥用地图交叉位置及两岸边缘估算落点，补桥台、弧形铝板、竹木桥面和接入湖光路北侧的两翼园径。引道曲线、桥台细部和临路铺装按照片、底图估算。"
+    },
+    {
+      "site": "莲坂国贸大厦 · 主塔、沿街裙楼与屋顶钢桁架",
+      "operator": "https://www.itgservice.com.cn/project_detail.aspx?projectid=31",
+      "developerHistory": "https://www.itgreal.com.cn/news/detail/22865",
+      "footprint": "https://www.openstreetmap.org/way/653053985",
+      "heightReference": "https://feilno.com/nd.jsp?fromColId=102&id=304",
+      "facadePhoto": "https://www.sohu.com/a/833058248_120823584",
+      "imagery": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+      "reconstruction": "The OSM tower footprint and reported 168 m overall height set the model. The attached podium perimeter, arched glazing, roof levels and truss member layout are estimates from street photographs and oblique aerial imagery. The reserve replaces only city records coincident with the tower and its attached podium."
+    },
+    {
+      "site": "厦门 SM 城市广场 · 一至四期、嘉禾路天桥与 CHAO BLOCK",
+      "phaseOne": "https://www.smsupermalls.cn/city/about.aspx?cid=1",
+      "phaseTwo": "https://www.smsupermalls.cn/city/about.aspx?cid=2",
+      "laterPhases": ["https://www.smsupermalls.cn/city/about.aspx?cid=10", "https://www.smsupermalls.cn/city/about.aspx?cid=12"],
+      "bridge": "https://www.smsupermalls.cn/newsdisp.aspx?aid=9123",
+      "phaseTwoMap": "https://www.openstreetmap.org/way/129111266",
+      "datedEvidence": [
+        { "date": "2013-09-26", "event": "一二期天桥向公众开放", "coverage": "94米长度、白色钢架与封闭玻璃。", "source": "https://www.smsupermalls.cn/newsdisp.aspx?aid=9123" },
+        { "date": "2022-12-18", "event": "三期商场开业", "coverage": "嘉禾路401号三期商业体，地上四层。", "source": "https://www.smsupermalls.cn/city/about.aspx?cid=10" },
+        { "date": "2024-09-06", "event": "四期A、B地块竣工", "coverage": "A地块旺街地下商业和地面停车场，B地块三栋办公塔楼及商业裙楼。", "source": "https://www.smsupermalls.cn/newsdisp.aspx?aid=14495" },
+        { "date": "2026-06-01", "event": "三期voco酒店开业", "coverage": "已建三期商场上方的条形酒店。", "source": "https://www.smsupermalls.cn/newsdisp.aspx?aid=15062" },
+        { "date": "2026-09-25", "event": "四期CHAO BLOCK首开", "coverage": "首开逾1.94万平方米，邻接一期。其余约1.3万平方米仍在建。", "source": "https://www.smsupermalls.cn/newsdisp.aspx?aid=15138" },
+        { "date": "2026-11-13", "event": "设计方发布首开区实景与图纸", "coverage": "南入口、蓝色连桥、二层内街及其与一期的关系。照片未注明拍摄日。", "source": "https://www.gooood.cn/sm-xiamen-chao-block-by-dyml.htm" }
+      ],
+      "reconstruction": "一期与二期按底图和94米天桥制作。三期商场、voco酒店及一三期天桥依测绘轮廓与实景补齐。四期建模覆盖A地块地面前场、B地块三塔及CHAO BLOCK首开区。北侧4C按在建用地表达，当前施工体量缺乏定年实测。塔高、屋顶机房、桥标高和蓝色桥的落点为影像估算。底图航片未注明原始拍摄日。"
+    },
+    {
+      "site": "中华城 · 思明南路、圆角骑楼与台光街",
+      "streetHistory": "https://xm.fjdsfzw.org.cn/2025-01-26/content_154710.html",
+      "mallMap": "https://www.openstreetmap.org/node/11478792345",
+      "chapelMap": "https://www.openstreetmap.org/node/12564308258",
+      "chapelArchitecture": "https://minnan.wenlvti.net/details/artifact?id=361",
+      "frontagePhoto": "https://imgbdb4.bendibao.com/xmbdb/tour/202211/30/20221130180632_93244.jpg",
+      "datedEvidence": [
+        { "date": "2025-07-30", "event": "作者标注的南区实拍日", "coverage": "南区室内街和电梯层，航拍外轮廓另以地图及影像定位。", "source": "https://www.youtube.com/watch?v=FNcFbpNTxVA" },
+        { "date": "2026-10-23", "event": "中华城盒马鲜生开门迎客", "coverage": "南区商业开放，11月4日报道进一步确认地下B1焕新。", "source": "https://xm.fjsen.com/2026-10/24/content_32272536.htm" }
+      ],
+      "basementRenewal": "https://dzb.sunnews.cn/html/2026-11/04/content_842900.htm?div=-1",
+      "reconstruction": "南北商业体、圆角骑楼、分段屋面和台光街新街堂参照测绘、地面照片及航片。近期运营资料覆盖地下B1。外观航片原始拍摄日未注明，屋面高度、内街局部尺寸和装饰细节为影像估算。"
+    },
+    {
+      "site": "东渡海上世界 · 沿岸商业与潮汐之眼",
+      "currentSite": "https://swt.fujian.gov.cn/xxgk/jgzn/jgcs/zmsyq/zmzhc_tpxw/202607/t20260706_7172587.htm",
+      "wheelConstruction": "https://www.fjdaily.com/app/content/2022-05/28/content_1462097.html",
+      "wheelManufacturer": "https://cdn.asp.events/CLIENT_DMG_Even_3A648F5C_9502_5004_99E8F7AED794D022/sites/SEA-2023-Arabic/media/libraries/brochures/3780-JUMA-Brochure%E5%AE%A3%E4%BC%A0%E5%9B%BE%E5%86%8C%EF%BC%88%E5%B0%8F%E5%9B%BE%E5%86%8C%EF%BC%8923%E5%B9%B4%E7%89%88.pdf",
+      "aerialPhoto": "https://www.fujian.gov.cn/zwgk/ztzl/sxzygwzxsgzx/flsxkmh/202302/W020230223367148857787.jpg",
+      "footprints": ["https://www.openstreetmap.org/way/1133116707", "https://www.openstreetmap.org/way/1498777416", "https://www.openstreetmap.org/way/1498777417"],
+      "datedEvidence": [
+        { "date": "2026-07-06", "event": "截至福建省商务厅现场介绍发布", "coverage": "潮汐之眼、屋顶卡丁车、观景平台及滨水商业。该文没有标注影像原始拍摄日。", "source": "https://swt.fujian.gov.cn/xxgk/jgzn/jgcs/zmsyq/zmzhc_tpxw/202607/t20260706_7172587.htm" },
+        { "date": "2026-09-11", "event": "中秋旅游嘉年华启幕现场", "coverage": "海上世界为开幕场地，潮汐之眼列入现场活动体验。", "source": "https://www.thepaper.cn/newsDetail_forward_34056923" },
+        { "date": "2026-10-01", "event": "中秋旅游嘉年华奇妙夜市集启幕", "coverage": "见现场报道所述的三楼滨海平台；摩天轮日常开放时段未核实。", "source": "https://www.hxnews.com/news/fj/mn/xm/202610/02/2272639.shtml" }
+      ],
+      "reconstruction": "沿岸建筑依地图轮廓定位，轮体62米、球形轿厢32个按厂家资料制作。轮盘方位、支架尺寸、屋顶装置和分段露台按照片估算。底图航片未注明原始拍摄日。"
+    }
+  ],
+  "clouds": "cloud-shape.rg8 and cloud-weather.webp are original seamless procedural noise and weather fields. Cloud forms, sunlight shafts and projected cloud shadows are computed in real time."
+}

@@ -1,0 +1,15 @@
+{
+  "viewport": [
+    1800,
+    974
+  ],
+  "drawingBuffer": [
+    1620,
+    876
+  ],
+  "pixelRatio": 0.9,
+  "lineNodes": 17,
+  "samples": 273,
+  "medianMs": 33.6,
+  "p95Ms": 43.5
+}

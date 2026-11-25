@@ -1,0 +1,15 @@
+{
+  "free": {
+    "count": 160,
+    "actualWindowSeconds": 40.05,
+    "horizontalTraceMetres": 13086.4,
+    "largestIntervalMovementMetres": 139.6
+  },
+  "normalLightAircraft": {
+    "count": 240,
+    "actualWindowSeconds": 50.77,
+    "horizontalTraceMetres": 2501.1,
+    "largestIntervalMovementMetres": 13.4
+  },
+  "largestCheckpointDeviationMetres": 41.8
+}

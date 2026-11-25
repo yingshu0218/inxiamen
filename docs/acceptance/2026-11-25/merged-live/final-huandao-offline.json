@@ -1,0 +1,145 @@
+{
+  "carriageways": 12,
+  "meanDirectionKm": 19.7,
+  "roadEnds": [
+    "-2803,4966.5",
+    "-2848.2,4968",
+    "5197.3,-6660.3",
+    "5190.7,-6646"
+  ],
+  "beachPolygons": 8,
+  "flightKm": 21.48,
+  "elapsedSeconds": 407,
+  "minimumClearanceM": 122,
+  "assists": 0,
+  "views": [
+    {
+      "id": "huandao-overview",
+      "clearanceM": 718
+    },
+    {
+      "id": "baicheng-beach",
+      "clearanceM": 75
+    },
+    {
+      "id": "huli-revetment",
+      "clearanceM": 88
+    },
+    {
+      "id": "zengcuoan-fish",
+      "clearanceM": 62
+    },
+    {
+      "id": "huangcuo-wave",
+      "clearanceM": 112
+    },
+    {
+      "id": "yefeng-beach",
+      "clearanceM": 138
+    },
+    {
+      "id": "huandao-exhibition",
+      "clearanceM": 275
+    },
+    {
+      "id": "guanyin-coast",
+      "clearanceM": 231
+    },
+    {
+      "id": "huandao-wutong",
+      "clearanceM": 339
+    },
+    {
+      "id": "huandao-wuyuan",
+      "clearanceM": 189
+    }
+  ],
+  "meshes": [
+    {
+      "name": "黄厝 · 海浪平台对岸字牌",
+      "vertices": 4
+    },
+    {
+      "name": "环岛南路、环岛东路 · 分幅机动车道",
+      "vertices": 52965
+    },
+    {
+      "name": "白城至五缘湾 · 滨海步道与骑行线",
+      "vertices": 33644
+    },
+    {
+      "name": "环岛路沿线天桥、海浪平台、观音山施工段与五通岸墙",
+      "vertices": 28248
+    }
+  ],
+  "north": {
+    "seams": [
+      {
+        "center": [
+          5190,
+          -6646
+        ],
+        "sourceSnapM": 0.7,
+        "sampledJointStepM": 0.028
+      },
+      {
+        "center": [
+          5197,
+          -6660
+        ],
+        "sourceSnapM": 0.424,
+        "sampledJointStepM": 0.026
+      }
+    ],
+    "underpasses": [
+      {
+        "name": "机动车掉头",
+        "at": [
+          5111.113,
+          -6686.173
+        ],
+        "soffitClearanceM": 3.493
+      },
+      {
+        "name": "步行骑行折返",
+        "at": [
+          5026.128,
+          -6725.673
+        ],
+        "soffitClearanceM": 3.248
+      },
+      {
+        "name": "机动车掉头",
+        "at": [
+          5116.878,
+          -6699.133
+        ],
+        "soffitClearanceM": 4.062
+      },
+      {
+        "name": "步行骑行折返",
+        "at": [
+          5031.791,
+          -6738.404
+        ],
+        "soffitClearanceM": 3.405
+      }
+    ],
+    "mupuUnderdeckM": [
+      5.994,
+      5.762,
+      6.342,
+      5.497
+    ],
+    "frontageJoinGapsM": [
+      0,
+      0
+    ],
+    "frontageKm": 5.685,
+    "parkWalkM": 2311.462,
+    "parkBranchM": 306.611,
+    "quayWalkSamples": 154,
+    "roadTerrainSamples": 1751,
+    "minimumRoadSkinM": 0.113
+  }
+}

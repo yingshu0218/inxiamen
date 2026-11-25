@@ -1,0 +1,43 @@
+{
+  "source": "Current shared front yard geometry and served dist street data. Neighbor rings from identified independent previous footage and asset decoding.",
+  "buildings": [
+    {
+      "center": [
+        -1452.984375,
+        -6663.09375
+      ],
+      "courtIntersects": false,
+      "driveIntersects": false,
+      "courtSeparationMetres": 15.154
+    },
+    {
+      "center": [
+        -1484.25,
+        -6711.125
+      ],
+      "courtIntersects": false,
+      "driveIntersects": false,
+      "courtSeparationMetres": 1.5
+    }
+  ],
+  "remainingParkingPositions": 14,
+  "parkingPositionAndLineCornersInCourt": true,
+  "drivewayIntersectsCourt": true,
+  "drivewayStart": [
+    -1467,
+    -6718
+  ],
+  "centerlineConnection": {
+    "distance": 0,
+    "edge": [
+      [
+        -1440,
+        -6681
+      ],
+      [
+        -1467,
+        -6718
+      ]
+    ]
+  }
+}

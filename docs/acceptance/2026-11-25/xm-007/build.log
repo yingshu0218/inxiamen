@@ -1,0 +1,23 @@
+
+> xiamen-by-air@1.0.0 build
+> vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 150 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                           16.70 kB │ gzip:   5.49 kB
+dist/assets/index-lUNLeYXp.css            17.29 kB │ gzip:   5.23 kB
+dist/assets/arrival-terrain-BKXRulY7.js    1.25 kB │ gzip:   0.84 kB
+dist/assets/dreamliner-zJteGdqL.js        48.46 kB │ gzip:  14.74 kB
+dist/assets/index-CuoKdw8C.js            186.38 kB │ gzip:  76.05 kB
+dist/assets/sunlight-layout-D4zc91jV.js  752.70 kB │ gzip: 197.58 kB
+dist/assets/game-COjByyfW.js             821.10 kB │ gzip: 334.15 kB
+
+✓ built in 465ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

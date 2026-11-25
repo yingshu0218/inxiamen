@@ -1,0 +1,5 @@
+{"phase":"厦航 787-9 · 进近着陆","place":"高崎机场","speed":261,"t":0.29333333333333333,"audioContext":"running","playback":"播放 4×","arrived":false}
+{"phase":"厦航 787-9 · 拉平接地","place":"高崎机场","speed":256,"t":8.464,"audioContext":"running","playback":"播放 4×","arrived":false}
+{"phase":"厦航 787-9 · 着陆滑跑","place":"高崎机场","speed":253,"t":9.866666666666667,"audioContext":"running","playback":"播放 4×","arrived":false}
+{"phase":"厦航 787-9 · 机坪滑行","place":"高崎机场滑行道","speed":30,"t":18.032,"audioContext":"running","playback":"播放 4×","arrived":false}
+{"phase":"厦航 787-9 · 已停稳","place":"高崎机场机坪","speed":0,"t":38.944,"audioContext":"running","playback":"播放 4×","arrived":true}

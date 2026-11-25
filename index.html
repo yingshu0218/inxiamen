@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#19302f" />
+    <meta
+      name="description"
+      content="乘厦航波音 787 从云上飞抵高崎，也可以驾驶轻型观光机环游厦门。"
+    />
+    <title>鹭岛飞行 · 日落环岛线</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231b3437'/%3E%3Cpath fill='%23f7e4b8' d='M4 14Q22 19 33 34Q45 23 59 28L48 32Q43 35 40 39Q34 43 22 41L15 46L20 38Q14 36 4 14Z'/%3E%3C/svg%3E"
+    />
+    <link rel="preload" href="/art/xiamen-sunset.webp" as="image" media="(min-aspect-ratio: 4/5)" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main id="game" aria-label="鹭岛飞行">
+      <div id="world"></div>
+      <section id="lobby" aria-label="起飞大厅">
+        <picture>
+          <source media="(max-aspect-ratio: 4/5)" srcset="/art/xiamen-portrait.webp" />
+          <img class="cover-art" src="/art/xiamen-sunset.webp" alt="" fetchpriority="high" />
+        </picture>
+        <div class="cover-shade"></div>
+        <header class="lobby-header">
+          <div class="brand"><span data-icon="tern"></span><span>鹭岛飞行</span></div>
+          <nav class="icon-row" aria-label="游戏设置">
+            <button class="icon-button sound-toggle" type="button" aria-label="声音" title="声音">
+              <span data-icon="sound"></span>
+            </button>
+            <button
+              class="icon-button"
+              type="button"
+              data-open="help"
+              aria-label="操作说明"
+              title="操作说明"
+            >
+              <span data-icon="help"></span>
+            </button>
+          </nav>
+        </header>
+        <div class="flight-title">
+          <h1>日落环岛线</h1>
+          <p>高崎机场 <i>·</i> 黄厝沙滩 <i>·</i> 演武大桥 <i>·</i> 鼓浪屿 <i>·</i> 海沧大桥</p>
+          <div class="depart-actions">
+            <button id="jet-arrival" class="cover-button jet-entry" type="button"><span data-icon="landing"></span>厦航 787 云上进场</button>
+            <button id="depart" class="cover-button" type="button">从高崎起飞</button>
+            <button id="tour" class="cover-button" type="button">空中观光</button>
+            <button id="night-tour" class="night-tour" type="button"><span data-icon="moon"></span>夜航观光</button>
+          </div>
+          <div id="load-status" class="load-status" role="status" aria-live="polite"></div>
+        </div>
+        <button
+          id="lobby-chart"
+          class="mini-chart"
+          type="button"
+          data-open="map"
+          aria-label="查看环岛航线图"
+          title="航线图"
+        >
+          <canvas aria-hidden="true"></canvas>
+        </button>
+      </section>
+
+      <section id="hud" hidden aria-label="飞行仪表和操作">
+        <div class="hud-shade"></div>
+        <button id="summit-marker" hidden type="button" aria-label="近看日光岩">日光岩</button>
+        <div class="flight-header">
+          <div class="flight-location">
+            <span class="flight-wing" data-icon="tern"></span>
+            <div>
+              <div id="location" class="place">高崎机场</div>
+              <div id="phase" class="phase">跑道准备</div>
+              <div id="cabin-track" class="cabin-track" role="status" hidden></div>
+              <button id="enable-cabin-audio" class="cabin-audio" type="button" hidden>
+                <span data-icon="sound"></span>开启客舱声音
+              </button>
+            </div>
+          </div>
+          <canvas id="compass" width="300" height="55" role="img" aria-label="航向"></canvas>
+          <div class="flight-tools">
+            <button
+              id="weather-button"
+              class="weather-button"
+              data-open="environment"
+              title="时间与天气"
+              aria-label="时间与天气"
+            >
+              <span data-icon="sun"></span
+              ><span><strong id="clock">17:00</strong><small id="weather">晴间多云</small></span>
+            </button>
+            <button class="icon-button" data-open="pause" aria-label="暂停飞行" title="暂停飞行（Esc）">
+              <span data-icon="pause"></span>
+            </button>
+          </div>
+          <div id="hint" role="status" aria-live="polite"></div>
+          <div class="instruments">
+            <div><span id="speed-name">空速</span><strong id="speed">0</strong><small>km/h</small></div>
+            <div><span>海拔</span><strong id="alt">16</strong><small>m</small></div>
+            <div class="thrust"><span>油门</span><strong id="throttle">0</strong><small>%</small></div>
+          </div>
+        </div>
+        <div class="flight-dock" aria-label="飞行控制">
+          <button id="autopilot" aria-pressed="false" title="自动驾驶（P）">
+            <span data-icon="pilot"></span><span>自动驾驶</span><kbd>P</kbd>
+          </button>
+          <button id="play-rate" hidden title="切换观光播放速度"><span data-icon="rate"></span><span id="play-rate-label">播放 1×</span></button>
+          <button id="camera" title="切换视角（C）">
+            <span data-icon="camera"></span><span id="camera-name">机外跟拍</span><kbd>C</kbd>
+          </button>
+          <button id="explore" aria-pressed="false" title="自由移动（F）">
+            <span data-icon="explore"></span><span id="explore-label">自由移动</span><kbd>F</kbd>
+          </button>
+          <button id="explore-rate" hidden title="切换自由移动速度">
+            <span data-icon="rate"></span><span id="explore-rate-label">移速 1×</span>
+          </button>
+          <button data-open="map" title="航线图（M）" aria-label="航线图">
+            <span data-icon="map"></span><span>航线图</span>
+          </button>
+          <button id="hide-hud" class="compact" title="隐藏界面（H）" aria-label="隐藏界面">
+            <span data-icon="frame"></span>
+          </button>
+        </div>
+        <button
+          id="hud-chart"
+          class="mini-chart"
+          data-open="map"
+          aria-label="查看当前位置与航线"
+          title="查看航线"
+        >
+          <canvas aria-hidden="true"></canvas>
+        </button>
+        <div class="touch-flight" hidden>
+          <div id="stick" aria-label="方向杆，上下俯仰、左右转弯"><span></span></div>
+          <div class="touch-throttle">
+            <button data-thrust="1" aria-label="加油门">＋</button>
+            <small><span id="touch-axis-name">油门</span><br /><output id="touch-power">0%</output></small>
+            <button data-thrust="-1" aria-label="减油门">−</button>
+            <button id="touch-brake">刹车</button>
+          </div>
+        </div>
+      </section>
+      <button id="show-hud" hidden class="icon-button" title="显示界面（H）" aria-label="显示飞行界面">
+        <span data-icon="frame"></span>
+      </button>
+
+      <dialog id="sheet" aria-labelledby="sheet-title">
+        <div class="sheet-top">
+          <h2 id="sheet-title"></h2>
+          <button id="close-sheet" class="icon-button" aria-label="关闭">
+            <span data-icon="close"></span>
+          </button>
+        </div>
+        <section data-panel="map" hidden>
+          <div id="map-routes" class="choices map-routes" role="group" aria-label="选择航线">
+            <button type="button" data-route="island" aria-pressed="true">日落环岛线</button>
+            <button type="button" data-route="787" aria-pressed="false">厦航 787 进场</button>
+          </div>
+          <canvas
+            id="chart"
+            class="large-chart"
+            role="img"
+            aria-label="厦门岛环岛飞行航线图，向上为北"
+          ></canvas>
+          <p class="sheet-note" id="map-note">选择沿途地点，即可从该段开始飞行。</p>
+          <div id="airport-views" class="choices" role="group" aria-label="高崎机场观景机位"></div>
+          <div id="crossing-views" aria-labelledby="crossing-title">
+            <h3 id="crossing-title" class="map-section-title">北岸桥堤</h3>
+            <div id="crossing-list" class="station-list"></div>
+          </div>
+          <div id="venue-views" aria-labelledby="venue-title">
+            <h3 id="venue-title" class="map-section-title">城市地标</h3>
+            <div id="venue-list" class="station-list"></div>
+          </div>
+          <details id="brt-views">
+            <summary>BRT 沿线站台</summary>
+            <div id="brt-list" class="station-list"></div>
+          </details>
+          <div id="station-list" class="station-list"></div>
+          <div id="arrival-list" class="station-list" hidden></div>
+        </section>
+        <section data-panel="environment" hidden>
+          <div class="field-title">
+            <label for="time-range">岛上时间</label><output id="time-value"></output>
+          </div>
+          <input id="time-range" type="range" min="0" max="1439" step="1" value="1000" />
+          <div class="time-ends">
+            <span>午夜</span><span id="sunset-label">日落</span><span>午夜</span>
+          </div>
+          <div id="light-presets" class="choices light-presets" role="group" aria-label="快速选择时段"></div>
+          <fieldset>
+            <legend>时间流速</legend>
+            <div id="rates" class="choices"></div>
+          </fieldset>
+          <fieldset>
+            <legend>海上天气</legend>
+            <div id="weathers" class="choices"></div>
+          </fieldset>
+          <button data-return class="primary" id="return-from-environment">返回飞行</button>
+        </section>
+        <section data-panel="pause" hidden>
+          <p id="paused-info" class="sheet-note"></p>
+          <button data-return class="primary" id="resume-session">继续飞行</button>
+          <fieldset id="cabin-settings" class="cabin-settings" hidden>
+            <legend>客舱声音</legend>
+            <label class="cabin-selection" for="cabin-music-choice">观景音乐
+              <select id="cabin-music-choice"><option value="auto">跟随航段</option></select>
+            </label>
+            <div class="cabin-speech-row">
+              <label><input id="cabin-speech" type="checkbox" checked> 中英双语播报</label>
+              <button id="replay-speech" type="button" title="继续飞行并重听本段广播">重听本段广播</button>
+            </div>
+          </fieldset>
+          <div class="menu-links">
+            <button data-open="environment"><span data-icon="sun"></span>时间与天气</button>
+            <button data-open="help"><span data-icon="help"></span>操作说明</button>
+            <button class="sound-toggle">
+              <span data-icon="sound"></span><span class="sound-caption">声音</span>
+            </button>
+            <button id="back-lobby"><span data-icon="home"></span>回到起飞大厅</button>
+          </div>
+        </section>
+        <section data-panel="help" hidden>
+          <div class="help-list">
+            <p class="pilot-help"><span>加油门 / 减油门</span><b>W / S</b></p>
+            <p class="pilot-help"><span>抬头 / 低头</span><b>↑ / ↓</b></p>
+            <p class="pilot-help"><span>向左 / 向右转弯</span><b>← / →</b></p>
+            <p class="pilot-help"><span>自动驾驶 / 接手</span><b>P</b></p>
+            <p><span id="help-cameras">机外 / 座舱 / 航拍</span><b>C</b></p>
+            <p><span>环顾 / 调整取景</span><b>拖动 / 滚轮</b></p>
+            <p><span>自由移动 / 返回飞行</span><b>F</b></p>
+            <p><span>自由移动时平移 / 升降 / 加速</span><b>WASD / E、Q / Shift</b></p>
+            <p class="pilot-help"><span>复位镜头 / 跑道刹车</span><b>R / 空格</b></p>
+            <p id="jet-reset-help" hidden><span>复位镜头</span><b>R</b></p>
+            <p><span>航线图 / 隐藏界面</span><b>M / H</b></p>
+            <p><span>暂停飞行</span><b>Esc</b></p>
+          </div>
+          <p class="sheet-note" id="help-note">
+            触屏可拖动方向杆驾驶，滑动画面环顾，双指缩放。自动驾驶可以接管起飞、观光和着陆。
+          </p>
+          <p class="sheet-note">自由移动时，触屏方向杆用于平移，＋/− 用于升降。航线图可直接前往景点，点「移速」切换速度。</p>
+          <details class="credits">
+            <summary>航图、飞机、音乐与场景来源</summary>
+            <p>厦航 787 航段采用高崎 05 跑道的
+              <a href="https://chart.wuhanqing.cn/Terminal/ZSAM-%E5%8E%A6%E9%97%A8%E9%AB%98%E5%B4%8E/ZSAM-9C-STAR%20RNAV%20RWY05.pdf" target="_blank" rel="noreferrer">进场图</a>
+              和 <a href="https://chart.wuhanqing.cn/Terminal/ZSAM-%E5%8E%A6%E9%97%A8%E9%AB%98%E5%B4%8E/ZSAM-20A-IAC%20RNAV%20ILS-DME%20z%20RWY05.pdf" target="_blank" rel="noreferrer">进近图</a>。
+            </p>
+            <p>客机外形及发动机、反推、轮胎采样来自
+              <a href="https://github.com/IskenderWang/787-family/tree/02626b5b659d89b9399943ee167bbb0b46f0c871" target="_blank" rel="noreferrer">FlightGear 787-family</a>。本游戏重绘了 B-7838 的涂装，并按飞行状态混音。
+              <a href="/aircraft/787/Authors.md" target="_blank">作者</a> · <a href="/aircraft/787/LICENSE" target="_blank">GPL 2 许可</a> · <a href="/aircraft/787/model-source.tar.xz" download>可编辑模型与转换脚本</a>
+            </p>
+            <p>787 的四首客舱曲目在游戏中重新编配演奏。双语广播由本游戏编写，使用 MeloTTS 合成。
+              <a href="https://www.bilibili.com/video/BV1W3411v7mZ/" target="_blank" rel="noreferrer">厦航客舱录音与曲目表</a>
+            </p>
+            <p>钢琴采样来自 Alexander Holm 的 <a href="https://sfzinstruments.github.io/pianos/salamander/" target="_blank" rel="noreferrer">Salamander Grand Piano</a>（<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noreferrer">CC BY 3.0</a>）。
+              吉他使用 <a href="https://github.com/facebookincubator/Meta-open-sound/tree/main/systems/instruments/meta-steel-guitar" target="_blank" rel="noreferrer">Meta Steel Guitar</a>（CC0）。
+            </p>
+            <p>
+              ©
+              <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer"
+                >OpenStreetMap</a
+              >
+              贡献者 · OpenFreeMap · OpenMapTiles。地表包含经过处理的哥白尼哨兵影像。Contains modified
+              Copernicus Sentinel data 2025. 本岛地形采用 Copernicus GLO-30，鼓浪屿和远景采用 Mapzen Terrain Tiles。
+              城市建筑结合地图和 Zhang、Zhao、Long 发布的
+              <a href="https://doi.org/10.6084/m9.figshare.27992417.v7" target="_blank" rel="noreferrer">CMAB V7</a>（CC BY 4.0）。
+            </p>
+            <p>
+              天空摄影来自
+              <a href="https://polyhaven.com/hdris" target="_blank" rel="noreferrer">Poly Haven</a
+              >（CC0）。封面为生成美术，飞行场景使用本地三维模型。<a
+                href="/geo/credits.json"
+                target="_blank"
+                >地图数据</a
+              > · <a href="/scenery/credits.json" target="_blank" rel="noreferrer">城市模型数据</a>
+            </p>
+          </details>
+        </section>
+        <section data-panel="arrived" hidden>
+          <p class="sheet-note" id="trip-summary"></p>
+          <div id="parked-cabin" class="parked-cabin" hidden>
+            <span id="parked-caption" role="status"></span>
+            <button id="parked-enable-audio" type="button" class="cabin-audio" hidden>
+              <span data-icon="sound"></span>开启客舱声音
+            </button>
+            <button id="parked-mute" type="button" class="icon-button sound-toggle" aria-label="关闭声音">
+              <span data-icon="sound"></span>
+            </button>
+          </div>
+          <button id="again" class="primary">再次从高崎出发</button
+          ><button id="finish-trip" class="secondary">回到起飞大厅</button>
+        </section>
+      </dialog>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

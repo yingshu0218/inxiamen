@@ -1,0 +1,32 @@
+{
+  "stops": 21,
+  "checked": [
+    "motion between stations",
+    "hops loop continuity",
+    "door opening while distance stays fixed"
+  ],
+  "routes": {
+    "qianpu": {
+      "buses": 15,
+      "periodSeconds": 2250,
+      "stopsWithScheduledDeparture": 14,
+      "movingSamples": 9681,
+      "stationarySamples": 1567,
+      "doorOpenSamples": 1505,
+      "movingWithDoorOpenSamples": 0,
+      "observedMaxMps": 13.60000000006039,
+      "sameStartAndEndDistance": true
+    },
+    "airport": {
+      "buses": 22,
+      "periodSeconds": 3300,
+      "stopsWithScheduledDeparture": 19,
+      "movingSamples": 14703,
+      "stationarySamples": 1795,
+      "doorOpenSamples": 1711,
+      "movingWithDoorOpenSamples": 0,
+      "observedMaxMps": 13.60000000006039,
+      "sameStartAndEndDistance": true
+    }
+  }
+}

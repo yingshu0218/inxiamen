@@ -1,0 +1,198 @@
+{
+  "outcomes": [
+    {
+      "id": "desktop-menu",
+      "front": {
+        "ui": {
+          "place": "黄荣远堂",
+          "explore": "true",
+          "phase": "自由移动 · 飞行已暂停",
+          "alt": 23,
+          "viewport": [
+            1120,
+            680
+          ],
+          "touch": false
+        },
+        "pose": {
+          "t": 8384.299999952316,
+          "x": -5744.899999999998,
+          "z": 3791.699999999999,
+          "heading": 0.2576184393951929,
+          "exploring": true,
+          "alt": 23,
+          "speed": 0,
+          "place": "黄荣远堂",
+          "phase": "自由移动 · 飞行已暂停"
+        }
+      },
+      "reverse": {
+        "ui": {
+          "place": "黄荣远堂",
+          "explore": "true",
+          "phase": "自由移动 · 飞行已暂停",
+          "alt": 23,
+          "viewport": [
+            1120,
+            680
+          ],
+          "touch": false
+        },
+        "pose": {
+          "t": 12037.100000143051,
+          "x": -5744.899999999998,
+          "z": 3791.699999999999,
+          "heading": -2.232081560604807,
+          "exploring": true,
+          "alt": 23,
+          "speed": 0,
+          "place": "黄荣远堂",
+          "phase": "自由移动 · 飞行已暂停"
+        }
+      },
+      "runtime": {
+        "url": "http://127.0.0.1:5187/",
+        "weather": "晴间多云",
+        "js": [
+          [
+            "/assets/index-DrRDMZjd.js",
+            200
+          ],
+          [
+            "/assets/sunlight-layout-qT5a4tSe.js",
+            200
+          ],
+          [
+            "/assets/game-BflBCur6.js",
+            200
+          ]
+        ],
+        "failures": [],
+        "warnings": [
+          [
+            "warn",
+            [
+              "THREE.WebGLTextures: Trying to use 17 texture units while this GPU supports only 16"
+            ]
+          ],
+          [
+            "warn",
+            [
+              "THREE.WebGLTextures: Trying to use 18 texture units while this GPU supports only 16"
+            ]
+          ]
+        ],
+        "errors": [],
+        "clock": "16:34",
+        "viewport": [
+          1120,
+          680
+        ],
+        "canvas": [
+          [
+            1120,
+            680
+          ]
+        ],
+        "gpu": {
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+          "maxTextureUnits": 16
+        }
+      },
+      "returned": {
+        "place": "高崎机场",
+        "explore": "false",
+        "phase": "跑道准备 · 手动驾驶",
+        "alt": 18,
+        "viewport": [
+          1120,
+          680
+        ],
+        "touch": false
+      }
+    },
+    {
+      "id": "narrow-direct",
+      "front": {
+        "place": "黄荣远堂",
+        "explore": "true",
+        "phase": "自由移动 · 飞行已暂停",
+        "alt": 23,
+        "viewport": [
+          390,
+          844
+        ],
+        "touch": true
+      },
+      "reverse": {
+        "place": "黄荣远堂",
+        "explore": "true",
+        "phase": "自由移动 · 飞行已暂停",
+        "alt": 23,
+        "viewport": [
+          390,
+          844
+        ],
+        "touch": true
+      },
+      "touchDragPixels": [
+        240,
+        241
+      ],
+      "runtime": {
+        "url": "http://127.0.0.1:5187/?tour=huangrongyuan&time=morning",
+        "weather": "晴间多云",
+        "js": [
+          [
+            "/assets/index-DrRDMZjd.js",
+            200
+          ],
+          [
+            "/assets/sunlight-layout-qT5a4tSe.js",
+            200
+          ],
+          [
+            "/assets/game-BflBCur6.js",
+            200
+          ]
+        ],
+        "failures": [],
+        "warnings": [
+          [
+            "warn",
+            [
+              "THREE.WebGLTextures: Trying to use 17 texture units while this GPU supports only 16"
+            ]
+          ]
+        ],
+        "errors": [],
+        "clock": "09:15",
+        "viewport": [
+          390,
+          844
+        ],
+        "canvas": [
+          [
+            390,
+            844
+          ]
+        ],
+        "gpu": {
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+          "maxTextureUnits": 16
+        }
+      },
+      "returned": {
+        "place": "高崎机场",
+        "explore": "false",
+        "phase": "跑道准备 · 手动驾驶",
+        "alt": 18,
+        "viewport": [
+          390,
+          844
+        ],
+        "touch": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "spaceId": 60,
+  "tabsBeforeFinish": [
+    {
+      "label": "p1",
+      "openedBy": "agent"
+    }
+  ],
+  "result": {
+    "spaceId": 60,
+    "closedSpace": true,
+    "keptManagedLabels": [],
+    "closedManagedLabels": [
+      "p1"
+    ],
+    "preservedUnmanagedCount": 0
+  },
+  "postFinishInventory": null
+}

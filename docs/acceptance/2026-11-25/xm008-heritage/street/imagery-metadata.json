@@ -1,0 +1,28 @@
+{
+  "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/identify?layers=all&geometry=13143289.368990744%2C2807830.50498497&geometryType=esriGeometryPoint&sr=3857&mapExtent=13143226.368990744%2C2807767.50498497%2C13143352.368990744%2C2807893.50498497&imageDisplay=560%2C560%2C96&tolerance=1&returnGeometry=false&f=pjson",
+  "point": [
+    -5751.6,
+    3795.2
+  ],
+  "metadata": [
+    {
+      "OBJECTID": "5297376",
+      "Shape": "Polygon",
+      "SRC_DATE": "20250320",
+      "SRC_RES": "0.34",
+      "SRC_ACC": "8.47",
+      "SAMP_RES": "0.3",
+      "SRC_DESC": "LG04",
+      "MinMapLevel": "12",
+      "MaxMapLevel": "19",
+      "NICE_NAME": "Vivid Advanced",
+      "DrawOrder": "80",
+      "SRC_DATE2": "3/20/2025",
+      "NICE_DESC": "Vantor",
+      "Shape_Length": "79128.498448",
+      "Shape_Area": "205768817",
+      "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+      "ReleaseName": "Raster Basemaps 2026.R01"
+    }
+  ]
+}

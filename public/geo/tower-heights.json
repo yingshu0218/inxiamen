@@ -1,0 +1,70 @@
+{
+  "credit": "The Skyscraper Center · Council on Vertical Urbanism",
+  "height": "Architectural height above ground, metres. Coordinates are WGS84 anchor points inside mapped tower footprints.",
+  "towers": [
+    {
+      "name": "财富中心",
+      "sourceName": "Fortune Center",
+      "height": 192.0,
+      "lon": 118.068001,
+      "lat": 24.46076,
+      "reference": "https://www.skyscrapercenter.com/building/fortune-center/8815"
+    },
+    {
+      "name": "厦门国际贸易大厦",
+      "sourceName": "International Trade Building",
+      "height": 168.0,
+      "lon": 118.113708,
+      "lat": 24.478161,
+      "reference": "https://www.skyscrapercenter.com/building/international-trade-building/2861"
+    },
+    {
+      "name": "港务大厦",
+      "sourceName": "Port Building",
+      "height": 149.7,
+      "lon": 118.070892,
+      "lat": 24.487329,
+      "reference": "https://www.skyscrapercenter.com/building/port-building/18579"
+    },
+    {
+      "name": "观音山商务营运中心11号楼",
+      "sourceName": "Guanyin Mountain Business Center, Building 11",
+      "height": 149.4,
+      "lon": 118.19062,
+      "lat": 24.495239,
+      "reference": "https://www.skyscrapercenter.com/building/guanyin-mountain-business-center-building-11/18580"
+    },
+    {
+      "name": "建发国际大厦",
+      "sourceName": "C&D International Tower",
+      "height": 219.4,
+      "lon": 118.186462,
+      "lat": 24.47682,
+      "reference": "https://www.skyscrapercenter.com/building/cd-international-tower/9243"
+    },
+    {
+      "name": "厦门国际金融中心",
+      "sourceName": "Xiamen Financial Centre",
+      "height": 212.65,
+      "lon": 118.185913,
+      "lat": 24.47773,
+      "reference": "https://www.skyscrapercenter.com/building/xiamen-financial-centre/11130"
+    },
+    {
+      "name": "特房波特曼财富中心A塔",
+      "sourceName": "Portman Fortune Center Tower A",
+      "height": 213.8,
+      "lon": 118.184059,
+      "lat": 24.47834,
+      "reference": "https://www.skyscrapercenter.com/building/portman-fortune-center-tower-a/11128"
+    },
+    {
+      "name": "特房波特曼财富中心B塔",
+      "sourceName": "Portman Fortune Center Tower B",
+      "height": 213.8,
+      "lon": 118.183517,
+      "lat": 24.477221,
+      "reference": "https://www.skyscrapercenter.com/building/portman-fortune-center-tower-b/11129"
+    }
+  ]
+}

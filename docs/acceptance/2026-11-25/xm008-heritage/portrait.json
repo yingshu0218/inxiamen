@@ -1,0 +1,34 @@
+[
+  {
+    "url": "http://127.0.0.1:5398/?tour=rock-profile&time=morning",
+    "hud": "双岩侧景",
+    "viewport": [
+      430,
+      800
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:5398/?tour=huangrongyuan&time=morning",
+    "hud": "黄荣远堂",
+    "viewport": [
+      430,
+      800
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:5398/?tour=garden-bridge&time=morning",
+    "hud": "四十四桥与渡月亭",
+    "viewport": [
+      430,
+      800
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:5398/?tour=garden-shore&time=morning",
+    "hud": "菽庄西门与海堤",
+    "viewport": [
+      430,
+      800
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "scene": "bridge",
+    "rAF": {
+      "samples": 130,
+      "medianMs": 33.4,
+      "p95Ms": 42.02,
+      "fps": 24.0
+    },
+    "video": {
+      "frames": 111,
+      "seconds": 4.926,
+      "fps": 22.3
+    }
+  },
+  {
+    "scene": "mountain",
+    "rAF": {
+      "samples": 118,
+      "medianMs": 33.4,
+      "p95Ms": 41.72,
+      "fps": 23.6
+    },
+    "video": {
+      "frames": 111,
+      "seconds": 4.942,
+      "fps": 22.3
+    }
+  },
+  {
+    "scene": "787-harbor",
+    "rAF": {
+      "samples": 135,
+      "medianMs": 33.35,
+      "p95Ms": 41.7,
+      "fps": 29.3
+    },
+    "video": {
+      "frames": 92,
+      "seconds": 3.865,
+      "fps": 23.5
+    }
+  }
+]

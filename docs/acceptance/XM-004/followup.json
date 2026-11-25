@@ -1,0 +1,288 @@
+{
+  "railway": {
+    "baselineSourceSnapshot": {
+      "meshes": 1687,
+      "bad": []
+    },
+    "firstProduction": {
+      "game": "game-Dr11to1x.js",
+      "sha256": "9a000c79e483d0410c0377d329082279938832326e2885878977ea79cd51d979",
+      "meshes": 1691,
+      "bad": [
+        {
+          "name": "厦门高崎站 · 国铁货运Ⅰ、Ⅱ场",
+          "parent": "厦门城市与滨海地标",
+          "type": "Mesh",
+          "vertices": 240441,
+          "badVertices": 30480,
+          "first": [
+            1680,
+            1681,
+            1682,
+            1683
+          ],
+          "badTriangles": 15348
+        }
+      ],
+      "station": [
+        {
+          "vertices": 240441,
+          "radius": null
+        }
+      ]
+    },
+    "sameBundleWithRailEdgeFixOnly": {
+      "meshes": 1691,
+      "bad": [],
+      "station": [
+        {
+          "vertices": 240441,
+          "radius": 1454.2738287460452
+        }
+      ]
+    },
+    "publishedProduction": {
+      "game": "game-COjByyfW.js",
+      "sha256": "77f452a2907170b00da34f5143ee902db449c044c5ee267ec4c20e726d639024",
+      "meshes": 1691,
+      "bad": [],
+      "station": [
+        {
+          "vertices": 247905,
+          "radius": 1536.8422120573607
+        }
+      ]
+    }
+  },
+  "forest": {
+    "before strong": {
+      "pixels": 1046,
+      "canopyTouched": 893,
+      "nearCanopy1px": 987,
+      "contrastEdge": 833
+    },
+    "after strong": {
+      "pixels": 1263,
+      "canopyTouched": 863,
+      "nearCanopy1px": 1203,
+      "contrastEdge": 1115
+    },
+    "new strong": {
+      "pixels": 999,
+      "canopyTouched": 701,
+      "nearCanopy1px": 978,
+      "contrastEdge": 858
+    },
+    "resolved strong": {
+      "pixels": 782,
+      "canopyTouched": 731,
+      "nearCanopy1px": 762,
+      "contrastEdge": 576
+    },
+    "before-mountain": {
+      "microMean": 0.38857808857808857,
+      "p99": 6.0,
+      "p999": 36.333333333333336,
+      "max": 115.0,
+      "samePoseMax": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "turn": 2.471878787878788
+    },
+    "final-mountain": {
+      "microMean": 0.3642113442113442,
+      "p99": 7.0,
+      "p999": 15.666666666666666,
+      "max": 32.0,
+      "samePoseMax": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "turn": 2.119446775446775
+    },
+    "crown-mountain": {
+      "microMean": 0.37457964257964255,
+      "p99": 7.333333333333333,
+      "p999": 16.333333333333332,
+      "max": 36.666666666666664,
+      "samePoseMax": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "turn": 2.214081118881119
+    },
+    "isolateVsBaselineAtRest": 0.0
+  },
+  "samplers": {
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+    "fragment": 16,
+    "combined": 32,
+    "programs": {
+      "three-texture-prepass a/b/c": {
+        "a": 0,
+        "b": 1,
+        "c": 2
+      },
+      "terrain envMap": {
+        "envMap": 0
+      },
+      "terrain airWeather/gCover/gHuandaoBeaches/gCoast/gHubin/gBridgeCourts/gWucun/gUrbanSurface/gNightMap/gIsland/map/aoMap/envMap/dfgLUT/directionalShadowMap[0]": {
+        "airWeather": 4,
+        "gCover": 5,
+        "gHuandaoBeaches": 6,
+        "gCoast": 7,
+        "gHubin": 8,
+        "gBridgeCourts": 9,
+        "gWucun": 10,
+        "gUrbanSurface": 11,
+        "gNightMap": 12,
+        "gIsland": 13,
+        "map": 14,
+        "aoMap": 15,
+        "envMap": 16,
+        "dfgLUT": 17,
+        "directionalShadowMap[0]": 3
+      },
+      "terrain result": {
+        "error": 0,
+        "pixel": [
+          48,
+          56,
+          29,
+          255
+        ],
+        "rgbaSHA256": "b2c75380a07e637678c27b108b7c5e65190d6c67aaedc92a89749dd43cd6853d",
+        "uniqueRGBA": 18
+      },
+      "terrain-repeat airWeather/gCover/gHuandaoBeaches/gCoast/gHubin/gBridgeCourts/gWucun/gUrbanSurface/gNightMap/gIsland/map/aoMap/envMap/dfgLUT/directionalShadowMap[0]": {
+        "airWeather": 1,
+        "gCover": 2,
+        "gHuandaoBeaches": 3,
+        "gCoast": 4,
+        "gHubin": 5,
+        "gBridgeCourts": 6,
+        "gWucun": 7,
+        "gUrbanSurface": 8,
+        "gNightMap": 9,
+        "gIsland": 10,
+        "map": 11,
+        "aoMap": 12,
+        "envMap": 13,
+        "dfgLUT": 14,
+        "directionalShadowMap[0]": 0
+      },
+      "terrain-repeat result": {
+        "error": 0,
+        "pixel": [
+          48,
+          56,
+          29,
+          255
+        ],
+        "rgbaSHA256": "b2c75380a07e637678c27b108b7c5e65190d6c67aaedc92a89749dd43cd6853d",
+        "uniqueRGBA": 18
+      },
+      "water tDay/tDusk/tCloud/cloudLight/cloudDepth/airWeather/tDiffuse/shoreMap/waves/urbanSurface": {
+        "tDay": 0,
+        "tDusk": 1,
+        "tCloud": 2,
+        "cloudLight": 3,
+        "cloudDepth": 4,
+        "airWeather": 5,
+        "tDiffuse": 6,
+        "shoreMap": 7,
+        "waves": 8,
+        "urbanSurface": 9
+      },
+      "water result": {
+        "error": 0,
+        "pixel": [
+          153,
+          152,
+          152,
+          255
+        ],
+        "rgbaSHA256": "f9ba5cc45f0defafc57d1421af5aec2790dcc1069359cc21d6dce498b98989e0",
+        "uniqueRGBA": 161
+      },
+      "lake tDay/tDusk/tCloud/cloudLight/airWeather/waves": {
+        "tDay": 0,
+        "tDusk": 1,
+        "tCloud": 2,
+        "cloudLight": 3,
+        "airWeather": 4,
+        "waves": 5
+      },
+      "lake result": {
+        "error": 0,
+        "pixel": [
+          146,
+          145,
+          144,
+          255
+        ],
+        "rgbaSHA256": "0a934ff26d402ae4e8e61fd8ea73c4e0d85785150f7651d3caacb3bf96a1d21a",
+        "uniqueRGBA": 168
+      }
+    },
+    "warnings": [
+      {
+        "msg": "THREE.WebGLTextures: Trying to use 17 texture units while this GPU supports only 16",
+        "phase": "terrain",
+        "units": {
+          "airWeather": 4,
+          "gCover": 5,
+          "gHuandaoBeaches": 6,
+          "gCoast": 7,
+          "gHubin": 8,
+          "gBridgeCourts": 9,
+          "gWucun": 10,
+          "gUrbanSurface": 11,
+          "gNightMap": 12,
+          "gIsland": 13,
+          "map": 14,
+          "aoMap": 15,
+          "envMap": 0,
+          "dfgLUT": 0,
+          "directionalShadowMap[0]": 3
+        }
+      },
+      {
+        "msg": "THREE.WebGLTextures: Trying to use 18 texture units while this GPU supports only 16",
+        "phase": "terrain",
+        "units": {
+          "airWeather": 4,
+          "gCover": 5,
+          "gHuandaoBeaches": 6,
+          "gCoast": 7,
+          "gHubin": 8,
+          "gBridgeCourts": 9,
+          "gWucun": 10,
+          "gUrbanSurface": 11,
+          "gNightMap": 12,
+          "gIsland": 13,
+          "map": 14,
+          "aoMap": 15,
+          "envMap": 16,
+          "dfgLUT": 0,
+          "directionalShadowMap[0]": 3
+        }
+      }
+    ],
+    "errors": [],
+    "renderer": "ego-browser Chromium 156 / WebGL 2 / macOS 26.6.2",
+    "canvasPixels": [
+      32,
+      32
+    ],
+    "sameTerrainRgbaBytes": 4096,
+    "isolatedWarningCount": 0
+  }
+}

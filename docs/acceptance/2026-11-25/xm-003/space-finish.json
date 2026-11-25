@@ -1,0 +1,27 @@
+{
+  "spaceId": 51,
+  "finish": {
+    "spaceId": 51,
+    "closedSpace": true,
+    "keptManagedLabels": [],
+    "closedManagedLabels": [
+      "p1"
+    ],
+    "preservedUnmanagedCount": 0
+  },
+  "listedAfterFinish": true,
+  "remaining": {
+    "createdBy": "agent",
+    "id": 51,
+    "name": "XM-003 高崎火车站开发预览",
+    "ownership": "user",
+    "profileId": "Default",
+    "profileName": "您的 ego",
+    "recentTabTitles": [
+      "鹭岛飞行 · 日落环岛线"
+    ],
+    "taskId": "XM-003 高崎火车站开发预览"
+  },
+  "listedOnRecheck": false,
+  "recheck": []
+}

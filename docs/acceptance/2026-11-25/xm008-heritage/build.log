@@ -1,0 +1,23 @@
+
+> xiamen-by-air@1.0.0 build
+> vite build --outDir /private/tmp/xm008-heritage-preview --emptyOutDir
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 157 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../../private/tmp/xm008-heritage-preview/index.html                           16.70 kB │ gzip:   5.49 kB
+../../../../../private/tmp/xm008-heritage-preview/assets/index-lUNLeYXp.css            17.29 kB │ gzip:   5.23 kB
+../../../../../private/tmp/xm008-heritage-preview/assets/arrival-terrain-C-_4iSwc.js    1.25 kB │ gzip:   0.83 kB
+../../../../../private/tmp/xm008-heritage-preview/assets/dreamliner-B3pAojlW.js        48.46 kB │ gzip:  14.71 kB
+../../../../../private/tmp/xm008-heritage-preview/assets/index-CYZ06jiY.js            195.52 kB │ gzip:  79.05 kB
+../../../../../private/tmp/xm008-heritage-preview/assets/sunlight-layout-qT5a4tSe.js  754.89 kB │ gzip: 198.17 kB
+../../../../../private/tmp/xm008-heritage-preview/assets/game-DKtNn0Dx.js             845.91 kB │ gzip: 343.57 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 384ms

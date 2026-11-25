@@ -1,0 +1,23 @@
+{
+  "lvquan": {
+    "samples": 192,
+    "medianMs": 33.3,
+    "p95Ms": 42
+  },
+  "lehai": {
+    "samples": 192,
+    "medianMs": 33.4,
+    "p95Ms": 41.8
+  },
+  "xiangan": {
+    "samples": 192,
+    "medianMs": 33.4,
+    "p95Ms": 41.9
+  },
+  "viewport": [
+    1800,
+    974,
+    1620,
+    876
+  ]
+}

@@ -1,0 +1,27 @@
+
+> xiamen-by-air@1.0.0 build
+> vite build --outDir /tmp/xm011-island-street.RQwRkm
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 157 modules transformed.
+
+(!) outDir /tmp/xm011-island-street.RQwRkm is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../../../../../tmp/xm011-island-street.RQwRkm/index.html                           16.70 kB │ gzip:   5.49 kB
+../../../../../tmp/xm011-island-street.RQwRkm/assets/index-lUNLeYXp.css            17.29 kB │ gzip:   5.23 kB
+../../../../../tmp/xm011-island-street.RQwRkm/assets/arrival-terrain-HlPqwpj4.js    1.25 kB │ gzip:   0.83 kB
+../../../../../tmp/xm011-island-street.RQwRkm/assets/dreamliner-BNWeBmJC.js        48.46 kB │ gzip:  14.71 kB
+../../../../../tmp/xm011-island-street.RQwRkm/assets/index-DrRDMZjd.js            195.54 kB │ gzip:  79.07 kB
+../../../../../tmp/xm011-island-street.RQwRkm/assets/sunlight-layout-qT5a4tSe.js  754.89 kB │ gzip: 198.17 kB
+../../../../../tmp/xm011-island-street.RQwRkm/assets/game-BflBCur6.js             845.91 kB │ gzip: 343.57 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 319ms

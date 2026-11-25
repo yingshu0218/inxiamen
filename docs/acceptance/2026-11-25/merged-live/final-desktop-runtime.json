@@ -1,0 +1,35 @@
+{
+  "url": "http://127.0.0.1:5187/",
+  "entryFiles": [
+    [
+      "/assets/index-jvIRDHlC.js",
+      200
+    ],
+    [
+      "/assets/sunlight-layout-Cr4k97nd.js",
+      200
+    ],
+    [
+      "/assets/game-CG3du93v.js",
+      200
+    ]
+  ],
+  "failures": [],
+  "warn": [
+    [
+      "warn",
+      [
+        "THREE.WebGLTextures: Trying to use 17 texture units while this GPU supports only 16"
+      ]
+    ],
+    [
+      "warn",
+      [
+        "THREE.WebGLTextures: Trying to use 18 texture units while this GPU supports only 16"
+      ]
+    ]
+  ],
+  "errors": [],
+  "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+  "maxTextureUnits": 16
+}

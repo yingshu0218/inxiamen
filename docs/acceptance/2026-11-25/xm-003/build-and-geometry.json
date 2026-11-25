@@ -1,0 +1,72 @@
+{
+  "task": "XM-003",
+  "build": {
+    "command": "npm run build",
+    "vite": "8.3.8",
+    "status": "pass",
+    "warning": "Some chunks are larger than 500 kB after minification",
+    "distAtDelivery": "/tmp/xm-gaoqi/production",
+    "sha256": {
+      "index.html": "47952f38d3046e82480c567bb2ec4326fbe7fbd6f0348735d8657583caf1590c",
+      "assets/index-CuoKdw8C.js": "fe099479bd59c5647901a37dc6c1002b866e9ad7e172e55c3aa6e3c7e664d2ab",
+      "assets/game-COjByyfW.js": "77f452a2907170b00da34f5143ee902db449c044c5ee267ec4c20e726d639024"
+    }
+  },
+  "offline": {
+    "terrain": [
+      "public/geo/terrain.bin",
+      "public/geo/xiamen-relief.bin"
+    ],
+    "railways": 56,
+    "mesh": {
+      "vertices": 247905,
+      "triangles": 123969,
+      "finitePositionsAndNormals": true,
+      "stationSign": "厦门高崎站"
+    },
+    "centerlineJoins": [
+      {
+        "osmWays": [
+          1492165172,
+          1492165173
+        ],
+        "gapMetres": 0
+      },
+      {
+        "osmWays": [
+          1492165174,
+          1492165175
+        ],
+        "gapMetres": 0
+      },
+      {
+        "osmWays": [
+          1492165172,
+          627497895
+        ],
+        "gapMetres": 0
+      },
+      {
+        "osmWays": [
+          1492165174,
+          346692332
+        ],
+        "gapMetres": 0
+      }
+    ],
+    "forecourtJoin": {
+      "projectedXZ": [
+        -1467,
+        -6718
+      ],
+      "nearestStreet": "中埔路",
+      "osmWay": 258733706,
+      "gapMetres": 0
+    },
+    "venueViews": [
+      "gaoqi-railway",
+      "gaoqi-railway-front"
+    ]
+  },
+  "formalAcceptance": "pending XM-011"
+}

@@ -1,0 +1,50 @@
+{
+  "url": "http://127.0.0.1:5187/",
+  "observedAt": "2026-11-25T15:35:16.955579+08:00",
+  "distIndexMtime": "2026-11-25T02:22:44.380281+08:00",
+  "game": "assets/game-BILZYVRU.js",
+  "assets": {
+    "index.html": {
+      "http": 200,
+      "sha256": "8466362c7f5b0d35feb1fb6ceb605c191fcc1ec69ea7b5dbdc9f21ab0e85c3c1",
+      "matchesDist": true,
+      "bytes": 16707
+    },
+    "assets/index-DH9P2BEs.js": {
+      "http": 200,
+      "sha256": "616957164af435ad5ee55f4f43b668918b56ab084e364ea4c87e603d82560eb2",
+      "matchesDist": true,
+      "bytes": 187497
+    },
+    "assets/game-BILZYVRU.js": {
+      "http": 200,
+      "sha256": "8d430bb110dc3384a6f66dfd0e5db936df51d99ad218c1aa605678e8d674352e",
+      "matchesDist": true,
+      "bytes": 836727
+    },
+    "geo/gulangyu-heights.bin": {
+      "http": 200,
+      "sha256": "bf6d60c4a362901218ab0c2d458fc3e1b12a235197b24d12d362032c15b6de48",
+      "matchesDist": true,
+      "bytes": 109032
+    },
+    "geo/city-layout.bin": {
+      "http": 200,
+      "sha256": "3224a2cfab998ad1ac009b51422d43f219887b07947ab4896aaf690c5771d60f",
+      "matchesDist": true,
+      "bytes": 1611942
+    },
+    "geo/urban-streets.json": {
+      "http": 200,
+      "sha256": "fe3af758529e7a8148c44c45c870958dfeebde4c383e6a62f5bd157317791585",
+      "matchesDist": true,
+      "bytes": 631724
+    },
+    "geo/coast-distance.png": {
+      "http": 200,
+      "sha256": "9310c3068cf41c4cd316df1ff46f244ce745c1328c84b8ef34678c8918c82f1b",
+      "matchesDist": true,
+      "bytes": 645403
+    }
+  }
+}

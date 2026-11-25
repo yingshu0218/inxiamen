@@ -1,0 +1,15 @@
+{
+  "ordinaryBuildingRecords": 31221,
+  "replaced": 14,
+  "views": [
+    "gaoqi-industry",
+    "gaoqi-industry-ed",
+    "gaoqi-industry-materials"
+  ],
+  "sha256": {
+    "dist/index.html": "129d3987c23c86beae5a0c3d6473981ef8feaffd6dd70e693e6970d9b4c2d687",
+    "dist/assets/index-q_LB13Xu.js": "abf34d059302b82773686e6007f40ff20d58831ae38fb353072ee1372feff536",
+    "dist/assets/game-DeNZdO84.js": "01c6d172d9f9a998949c034e25321894da310c8befb2f0a0221c1130a2c5923b",
+    "dist/geo/city-layout.bin": "3224a2cfab998ad1ac009b51422d43f219887b07947ab4896aaf690c5771d60f"
+  }
+}

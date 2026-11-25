@@ -1,0 +1,124 @@
+{
+  "light": [
+    {
+      "phase": "approach",
+      "elapsed": 0,
+      "altitude": 243.49328547414436,
+      "speed": 40,
+      "km": 0,
+      "x": 4912.414607189638,
+      "z": -10612.987456995683,
+      "arrived": false,
+      "grounded": false,
+      "along": 7506.170906543404,
+      "cross": 121.141332296786
+    },
+    {
+      "phase": "rollout",
+      "elapsed": 117.51666666666128,
+      "altitude": 17.619999999999997,
+      "speed": 28.443252139904423,
+      "km": 4.392567493599205,
+      "x": 1391.0592471532661,
+      "z": -8009.142020515171,
+      "arrived": false,
+      "grounded": true,
+      "along": 3128.3541668492126,
+      "cross": 1.787157088983804e-10
+    },
+    {
+      "phase": "parked",
+      "elapsed": 121.91666666666103,
+      "altitude": 17.619999999999997,
+      "speed": 0,
+      "km": 4.4550397263040535,
+      "x": 1341.8698920288746,
+      "z": -7970.6198666324735,
+      "arrived": true,
+      "grounded": true,
+      "along": 3065.875778607232,
+      "cross": 7.321432349272072e-11
+    }
+  ],
+  "jet": [
+    {
+      "phase": "descent",
+      "elapsed": 0,
+      "altitude": 3000,
+      "speed": 113.18,
+      "km": 0,
+      "x": -12780.642931764376,
+      "z": -28773.508424013853,
+      "arrived": false,
+      "grounded": false,
+      "along": 4773.582694206994,
+      "cross": -25085.638877242953
+    },
+    {
+      "phase": "approach",
+      "elapsed": 513.9833333331945,
+      "altitude": 699.935436961816,
+      "speed": 83.9810575167583,
+      "km": 52.40682252630979,
+      "x": -10998.469180282422,
+      "z": 1693.879295653629,
+      "arrived": false,
+      "grounded": false,
+      "along": -12608.514558083338,
+      "cross": 0.22472863948678423
+    },
+    {
+      "phase": "flare",
+      "elapsed": 680.1666666663767,
+      "altitude": 33.07519589655667,
+      "speed": 71,
+      "km": 65.13127494113526,
+      "x": -980.6222334288996,
+      "z": -6151.783274400349,
+      "arrived": false,
+      "grounded": false,
+      "along": 115.93743653024195,
+      "cross": 2.8421709430404007e-13
+    },
+    {
+      "phase": "rollout",
+      "elapsed": 686.3333333330378,
+      "altitude": 21.65,
+      "speed": 70.97635629925583,
+      "km": 65.56910827446735,
+      "x": -635.915208734119,
+      "z": -6421.73714991275,
+      "arrived": false,
+      "grounded": true,
+      "along": 553.7707698639354,
+      "cross": 6.821210263296962e-13
+    },
+    {
+      "phase": "taxi",
+      "elapsed": 719.3166666663411,
+      "altitude": 21.65,
+      "speed": 8.498333737076873,
+      "km": 66.88037416238762,
+      "x": 396.44718743689236,
+      "z": -7230.220991254536,
+      "arrived": false,
+      "grounded": true,
+      "along": 1865.0366615649934,
+      "cross": 0.00038899939181646914
+    },
+    {
+      "phase": "parked",
+      "elapsed": 800.9333333329336,
+      "altitude": 21.509999999999998,
+      "speed": 0,
+      "km": 67.3807781340175,
+      "x": 818.6204486220156,
+      "z": -7083.579370784634,
+      "arrived": true,
+      "grounded": true,
+      "along": 2107,
+      "cross": 375.74999999999875
+    }
+  ],
+  "notes": "Light uses production 50 m and 25 m terrain arrays with airport grading, zero wind and no scenery obstacles. Jet uses production model path rules and the model clearance."
+}

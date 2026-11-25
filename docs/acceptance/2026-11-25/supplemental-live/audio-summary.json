@@ -1,0 +1,216 @@
+{
+  "recording": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "opus",
+        "sample_rate": "48000",
+        "channels": 2
+      }
+    ],
+    "format": {}
+  },
+  "audioContextStartSec": 0.06933333333333333,
+  "phaseChronology": [
+    {
+      "phase": "厦航 787-9 · 进近着陆",
+      "place": "高崎机场",
+      "speed": 261,
+      "t": 0.29333333333333333,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": false,
+      "audioStartRelativeSec": 0.224
+    },
+    {
+      "phase": "厦航 787-9 · 拉平接地",
+      "place": "高崎机场",
+      "speed": 256,
+      "t": 8.464,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": false,
+      "audioStartRelativeSec": 8.3947
+    },
+    {
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "place": "高崎机场",
+      "speed": 253,
+      "t": 9.866666666666667,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": false,
+      "audioStartRelativeSec": 9.7973
+    },
+    {
+      "phase": "厦航 787-9 · 机坪滑行",
+      "place": "高崎机场滑行道",
+      "speed": 30,
+      "t": 18.032,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": false,
+      "audioStartRelativeSec": 17.9627
+    },
+    {
+      "phase": "厦航 787-9 · 已停稳",
+      "place": "高崎机场机坪",
+      "speed": 0,
+      "t": 38.944,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": true,
+      "audioStartRelativeSec": 38.8747
+    }
+  ],
+  "effectStarts": {
+    "touchdown": {
+      "kind": "start",
+      "label": "touchdown",
+      "t": 9.818666666666667,
+      "when": 9.850666666666667,
+      "rate": 1.0399999618530273,
+      "loop": false,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256,
+      "audioStartRelativeSec": 9.7813
+    },
+    "strut-impulse": {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 9.818666666666667,
+      "when": 9.818666666666667,
+      "rate": 0.8600000143051147,
+      "loop": false,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256,
+      "audioStartRelativeSec": 9.7493
+    },
+    "roll": {
+      "kind": "start",
+      "label": "roll",
+      "t": 9.813333333333333,
+      "when": 9.813333333333333,
+      "rate": 1.340000033378601,
+      "loop": true,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256,
+      "audioStartRelativeSec": 9.744
+    },
+    "rumble": {
+      "kind": "start",
+      "label": "rumble",
+      "t": 9.813333333333333,
+      "when": 9.813333333333333,
+      "rate": 1.1699999570846558,
+      "loop": true,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256,
+      "audioStartRelativeSec": 9.744
+    },
+    "reverser": {
+      "kind": "start",
+      "label": "reverser",
+      "t": 9.92,
+      "when": 9.92,
+      "rate": 0.7518938779830933,
+      "loop": true,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 253,
+      "audioStartRelativeSec": 9.8507
+    }
+  },
+  "reversePeak": {
+    "kind": "gain",
+    "label": "reverser",
+    "t": 10.485333333333333,
+    "volume": 0.7452612821937366,
+    "audioStartRelativeSec": 10.416
+  },
+  "reverseZeroBeforeTaxi": {
+    "kind": "gain",
+    "label": "reverser",
+    "t": 16.912,
+    "volume": 0,
+    "audioStartRelativeSec": 16.8427
+  },
+  "rollingGainDuringTaxi": [
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 18.106666666666666,
+      "volume": 0.24955814321886255,
+      "audioStartRelativeSec": 18.0373
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 37.04533333333333,
+      "volume": 0.18468173264093815,
+      "audioStartRelativeSec": 36.976
+    }
+  ],
+  "rollingGainsAtStop": [
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 38.72,
+      "volume": 0,
+      "audioStartRelativeSec": 38.6507
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 38.72,
+      "volume": 0,
+      "audioStartRelativeSec": 38.6507
+    }
+  ],
+  "taxiStrutImpulseCount": 33,
+  "decodeRmsMethod": "downmix to mono s16le at 24 kHz, no normalization, window corresponds to the mixed signal rather than the isolated stems",
+  "pcmWindows": [
+    {
+      "label": "approach",
+      "startSec": 3,
+      "endSec": 6,
+      "rmsDbfs": -23.4,
+      "peakDbfs": -8.6
+    },
+    {
+      "label": "pre-touchdown",
+      "startSec": 9.1,
+      "endSec": 9.5,
+      "rmsDbfs": -36.7,
+      "peakDbfs": -25.9
+    },
+    {
+      "label": "touchdown and early rollout",
+      "startSec": 9.74,
+      "endSec": 10.12,
+      "rmsDbfs": -18.7,
+      "peakDbfs": -8.5
+    },
+    {
+      "label": "initial reverse",
+      "startSec": 10.35,
+      "endSec": 11.35,
+      "rmsDbfs": -21.5,
+      "peakDbfs": -9.8
+    },
+    {
+      "label": "taxi mid",
+      "startSec": 20,
+      "endSec": 28,
+      "rmsDbfs": -22.5,
+      "peakDbfs": -7.8
+    },
+    {
+      "label": "parked after tail",
+      "startSec": 39,
+      "endSec": 39.7,
+      "rmsDbfs": -28.4,
+      "peakDbfs": -18.2
+    }
+  ]
+}

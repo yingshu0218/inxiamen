@@ -1,0 +1,48 @@
+{
+  "lobby": "http://127.0.0.1:5187/",
+  "builtAt": "2026-11-25T01:53:39.019590+08:00",
+  "publishedAt": "2026-11-25T01:54:14.557597+08:00",
+  "assets": {
+    "index.html": {
+      "sha256": "4af7d2aa45b92da4fe3d9cb84709ca79d7d1430fdad033495c9dd1bc504879a1",
+      "http": 200,
+      "bytes": 16707
+    },
+    "assets/arrival-terrain-DaaI8gKK.js": {
+      "sha256": "16098ebe0d0e445f892d2502cdacfad2da561827fc7c594974987e2cedc0776f",
+      "http": 200,
+      "bytes": 1250
+    },
+    "assets/dreamliner-CPsAWjVQ.js": {
+      "sha256": "b4b0a36285c9655207389550d205de5e067b78660319d63356ab3d84ae67887d",
+      "http": 200,
+      "bytes": 48466
+    },
+    "assets/game-C7qBMkZ3.js": {
+      "sha256": "0b80180c39bf77553e2b5a5f47a07a02c1f220b6970e37d81a4aa48402786c85",
+      "http": 200,
+      "bytes": 835612
+    },
+    "assets/index-DSESYv8a.js": {
+      "sha256": "7409bf4fd079857f085ff7ef523b056dd88b1144ee31e6372b8047b8a2a79693",
+      "http": 200,
+      "bytes": 187497
+    },
+    "assets/index-lUNLeYXp.css": {
+      "sha256": "bdbadd6a8dbd7a901969f3b77581cf3c193eefe522f2f1f39c20ab8243b11cf6",
+      "http": 200,
+      "bytes": 17297
+    },
+    "assets/sunlight-layout-Cr4k97nd.js": {
+      "sha256": "717b14abec14904f206467d7a8d3f6228263e8bdfd123c24901f6044919cef40",
+      "http": 200,
+      "bytes": 752735
+    },
+    "geo/city-layout.bin": {
+      "sha256": "3224a2cfab998ad1ac009b51422d43f219887b07947ab4896aaf690c5771d60f",
+      "http": 200,
+      "bytes": 1611942
+    }
+  },
+  "preservedPriorHashedAssets": true
+}

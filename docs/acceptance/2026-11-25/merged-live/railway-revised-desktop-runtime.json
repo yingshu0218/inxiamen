@@ -1,0 +1,33 @@
+{
+  "page": "http://127.0.0.1:5313/",
+  "js": [
+    [
+      "/assets/index-CzWNFzez.js",
+      200
+    ],
+    [
+      "/assets/sunlight-layout-Cr4k97nd.js",
+      200
+    ],
+    [
+      "/assets/game-Djg4l2X9.js",
+      200
+    ]
+  ],
+  "failures": [],
+  "warnings": [
+    [
+      "warn",
+      [
+        "THREE.WebGLTextures: Trying to use 17 texture units while this GPU supports only 16"
+      ]
+    ],
+    [
+      "warn",
+      [
+        "THREE.WebGLTextures: Trying to use 18 texture units while this GPU supports only 16"
+      ]
+    ]
+  ],
+  "errors": []
+}

@@ -1,0 +1,111 @@
+{
+  "title": "厦门环岛飞行 · 地理数据",
+  "area": "以北纬 24.48°、东经 118.125° 为原点。核心场景覆盖 38 × 32 千米，客机进场的远景覆盖 84 × 67.5 千米。",
+  "sources": [
+    {
+      "layer": "海岸、河湖、道路、跑道、绿地与部分建筑轮廓",
+      "credit": "OpenFreeMap · © OpenMapTiles · © OpenStreetMap contributors",
+      "distribution": "Open Data Commons Open Database License 1.0 (ODbL)",
+      "copyright": "https://www.openstreetmap.org/copyright",
+      "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "tiles": "https://openfreemap.org/",
+      "schema": "https://openmaptiles.org/",
+      "snapshot": "2026-11-15",
+      "edits": "建筑保留外环、院落和有记录的分层构件。道路保留地面、高架及桥梁线位，湖泊保留湖心岛。裁剪、投影和去重后的 OpenStreetMap 派生数据库按 ODbL 提供。",
+      "data": [
+        "city-layout.bin",
+        "urban-streets.json",
+        "inland-water.json"
+      ]
+    },
+    {
+      "layer": "厦门环岛路分幅道路、步行与骑行线、天桥和滩地",
+      "credit": "© OpenStreetMap contributors",
+      "distribution": "Open Data Commons Open Database License 1.0",
+      "copyright": "https://www.openstreetmap.org/copyright",
+      "sourceFile": "src/coast/survey.json",
+      "data": [
+        "/scenery/huandao-beaches.png"
+      ],
+      "edits": "2026-11-25 查询；各 way 保留 ID 和最后制图编辑日。转换为本地米坐标，白城骑行线裁剪至校门旁，滩地栅格化为 5 米遮罩。"
+    },
+    {
+      "layer": "地表影像",
+      "credit": "Contains modified Copernicus Sentinel data 2025",
+      "product": "Sentinel-2B Level-2A TCI, 10 m",
+      "acquired": "2025-03-23",
+      "products": [
+        "S2B_50RNN_20250323_0_L2A",
+        "S2B_50RPN_20250323_0_L2A",
+        "S2B_50QNM_20250323_0_L2A",
+        "S2B_50QPM_20250323_0_L2A"
+      ],
+      "archive": "https://registry.opendata.aws/sentinel-2-l2a-cogs/",
+      "terms": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "edits": "由 Element 84 Earth Search 目录检索，在同日无云区域拼接可见光波段，裁剪、重投影并为实时照明调整对比度与色彩。"
+    },
+    {
+      "layer": "区域地形与鼓浪屿局部地形",
+      "credit": "Mapzen Terrain Tiles. SRTM and GMTED2010 terrain data courtesy of the U.S. Geological Survey. Global ETOPO1 terrain data from NOAA/NCEI.",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "attribution": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "edits": "核心区域使用 50 米基础网格，鼓浪屿使用 10 米局部网格，外围进场远山使用 250 米网格、40 米卫星影像与 OpenStreetMap 海岸线。"
+    },
+    {
+      "layer": "厦门本岛地形与山地水库",
+      "credit": "produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved",
+      "notice": "The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30.",
+      "source": "https://doi.org/10.5270/ESA-c5d3d65",
+      "archive": "https://registry.opendata.aws/copernicus-dem/",
+      "license": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/DEM/resources/license/License-COPDEM-30.pdf",
+      "method": "/geo/xiamen-relief.json",
+      "edits": "从约 30 米间距的卫星表面高程推算地面，平滑城区尖峰和树冠回波，在 25 米游戏网格上表示。分别用水域内的高程估算各内陆水面，连海湖泊使用海平面，高崎跑道统一为 16 米。东坪山水库、上李水库、筼筜湖东段及集美大桥与厦门大桥岸坡，在游戏内按已有水域多边形和海岸距离图细分到 5 米以校准贴地。岸坡和浅层水底按场景估算。"
+    },
+    {
+      "layer": "本岛建筑屋顶轮廓、高度和用途",
+      "credit": "Yecheng Zhang, Huimin Zhao & Ying Long · CMAB V7",
+      "source": "https://doi.org/10.6084/m9.figshare.27992417.v7",
+      "paper": "https://doi.org/10.1038/s41597-025-04730-5",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "processing": "/geo/urban-buildings.json",
+      "edits": "将 2023 年厦门影像解译的屋顶重投影并整体平移，与地图足迹和建筑分层去重、整合。建筑位置、用途和大部分高度仍为估计值。"
+    },
+    {
+      "layer": "八栋高层建筑的建筑高度",
+      "credit": "The Skyscraper Center · Council on Vertical Urbanism",
+      "sources": "/geo/tower-heights.json",
+      "edits": "以已建成建筑的公开坐标匹配其所在轮廓，使用资料记载的建筑高度。立面造型根据观光视距简化。"
+    },
+    {
+      "layer": "梧村—莲坂、中山路、湖里工业片区、厦门大桥集美岸的普通建筑",
+      "credit": "Overture Maps Foundation · © OpenStreetMap contributors · Qian Shi et al., East Asian Buildings",
+      "release": "2026-11-18.0",
+      "source": "https://docs.overturemaps.org/guides/buildings/",
+      "eastAsianBuildings": "https://doi.org/10.5281/zenodo.8174931",
+      "licenses": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://opendatacommons.org/licenses/odbl/1-0/"
+      ],
+      "edits": "按原位置投影、半米量化，使用 OSM 地块、路网、水域及手工模型占地筛选，与既有底库相交匹配并迁移高度、估算缺失高度。融合后的数据库按 ODbL 1.0 提供。"
+    },
+    {
+      "layer": "绿泉新村南排、集美大桥乐海路住宅地块、翔安大桥 D07 普通建筑",
+      "credit": "© OpenStreetMap contributors · Overture Maps Foundation · Qian Shi et al. (East Asian Buildings) · Yecheng Zhang, Huimin Zhao & Ying Long (CMAB V7)",
+      "overtureRelease": "2026-11-18.0",
+      "openStreetMap": "https://www.openstreetmap.org/copyright",
+      "eastAsianBuildings": "https://doi.org/10.5281/zenodo.8174931",
+      "cmab": "https://doi.org/10.6084/m9.figshare.27992417.v7",
+      "visualReference": "Esri World Imagery, https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+      "parcelSource": "https://static.sse.com.cn/disclosure/bond/announcement/company/c/new/2023-06-16/115548_20230616_STHT.pdf",
+      "edits": "乐海路选取九个已建 OSM 住宅地块，投影并融合屋面，转移匹配高度或按地块估算。绿泉新村单楼轮廓与 D07 八栋塔楼按观景尺度近似；地面为地图道路、用地与估绘铺装。影像仅供复核，游戏内没有分发该航片。融合数据库按 ODbL 1.0 提供。"
+    },
+    {
+      "layer": "鼓浪屿西坡与日光岩山肩局部相对地形",
+      "credit": "Produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+      "doi": "https://doi.org/10.5270/ESA-c5d3d65",
+      "tile": "N24 E118, GLO-30, EGM2008",
+      "imagery": "Contains modified Copernicus Sentinel data (2026-11-10), S2A_50RPN_20261110_0_L2A.",
+      "edits": "仅用约30米雷达表面模型的局部相对起伏校正山坡。海面为游戏参考面，沙坡、花岗岩岸肩为近似地貌。"
+    }
+  ]
+}

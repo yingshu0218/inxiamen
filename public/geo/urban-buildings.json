@@ -1,0 +1,163 @@
+{
+  "title": "厦门岛与鼓浪屿城市建筑数据提取",
+  "source": {
+    "title": "CMAB – The World’s First National-Scale Multi-Attribute Building Dataset",
+    "authors": [
+      "Yecheng Zhang",
+      "Huimin Zhao",
+      "Ying Long"
+    ],
+    "release": "Figshare V7 (author-processed release)",
+    "url": "https://doi.org/10.6084/m9.figshare.27992417.v7",
+    "sourceArchive": "https://ndownloader.figshare.com/files/53666771",
+    "archiveFile": "fujian.zip",
+    "archiveMd5": "e47bc4b6e731c8aee751aab04a8d9398",
+    "shapefile": "福建省/processed_xiamen20230318_all.shp",
+    "imageryDateFromFilename": "2023-03-18",
+    "sourceGeometry": "Polygonal rooftops extracted from satellite imagery. They approximate building ground footprints; roof parallax can remain, especially for tall buildings.",
+    "heightSource": "CMAB Height field in metres, based on modelling and combined source data. This Xiamen file does not attribute individually surveyed heights. Missing values remain zero.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "originalRelease": "https://doi.org/10.17632/b4t2wxhn2y.5",
+    "paper": "https://doi.org/10.1038/s41597-025-04730-5"
+  },
+  "processing": {
+    "sourceCRS": "EPSG:3857 (explicit source .prj; WGS 84 / Web Mercator Auxiliary Sphere)",
+    "projection": "Inverse Web Mercator to WGS84, then x=(lon-118.125)*101220, z=(24.48-lat)*111100.",
+    "worldRegistrationEastSouthMetres": [
+      11.0,
+      -1.0
+    ],
+    "registrationMethod": "A single translation after reprojection, fixed from island-wide building-mask correlation against OSM. No rubber-sheet, scale or rotation adjustment.",
+    "shoreBufferMetres": 45.0,
+    "simplificationToleranceMetres": 0.85,
+    "coordinateStepMetres": 0.5,
+    "scope": "Whole source polygons whose interior point lies within the buffered Xiamen or Gulangyu polygons in islands.json.",
+    "topology": "Make invalid polygons valid, simplify preserving topology, snap to half-metre coordinates, retain interior rings and polygon parts of at least 6 square metres. Remove coincident roofs with IoU >= 0.86.",
+    "heightProcessing": "Nearest decimetre, metres above local ground. Missing data retain source code 0.",
+    "osmAttribution": "© OpenStreetMap contributors. Used for the existing island boundary and the georegistration cross-check. https://www.openstreetmap.org/copyright"
+  },
+  "format": {
+    "role": "Input to the offline city-layout merge",
+    "magic": "XMB1",
+    "byteOrder": "little-endian",
+    "header": "4 ASCII bytes, uint32 polygon count",
+    "record": "uint16 heightDecimetres, uint8 function, uint8 heightSource, uint16 ringCount",
+    "ring": "uint16 vertexCount, then vertexCount pairs of signed int16 x,z at 0.5 metres. Exterior first, interior rings follow; rings omit the repeated closing vertex. Exterior is CCW in XZ.",
+    "functionCodes": {
+      "0": "other/unknown",
+      "1": "residential",
+      "2": "business",
+      "3": "public service",
+      "4": "industry",
+      "5": "office"
+    },
+    "heightCodes": {
+      "0": "missing",
+      "1": "CMAB model/combined",
+      "2": "explicitly surveyed (unused in this source)"
+    }
+  },
+  "counts": {
+    "sourceCityRecords": 94002,
+    "sourceRecordsIntersectingIslands": 23530,
+    "inputVertices": 1958471,
+    "inputCourtyards": 1530,
+    "underSixSquareMetres": 286,
+    "overlappingDuplicatePolygons": 0,
+    "outputVertices": 308728,
+    "courtyards": 1539,
+    "unbufferedIslandCounts": {
+      "xiamen": 24005,
+      "gulangyu": 0
+    },
+    "sourceRecordsOnShoreStrip": 161,
+    "records": 24166,
+    "heightsFromModel": 23584,
+    "heightsMissing": 582,
+    "heightMetres": {
+      "min": 3.0,
+      "p25": 12.1,
+      "median": 16.9,
+      "p75": 22.7,
+      "p95": 34.0,
+      "max": 90.4
+    },
+    "useCounts": {
+      "0": 2215,
+      "1": 18519,
+      "2": 1392,
+      "3": 1229,
+      "4": 42,
+      "5": 769
+    }
+  },
+  "intermediateBytes": 1431326,
+  "intermediateSha256": "b65555241ea2a5ac0e818d98fa5d7ff66192410689f25c095e7b540244e60df6",
+  "alignment": {
+    "method": "One-to-one polygon pairs selected by IoU >= 0.48 in either frame, on bundled OSM building footprints. Both medians use exactly the same pairs. OSM serves as a horizontal cross-check, not as height ground truth.",
+    "eligibleOsmFootprints": 5283,
+    "regions": {
+      "all": {
+        "pairs": 934,
+        "medianIoUBefore": 0.429,
+        "medianIoUAfter": 0.609,
+        "medianCentroidErrorBeforeMetres": 11.25,
+        "medianCentroidErrorAfterMetres": 4.58,
+        "p90CentroidErrorAfterMetres": 12.13,
+        "medianResidualEastSouthMetres": [
+          0.51,
+          1.26
+        ]
+      },
+      "airport": {
+        "pairs": 252,
+        "medianIoUBefore": 0.472,
+        "medianIoUAfter": 0.618,
+        "medianCentroidErrorBeforeMetres": 11.18,
+        "medianCentroidErrorAfterMetres": 5.5,
+        "p90CentroidErrorAfterMetres": 15.82,
+        "medianResidualEastSouthMetres": [
+          0.99,
+          1.67
+        ]
+      },
+      "southwestCity": {
+        "pairs": 80,
+        "medianIoUBefore": 0.427,
+        "medianIoUAfter": 0.609,
+        "medianCentroidErrorBeforeMetres": 9.39,
+        "medianCentroidErrorAfterMetres": 3.58,
+        "p90CentroidErrorAfterMetres": 8.44,
+        "medianResidualEastSouthMetres": [
+          2.1,
+          0.58
+        ]
+      },
+      "eastCoast": {
+        "pairs": 171,
+        "medianIoUBefore": 0.386,
+        "medianIoUAfter": 0.606,
+        "medianCentroidErrorBeforeMetres": 11.67,
+        "medianCentroidErrorAfterMetres": 4.09,
+        "p90CentroidErrorAfterMetres": 10.88,
+        "medianResidualEastSouthMetres": [
+          0.09,
+          1.21
+        ]
+      },
+      "centralCity": {
+        "pairs": 320,
+        "medianIoUBefore": 0.396,
+        "medianIoUAfter": 0.597,
+        "medianCentroidErrorBeforeMetres": 12.03,
+        "medianCentroidErrorAfterMetres": 4.46,
+        "p90CentroidErrorAfterMetres": 10.3,
+        "medianResidualEastSouthMetres": [
+          -0.32,
+          1.15
+        ]
+      }
+    }
+  }
+}

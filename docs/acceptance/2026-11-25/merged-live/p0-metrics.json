@@ -1,0 +1,138 @@
+[
+  {
+    "scene": "bridge",
+    "unencoded": {
+      "animationCount": 145,
+      "medianMs": 33.4,
+      "p95Ms": 41.8,
+      "fpsOnObservedSpan": 24.5,
+      "marksMs": {
+        "static": 0.5,
+        "smallYaw": 1455.3,
+        "largerYaw": 3622,
+        "travel": 4009.3,
+        "zoom": 5346.2,
+        "end": 5895.6
+      }
+    },
+    "encoded": {
+      "animationCount": 145,
+      "medianMs": 33.4,
+      "p95Ms": 41.68,
+      "fpsOnObservedSpan": 29.2,
+      "marksMs": {
+        "static": 13.3,
+        "smallYaw": 1466.8,
+        "largerYaw": 2690.9,
+        "travel": 3111.3,
+        "zoom": 4443.3,
+        "end": 4967.2
+      }
+    },
+    "storedVideo": {
+      "frames": 109,
+      "clipSeconds": 4.9,
+      "fpsOnObservedSpan": 22.0
+    },
+    "viewport": [
+      800,
+      450
+    ],
+    "canvas": [
+      [
+        800,
+        450
+      ]
+    ],
+    "camera": "机外跟拍",
+    "clock": "16:37"
+  },
+  {
+    "scene": "mountain",
+    "unencoded": {
+      "animationCount": 118,
+      "medianMs": 33.4,
+      "p95Ms": 42.22,
+      "fpsOnObservedSpan": 23.6,
+      "marksMs": {
+        "static": 0.3,
+        "smallYaw": 1453.7,
+        "largerYaw": 2702.4,
+        "travel": 3097.4,
+        "zoom": 4433.1,
+        "end": 4978.8
+      }
+    },
+    "encoded": {
+      "animationCount": 148,
+      "medianMs": 33.4,
+      "p95Ms": 41.7,
+      "fpsOnObservedSpan": 29.3,
+      "marksMs": {
+        "static": 5.5,
+        "smallYaw": 1459.3,
+        "largerYaw": 2742.5,
+        "travel": 3162.4,
+        "zoom": 4496.5,
+        "end": 5051
+      }
+    },
+    "storedVideo": {
+      "frames": 111,
+      "clipSeconds": 5.02,
+      "fpsOnObservedSpan": 21.9
+    },
+    "viewport": [
+      800,
+      450
+    ],
+    "canvas": [
+      [
+        800,
+        450
+      ]
+    ],
+    "camera": "稳定航拍",
+    "clock": "14:44"
+  },
+  {
+    "scene": "787-harbor",
+    "unencoded": {
+      "animationCount": 78,
+      "medianMs": 33.3,
+      "p95Ms": 43.02,
+      "fpsOnObservedSpan": 16.8,
+      "marksMs": {
+        "autoFlight": 0.5,
+        "end": 4605.4
+      }
+    },
+    "encoded": {
+      "animationCount": 119,
+      "medianMs": 33.35,
+      "p95Ms": 41.6,
+      "fpsOnObservedSpan": 29.1,
+      "marksMs": {
+        "autoFlight": 7.5,
+        "end": 4617.7
+      }
+    },
+    "storedVideo": {
+      "frames": 96,
+      "clipSeconds": 3.98,
+      "fpsOnObservedSpan": 23.8
+    },
+    "viewport": [
+      800,
+      450
+    ],
+    "canvas": [
+      [
+        800,
+        450
+      ]
+    ],
+    "camera": "右侧舷窗",
+    "clock": "14:44"
+  }
+]

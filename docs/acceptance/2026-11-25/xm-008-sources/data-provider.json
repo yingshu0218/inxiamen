@@ -1,0 +1,230 @@
+{
+  "checkedAt": "2026-11-25T16:16:35.372331+08:00",
+  "earthSearch": {
+    "bbox": [
+      118.051,
+      24.437,
+      118.074,
+      24.458
+    ],
+    "url": "https://earth-search.aws.element84.com/v1/search?collections=sentinel-2-l2a&bbox=118.051%2C24.437%2C118.074%2C24.458&datetime=2026-11-10T00%3A00%3A00Z%2F2026-11-25T23%3A59%3A59Z&limit=35",
+    "scenes": [
+      {
+        "id": "S2B_50RNN_20261123_0_L2A",
+        "datetime": "2026-11-23T02:51:01.458000Z",
+        "cloudCoverWholeTile": 91.856885,
+        "gsd": 10,
+        "mgrs": "MGRS-50RNN",
+        "bbox": [
+          117.163261,
+          24.321249,
+          118.090628,
+          25.31618
+        ],
+        "visual": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/NN/2026/11/S2B_50RNN_20261123_0_L2A/TCI.tif",
+        "classification": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/NN/2026/11/S2B_50RNN_20261123_0_L2A/SCL.tif"
+      },
+      {
+        "id": "S2B_50RPN_20261123_0_L2A",
+        "datetime": "2026-11-23T02:50:58.360000Z",
+        "cloudCoverWholeTile": 93.193388,
+        "gsd": 10,
+        "mgrs": "MGRS-50RPN",
+        "bbox": [
+          117.985622,
+          24.311027,
+          119.083906,
+          25.313377
+        ],
+        "visual": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/PN/2026/11/S2B_50RPN_20261123_0_L2A/TCI.tif",
+        "classification": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/PN/2026/11/S2B_50RPN_20261123_0_L2A/SCL.tif"
+      },
+      {
+        "id": "S2B_50RNN_20261113_0_L2A",
+        "datetime": "2026-11-13T02:50:59.319000Z",
+        "cloudCoverWholeTile": 70.232904,
+        "gsd": 10,
+        "mgrs": "MGRS-50RNN",
+        "bbox": [
+          117.168489,
+          24.321249,
+          118.090628,
+          25.316166
+        ],
+        "visual": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/NN/2026/11/S2B_50RNN_20261113_0_L2A/TCI.tif",
+        "classification": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/NN/2026/11/S2B_50RNN_20261113_0_L2A/SCL.tif"
+      },
+      {
+        "id": "S2B_50RPN_20261113_0_L2A",
+        "datetime": "2026-11-13T02:50:56.229000Z",
+        "cloudCoverWholeTile": 56.656843,
+        "gsd": 10,
+        "mgrs": "MGRS-50RPN",
+        "bbox": [
+          117.985622,
+          24.311027,
+          119.083906,
+          25.313377
+        ],
+        "visual": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/PN/2026/11/S2B_50RPN_20261113_0_L2A/TCI.tif",
+        "classification": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/PN/2026/11/S2B_50RPN_20261113_0_L2A/SCL.tif"
+      },
+      {
+        "id": "S2A_50RNN_20261110_0_L2A",
+        "datetime": "2026-11-10T02:51:04.663000Z",
+        "cloudCoverWholeTile": 0.002856,
+        "gsd": 10,
+        "mgrs": "MGRS-50RNN",
+        "bbox": [
+          117.155771,
+          24.321249,
+          118.090628,
+          25.316202
+        ],
+        "visual": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/NN/2026/11/S2A_50RNN_20261110_0_L2A/TCI.tif",
+        "classification": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/NN/2026/11/S2A_50RNN_20261110_0_L2A/SCL.tif"
+      },
+      {
+        "id": "S2A_50RPN_20261110_0_L2A",
+        "datetime": "2026-11-10T02:51:01.555000Z",
+        "cloudCoverWholeTile": 4.716896,
+        "gsd": 10,
+        "mgrs": "MGRS-50RPN",
+        "bbox": [
+          117.985622,
+          24.311027,
+          119.083906,
+          25.313377
+        ],
+        "visual": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/PN/2026/11/S2A_50RPN_20261110_0_L2A/TCI.tif",
+        "classification": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/50/R/PN/2026/11/S2A_50RPN_20261110_0_L2A/SCL.tif"
+      }
+    ]
+  },
+  "esriHighResolution": {
+    "内厝澳西北口": {
+      "point": [
+        118.05875,
+        24.44889
+      ],
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/identify?layers=all&geometry=118.05875%2C24.44889&geometryType=esriGeometryPoint&sr=4326&mapExtent=118.05675000000001%2C24.44689%2C118.06075%2C24.450889999999998&imageDisplay=1200%2C1260%2C96&tolerance=1&returnGeometry=false&f=pjson",
+      "highResolutionResults": [
+        {
+          "id": 9,
+          "image": {
+            "OBJECTID": "5297376",
+            "Shape": "Polygon",
+            "SRC_DATE": "20250320",
+            "SRC_RES": "0.34",
+            "SRC_ACC": "8.47",
+            "SAMP_RES": "0.3",
+            "SRC_DESC": "LG04",
+            "MinMapLevel": "12",
+            "MaxMapLevel": "19",
+            "NICE_NAME": "Vivid Advanced",
+            "DrawOrder": "80",
+            "SRC_DATE2": "3/20/2025",
+            "NICE_DESC": "Vantor",
+            "Shape_Length": "79128.498448",
+            "Shape_Area": "205768817",
+            "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+            "ReleaseName": "Raster Basemaps 2026.R01"
+          }
+        }
+      ]
+    },
+    "笔山洞西侧": {
+      "point": [
+        118.06041,
+        24.44794
+      ],
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/identify?layers=all&geometry=118.06041%2C24.44794&geometryType=esriGeometryPoint&sr=4326&mapExtent=118.05841000000001%2C24.44594%2C118.06241%2C24.449939999999998&imageDisplay=1200%2C1260%2C96&tolerance=1&returnGeometry=false&f=pjson",
+      "highResolutionResults": [
+        {
+          "id": 9,
+          "image": {
+            "OBJECTID": "5297376",
+            "Shape": "Polygon",
+            "SRC_DATE": "20250320",
+            "SRC_RES": "0.34",
+            "SRC_ACC": "8.47",
+            "SAMP_RES": "0.3",
+            "SRC_DESC": "LG04",
+            "MinMapLevel": "12",
+            "MaxMapLevel": "19",
+            "NICE_NAME": "Vivid Advanced",
+            "DrawOrder": "80",
+            "SRC_DATE2": "3/20/2025",
+            "NICE_DESC": "Vantor",
+            "Shape_Length": "79128.498448",
+            "Shape_Area": "205768817",
+            "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+            "ReleaseName": "Raster Basemaps 2026.R01"
+          }
+        }
+      ]
+    },
+    "八卦楼": {
+      "point": [
+        118.06323,
+        24.45013
+      ],
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/identify?layers=all&geometry=118.06323%2C24.45013&geometryType=esriGeometryPoint&sr=4326&mapExtent=118.06123000000001%2C24.448130000000003%2C118.06523%2C24.45213&imageDisplay=1200%2C1260%2C96&tolerance=1&returnGeometry=false&f=pjson",
+      "highResolutionResults": [
+        {
+          "id": 9,
+          "image": {
+            "OBJECTID": "5297376",
+            "Shape": "Polygon",
+            "SRC_DATE": "20250320",
+            "SRC_RES": "0.34",
+            "SRC_ACC": "8.47",
+            "SAMP_RES": "0.3",
+            "SRC_DESC": "LG04",
+            "MinMapLevel": "12",
+            "MaxMapLevel": "19",
+            "NICE_NAME": "Vivid Advanced",
+            "DrawOrder": "80",
+            "SRC_DATE2": "3/20/2025",
+            "NICE_DESC": "Vantor",
+            "Shape_Length": "79128.498448",
+            "Shape_Area": "205768817",
+            "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+            "ReleaseName": "Raster Basemaps 2026.R01"
+          }
+        }
+      ]
+    },
+    "黄荣远堂": {
+      "point": [
+        118.069,
+        24.4461
+      ],
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/identify?layers=all&geometry=118.069%2C24.4461&geometryType=esriGeometryPoint&sr=4326&mapExtent=118.06700000000001%2C24.444100000000002%2C118.071%2C24.4481&imageDisplay=1200%2C1260%2C96&tolerance=1&returnGeometry=false&f=pjson",
+      "highResolutionResults": [
+        {
+          "id": 9,
+          "image": {
+            "OBJECTID": "5297376",
+            "Shape": "Polygon",
+            "SRC_DATE": "20250320",
+            "SRC_RES": "0.34",
+            "SRC_ACC": "8.47",
+            "SAMP_RES": "0.3",
+            "SRC_DESC": "LG04",
+            "MinMapLevel": "12",
+            "MaxMapLevel": "19",
+            "NICE_NAME": "Vivid Advanced",
+            "DrawOrder": "80",
+            "SRC_DATE2": "3/20/2025",
+            "NICE_DESC": "Vantor",
+            "Shape_Length": "79128.498448",
+            "Shape_Area": "205768817",
+            "BlockName": "DYNAMIC_ESRI_Xiamen_25Q3",
+            "ReleaseName": "Raster Basemaps 2026.R01"
+          }
+        }
+      ]
+    }
+  }
+}

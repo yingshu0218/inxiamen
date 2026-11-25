@@ -1,0 +1,8 @@
+{
+  "beachPolygons": 8,
+  "beachMaskPixelDifferences": 0,
+  "parkPathSamples": 550,
+  "parkMinimumDistanceInlandM": 29.1,
+  "northernRoadSamplesInMaskExtent": 2100,
+  "roadCentersOnSand": 0
+}

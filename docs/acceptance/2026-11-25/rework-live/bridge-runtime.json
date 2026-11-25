@@ -1,0 +1,50 @@
+{
+  "url": "http://127.0.0.1:5187/",
+  "weather": "晴间多云",
+  "js": [
+    [
+      "/assets/index-DSESYv8a.js",
+      200
+    ],
+    [
+      "/assets/sunlight-layout-Cr4k97nd.js",
+      200
+    ],
+    [
+      "/assets/game-C7qBMkZ3.js",
+      200
+    ]
+  ],
+  "failures": [],
+  "warnings": [
+    [
+      "warn",
+      [
+        "THREE.WebGLTextures: Trying to use 17 texture units while this GPU supports only 16"
+      ]
+    ],
+    [
+      "warn",
+      [
+        "THREE.WebGLTextures: Trying to use 18 texture units while this GPU supports only 16"
+      ]
+    ]
+  ],
+  "errors": [],
+  "returned": {
+    "t": 47376.799999952316,
+    "x": -1007.3412424249354,
+    "z": -6130.858548440043,
+    "heading": 0.9064207239095329,
+    "exploring": false,
+    "alt": 18,
+    "speed": 0,
+    "place": "高崎机场",
+    "phase": "跑道准备 · 手动驾驶"
+  },
+  "viewport": [
+    1120,
+    680
+  ],
+  "timeRequest": "normal lobby local afternoon"
+}

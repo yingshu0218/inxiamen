@@ -1,0 +1,71 @@
+{
+  "carriageways": 12,
+  "meanDirectionKm": 19.7,
+  "roadEnds": [
+    "-2803,4966.5",
+    "-2848.2,4968",
+    "5197.3,-6660.3",
+    "5190.7,-6646"
+  ],
+  "beachPolygons": 7,
+  "flightKm": 21.48,
+  "elapsedSeconds": 407,
+  "minimumClearanceM": 122,
+  "assists": 0,
+  "views": [
+    {
+      "id": "huandao-overview",
+      "clearanceM": 718
+    },
+    {
+      "id": "baicheng-beach",
+      "clearanceM": 75
+    },
+    {
+      "id": "huli-revetment",
+      "clearanceM": 88
+    },
+    {
+      "id": "zengcuoan-fish",
+      "clearanceM": 62
+    },
+    {
+      "id": "huangcuo-wave",
+      "clearanceM": 112
+    },
+    {
+      "id": "yefeng-beach",
+      "clearanceM": 138
+    },
+    {
+      "id": "huandao-exhibition",
+      "clearanceM": 275
+    },
+    {
+      "id": "guanyin-coast",
+      "clearanceM": 231
+    },
+    {
+      "id": "huandao-wuyuan",
+      "clearanceM": 189
+    }
+  ],
+  "meshes": [
+    {
+      "name": "黄厝 · 海浪平台对岸字牌",
+      "vertices": 4
+    },
+    {
+      "name": "环岛南路、环岛东路 · 分幅机动车道",
+      "vertices": 42372
+    },
+    {
+      "name": "白城至五缘湾 · 滨海步道与骑行线",
+      "vertices": 29768
+    },
+    {
+      "name": "白城天桥、曾厝垵渔桥、海浪平台与观音山施工段",
+      "vertices": 17412
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "url": "http://127.0.0.1:5187/",
+  "builtAt": "2026-11-25T17:39:23.000494+08:00",
+  "publishedAt": "2026-11-25T17:39:23.165524+08:00",
+  "sha256": {
+    "index.html": "28654f6035911304133c153f687442a7e3599bdd2369dbab3a2228fece1f5c60",
+    "assets/arrival-terrain-CZWB3MkB.js": "f809672ce4b6b778e52f93786067385152533ec8f6360757de17a9921aade33f",
+    "assets/dreamliner-BPLi6YN6.js": "602a9d998431dcebf3f96eb17f3f2bd1f4ee1b20a14935af7a022d94d369c5c9",
+    "assets/game-C98ZEVWr.js": "66cc11e0720c017b22cc1b2949131654956a58696a65478d2cd281c6ec4377d1",
+    "assets/index-BeKlH6Y1.js": "189dc04bdaab0762b9b4c7560d7b6f0425b5b390863344e18b9077b9c015d0f5",
+    "assets/index-CQ7sRp4I.css": "102dec777d1d5a35ae5bdc2403501892080fb4111ea06770f1aef0df04532c07",
+    "assets/sunlight-layout-qT5a4tSe.js": "1acc5ca235f78a3cc645104e9d7665cb8421784433cfeb897d1470c4d7217f6b",
+    "geo/gulangyu-heights.bin": "33a93c85dc843768c8b9f479989515ccec191bbc2ecf4fd1fd6deacdaadd36ef",
+    "geo/city-layout.bin": "3224a2cfab998ad1ac009b51422d43f219887b07947ab4896aaf690c5771d60f",
+    "geo/urban-streets.json": "fe3af758529e7a8148c44c45c870958dfeebde4c383e6a62f5bd157317791585",
+    "geo/coast-distance.png": "9310c3068cf41c4cd316df1ff46f244ce745c1328c84b8ef34678c8918c82f1b"
+  },
+  "geometryAssetsMatchPrior": {
+    "geo/gulangyu-heights.bin": true,
+    "geo/city-layout.bin": true,
+    "geo/urban-streets.json": true,
+    "geo/coast-distance.png": true
+  }
+}

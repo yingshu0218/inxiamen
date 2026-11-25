@@ -1,0 +1,32 @@
+Space 45 page p1
+Existing Wucun: { title: '鹭岛飞行 · 日落环岛线', alt: '167', phase: '沿海巡航 · 自动驾驶', width: 1600, errors: [ 'THREE.WebGLTextures: Trying to use 17 texture units while this GPU supports only 16', 'THREE.WebGLTextures: Trying to use 18 texture units while this GPU supports only 16' ], overflow: false }
+sm-xiamen desktop 302
+sm-xiamen-top desktop 656
+sm-chao desktop 298
+sm-chao-walk desktop 50
+zhonghua-city desktop 285
+zhonghua-city-top desktop 521
+sea-world desktop 300
+sea-world-top desktop 762
+nanhu desktop 207
+nanhu-link desktop 25
+mixc desktop 267
+mixc-link desktop 171
+Desktop map and return passed.
+sm-xiamen mobile 355
+sm-xiamen-top mobile 735
+sm-chao mobile 407
+sm-chao-walk mobile 74
+zhonghua-city mobile 330
+zhonghua-city-top mobile 633
+sea-world mobile 416
+sea-world-top mobile 1050
+nanhu mobile 255
+nanhu-link mobile 39
+mixc mobile 355
+mixc-link mobile 218
+Mobile map and return passed.
+Direct entry sm-chao-walk 74
+Direct entry nanhu-link 39
+Direct entry mixc-link 218
+

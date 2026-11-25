@@ -1,0 +1,159 @@
+{
+  "entry": "rock-profile",
+  "game": "http://127.0.0.1:5398/assets/game-DKtNn0Dx.js",
+  "stops": [
+    {
+      "id": "rock-profile",
+      "name": "双岩侧景",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "81",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "rock",
+      "name": "日光岩",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "90",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "gulangyu",
+      "name": "全岛鸟瞰",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "605",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "island",
+      "name": "鼓浪屿",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "113",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "bagua-gallery",
+      "name": "八卦楼海侧柱廊",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "56",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "garden",
+      "name": "菽庄花园",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "92",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "garden-shore",
+      "name": "菽庄西门与海堤",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "22",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "garden-bridge",
+      "name": "四十四桥与渡月亭",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "20",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "huangrongyuan",
+      "name": "黄荣远堂",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "26",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "haitiantang",
+      "name": "海天堂构",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "63",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "neicuoao-roofs",
+      "name": "内厝澳 · 屋顶低空",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "118",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "bishan-lane",
+      "name": "笔山路 · 坡巷街口",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "26",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    },
+    {
+      "id": "sanqiutian",
+      "name": "三丘田码头",
+      "phase": "自由移动 · 飞行已暂停",
+      "alt": "56",
+      "viewport": [
+        1200,
+        750
+      ],
+      "issues": []
+    }
+  ],
+  "returned": {
+    "name": "高崎机场",
+    "phase": "跑道准备 · 手动驾驶",
+    "alt": "18",
+    "viewport": [
+      1200,
+      750
+    ],
+    "issues": []
+  }
+}

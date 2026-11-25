@@ -1,0 +1,141 @@
+{
+  "islandLandmarkTriangles": 168545,
+  "islandRecords": 1150,
+  "landmarkExclusions": 24,
+  "before": 34,
+  "after": 43,
+  "imageOnly": 3,
+  "originalMappedHeights": 0,
+  "roofCounts": {
+    "flat": 10,
+    "gable": 15,
+    "hip": 18
+  },
+  "areaBefore": 9480.1,
+  "areaAfter": 8329.3,
+  "streetSamples": 1403,
+  "foundationGradeMax": 8.46,
+  "streets": [
+    {
+      "osm": 198040136,
+      "samples": 96,
+      "standingObstacles": 0,
+      "low": 16.77,
+      "high": 17.27
+    },
+    {
+      "osm": 231880766,
+      "samples": 245,
+      "standingObstacles": 0,
+      "low": 18.52,
+      "high": 21.88
+    },
+    {
+      "osm": 552998335,
+      "samples": 158,
+      "standingObstacles": 0,
+      "low": 21.35,
+      "high": 27.83
+    },
+    {
+      "osm": 642504810,
+      "samples": 57,
+      "standingObstacles": 0,
+      "low": 21.84,
+      "high": 23.04
+    },
+    {
+      "osm": 902673161,
+      "samples": 33,
+      "standingObstacles": 0,
+      "low": 16.74,
+      "high": 17.19
+    },
+    {
+      "osm": 903045440,
+      "samples": 219,
+      "standingObstacles": 0,
+      "low": 17.19,
+      "high": 23.35
+    },
+    {
+      "osm": 903045441,
+      "samples": 51,
+      "standingObstacles": 0,
+      "low": 21.42,
+      "high": 22.91
+    },
+    {
+      "osm": 903045442,
+      "samples": 140,
+      "standingObstacles": 0,
+      "low": 19.2,
+      "high": 23.67
+    },
+    {
+      "osm": 905736887,
+      "samples": 110,
+      "standingObstacles": 0,
+      "low": 17.17,
+      "high": 20.75
+    },
+    {
+      "osm": 905748514,
+      "samples": 107,
+      "standingObstacles": 0,
+      "low": 21.17,
+      "high": 21.95
+    },
+    {
+      "osm": 1244520295,
+      "samples": 79,
+      "standingObstacles": 0,
+      "low": 15.3,
+      "high": 16.78
+    },
+    {
+      "osm": 1244520303,
+      "samples": 77,
+      "standingObstacles": 0,
+      "low": 20.75,
+      "high": 21.84
+    },
+    {
+      "osm": 1244525188,
+      "samples": 31,
+      "standingObstacles": 0,
+      "low": 25.49,
+      "high": 25.6
+    }
+  ],
+  "cameras": [
+    {
+      "id": "neicuoao-roofs",
+      "aspect": 1.78,
+      "clearance": 87.38,
+      "inFrame": 43,
+      "visible": 43
+    },
+    {
+      "id": "neicuoao-roofs",
+      "aspect": 0.46,
+      "clearance": 123.94,
+      "inFrame": 43,
+      "visible": 42
+    },
+    {
+      "id": "bishan-lane",
+      "aspect": 1.78,
+      "clearance": 3.84,
+      "inFrame": 11,
+      "visible": 2
+    },
+    {
+      "id": "bishan-lane",
+      "aspect": 0.46,
+      "clearance": 3.84,
+      "inFrame": 5,
+      "visible": 1
+    }
+  ]
+}

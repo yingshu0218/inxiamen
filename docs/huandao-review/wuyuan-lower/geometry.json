@@ -1,0 +1,276 @@
+{
+  "carriageways": 12,
+  "meanDirectionKm": 19.7,
+  "roadEnds": [
+    "-2803,4966.5",
+    "-2848.2,4968",
+    "5197.3,-6660.3",
+    "5190.7,-6646"
+  ],
+  "beachPolygons": 8,
+  "flightKm": 21.48,
+  "elapsedSeconds": 407,
+  "minimumClearanceM": 122,
+  "assists": 0,
+  "views": [
+    {
+      "id": "huandao-overview",
+      "clearanceM": 718
+    },
+    {
+      "id": "baicheng-beach",
+      "clearanceM": 75
+    },
+    {
+      "id": "huli-revetment",
+      "clearanceM": 88
+    },
+    {
+      "id": "zengcuoan-fish",
+      "clearanceM": 62
+    },
+    {
+      "id": "huangcuo-wave",
+      "clearanceM": 112
+    },
+    {
+      "id": "yefeng-beach",
+      "clearanceM": 138
+    },
+    {
+      "id": "huandao-exhibition",
+      "clearanceM": 275
+    },
+    {
+      "id": "guanyin-coast",
+      "clearanceM": 231
+    },
+    {
+      "id": "huandao-wutong",
+      "clearanceM": 339
+    },
+    {
+      "id": "huandao-wuyuan",
+      "clearanceM": 189
+    }
+  ],
+  "meshes": [
+    {
+      "name": "黄厝 · 海浪平台对岸字牌",
+      "vertices": 4
+    },
+    {
+      "name": "五缘大桥 · 双幅连续桥面",
+      "vertices": 7764
+    },
+    {
+      "name": "五缘大桥 · 提篮拱与引桥",
+      "vertices": 11824
+    },
+    {
+      "name": "环岛南路、环岛东路 · 分幅机动车道",
+      "vertices": 66909
+    },
+    {
+      "name": "白城至五缘湾 · 滨海步道与骑行线",
+      "vertices": 65048
+    },
+    {
+      "name": "环岛路沿线天桥、海浪平台、观音山施工段与五通岸墙",
+      "vertices": 32188
+    }
+  ],
+  "north": {
+    "seams": [
+      {
+        "center": [
+          5190,
+          -6646
+        ],
+        "sourceSnapM": 0.7,
+        "sampledJointStepM": 0.019
+      },
+      {
+        "center": [
+          5197,
+          -6660
+        ],
+        "sourceSnapM": 0.424,
+        "sampledJointStepM": 0.019
+      }
+    ],
+    "pierRays": 462,
+    "fullCrossing": [
+      {
+        "way": 127162502,
+        "approachToApproachM": 932.866,
+        "deckRayHits": 2802,
+        "westJointStepM": 0.01
+      },
+      {
+        "way": 127162523,
+        "approachToApproachM": 928.221,
+        "deckRayHits": 2790,
+        "westJointStepM": 0.093
+      }
+    ],
+    "westUnderpasses": [
+      {
+        "at": [
+          4511.26,
+          -6954.752
+        ],
+        "clearanceM": 8.604
+      },
+      {
+        "at": [
+          4537.466,
+          -6943.238
+        ],
+        "clearanceM": 9.816
+      },
+      {
+        "at": [
+          4555.821,
+          -6935.173
+        ],
+        "clearanceM": 10.848
+      },
+      {
+        "at": [
+          4587.694,
+          -6921.169
+        ],
+        "clearanceM": 12.283
+      },
+      {
+        "name": "西岸步骑线",
+        "at": [
+          4623.159,
+          -6905.586
+        ],
+        "clearanceM": 14.379
+      },
+      {
+        "name": "西岸步骑线",
+        "at": [
+          4629.311,
+          -6919.387
+        ],
+        "clearanceM": 14.266
+      }
+    ],
+    "underpasses": [
+      {
+        "name": "机动车掉头",
+        "at": [
+          5111.113,
+          -6686.173
+        ],
+        "soffitClearanceM": 3.932
+      },
+      {
+        "name": "步行骑行折返",
+        "at": [
+          5026.128,
+          -6725.673
+        ],
+        "soffitClearanceM": 9.243
+      },
+      {
+        "name": "机动车掉头",
+        "at": [
+          5116.878,
+          -6699.133
+        ],
+        "soffitClearanceM": 3.744
+      },
+      {
+        "name": "步行骑行折返",
+        "at": [
+          5031.791,
+          -6738.404
+        ],
+        "soffitClearanceM": 9.288
+      }
+    ],
+    "mupuUnderdeckM": [
+      5.994,
+      5.762,
+      6.342,
+      5.497
+    ],
+    "frontageJoinGapsM": [
+      0,
+      0
+    ],
+    "frontageKm": 5.685,
+    "parkWalkM": 2311.462,
+    "parkBranchM": 306.611,
+    "quayWalkSamples": 154,
+    "roadTerrainSamples": 1751,
+    "minimumRoadSkinM": 0.124
+  },
+  "lowerPaving": [
+    {
+      "name": "east vehicle turn",
+      "worst": [
+        5149.077511769133,
+        -6699.98164859858
+      ],
+      "metres": 643.6,
+      "points": 16800,
+      "missing": 0,
+      "buried": 0,
+      "covered": 0,
+      "minGroundM": 0.443,
+      "minQuayM": 0.267,
+      "minBankM": 1.05
+    },
+    {
+      "name": "east vehicle exit",
+      "worst": [
+        5394.465242423781,
+        -6469.284406129059
+      ],
+      "metres": 227.8,
+      "points": 6080,
+      "missing": 0,
+      "buried": 0,
+      "covered": 0,
+      "minGroundM": 0.461,
+      "minQuayM": null,
+      "minBankM": 2.276
+    },
+    {
+      "name": "east shared path",
+      "worst": [
+        5062.8713895997935,
+        -6762.972552761399
+      ],
+      "metres": 959.6,
+      "points": 12430,
+      "missing": 0,
+      "buried": 0,
+      "covered": 0,
+      "minGroundM": 0.48,
+      "minQuayM": 0.248,
+      "minBankM": 1.08
+    },
+    {
+      "name": "west shared path",
+      "worst": [
+        4600.004033120946,
+        -6881.8536335342815
+      ],
+      "metres": 362.4,
+      "points": 5010,
+      "missing": 0,
+      "buried": 0,
+      "covered": 0,
+      "minGroundM": 0.541,
+      "minQuayM": null,
+      "minBankM": 1.14
+    }
+  ]
+}

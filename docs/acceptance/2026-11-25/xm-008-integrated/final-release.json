@@ -1,0 +1,63 @@
+{
+  "lobby": "http://127.0.0.1:5187/",
+  "builtAt": "2026-11-25T17:02:15.401855+08:00",
+  "publishedAt": "2026-11-25T17:02:15.570237+08:00",
+  "assets": {
+    "index.html": {
+      "sha256": "e4b330dd8a4d56a6d31c4cfe122aee19185a4e11b889ad1a8bbb2210fb1ee255",
+      "http": 200,
+      "bytes": 16707
+    },
+    "assets/arrival-terrain-HlPqwpj4.js": {
+      "sha256": "c7179ea1b801ed9ebbbea80481934214cc302a2eec9618ee9f6d0fbf45e53ea6",
+      "http": 200,
+      "bytes": 1250
+    },
+    "assets/dreamliner-BNWeBmJC.js": {
+      "sha256": "4a4e93ccd4a60778b9905856b4cebdaaa22a2e16c8dcf99e41c792e3af3d8324",
+      "http": 200,
+      "bytes": 48465
+    },
+    "assets/game-BflBCur6.js": {
+      "sha256": "f018b0f987c17d59face2ca5e27aa75d1aa2504fa694e6c6b385b11eebf5f904",
+      "http": 200,
+      "bytes": 845915
+    },
+    "assets/index-DrRDMZjd.js": {
+      "sha256": "181a28ffd7c44f7a132bdb42af3de95bdaeebc85c8a9f25e0329dc657c92de07",
+      "http": 200,
+      "bytes": 195546
+    },
+    "assets/index-lUNLeYXp.css": {
+      "sha256": "bdbadd6a8dbd7a901969f3b77581cf3c193eefe522f2f1f39c20ab8243b11cf6",
+      "http": 200,
+      "bytes": 17297
+    },
+    "assets/sunlight-layout-qT5a4tSe.js": {
+      "sha256": "1acc5ca235f78a3cc645104e9d7665cb8421784433cfeb897d1470c4d7217f6b",
+      "http": 200,
+      "bytes": 754899
+    },
+    "geo/gulangyu-heights.bin": {
+      "sha256": "33a93c85dc843768c8b9f479989515ccec191bbc2ecf4fd1fd6deacdaadd36ef",
+      "http": 200,
+      "bytes": 109032
+    },
+    "geo/city-layout.bin": {
+      "sha256": "3224a2cfab998ad1ac009b51422d43f219887b07947ab4896aaf690c5771d60f",
+      "http": 200,
+      "bytes": 1611942
+    },
+    "geo/urban-streets.json": {
+      "sha256": "fe3af758529e7a8148c44c45c870958dfeebde4c383e6a62f5bd157317791585",
+      "http": 200,
+      "bytes": 631724
+    },
+    "geo/coast-distance.png": {
+      "sha256": "9310c3068cf41c4cd316df1ff46f244ce745c1328c84b8ef34678c8918c82f1b",
+      "http": 200,
+      "bytes": 645403
+    }
+  },
+  "matchingPreviouslyTestedGeography": true
+}

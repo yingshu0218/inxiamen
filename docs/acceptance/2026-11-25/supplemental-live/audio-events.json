@@ -1,0 +1,1493 @@
+{
+  "started": 0.06933333333333333,
+  "ended": 40.14933333333333,
+  "ctxSampleRate": 48000,
+  "decoded": [
+    {
+      "name": "touchdown",
+      "frames": 90767,
+      "sampleRate": 48000,
+      "channels": 1,
+      "t": 0.06933333333333333
+    },
+    {
+      "name": "roll",
+      "frames": 182090,
+      "sampleRate": 48000,
+      "channels": 1,
+      "t": 0.06933333333333333
+    },
+    {
+      "name": "rumble",
+      "frames": 175980,
+      "sampleRate": 48000,
+      "channels": 1,
+      "t": 0.07466666666666667
+    },
+    {
+      "name": "turbine",
+      "frames": 720000,
+      "sampleRate": 48000,
+      "channels": 1,
+      "t": 0.07466666666666667
+    },
+    {
+      "name": "jet",
+      "frames": 334783,
+      "sampleRate": 48000,
+      "channels": 1,
+      "t": 0.07466666666666667
+    },
+    {
+      "name": "whine",
+      "frames": 379545,
+      "sampleRate": 48000,
+      "channels": 1,
+      "t": 0.08
+    },
+    {
+      "name": "reverser",
+      "frames": 479194,
+      "sampleRate": 48000,
+      "channels": 1,
+      "t": 0.08
+    }
+  ],
+  "events": [
+    {
+      "kind": "start",
+      "label": "wind",
+      "t": 0.016,
+      "when": 0.016,
+      "rate": 1,
+      "loop": true,
+      "phase": "厦航 787-9 · 进近着陆",
+      "speed": 261
+    },
+    {
+      "kind": "start",
+      "label": "turbine",
+      "t": 0.15466666666666667,
+      "when": 0.15466666666666667,
+      "rate": 0.9567999839782715,
+      "loop": true,
+      "phase": "厦航 787-9 · 进近着陆",
+      "speed": 261
+    },
+    {
+      "kind": "start",
+      "label": "turbine",
+      "t": 0.15466666666666667,
+      "when": 0.15466666666666667,
+      "rate": 0.9644544124603271,
+      "loop": true,
+      "phase": "厦航 787-9 · 进近着陆",
+      "speed": 261
+    },
+    {
+      "kind": "start",
+      "label": "whine",
+      "t": 0.15466666666666667,
+      "when": 0.15466666666666667,
+      "rate": 1.013200044631958,
+      "loop": true,
+      "phase": "厦航 787-9 · 进近着陆",
+      "speed": 261
+    },
+    {
+      "kind": "start",
+      "label": "jet",
+      "t": 0.15466666666666667,
+      "when": 0.15466666666666667,
+      "rate": 0.8939999938011169,
+      "loop": true,
+      "phase": "厦航 787-9 · 进近着陆",
+      "speed": 261
+    },
+    {
+      "kind": "start",
+      "label": "roll",
+      "t": 9.813333333333333,
+      "when": 9.813333333333333,
+      "rate": 1.340000033378601,
+      "loop": true,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 9.813333333333333,
+      "volume": 0.7068824379877727
+    },
+    {
+      "kind": "start",
+      "label": "rumble",
+      "t": 9.813333333333333,
+      "when": 9.813333333333333,
+      "rate": 1.1699999570846558,
+      "loop": true,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 9.813333333333333,
+      "volume": 0.44
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 9.818666666666667,
+      "when": 9.818666666666667,
+      "rate": 0.8600000143051147,
+      "loop": false,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 9.818666666666667,
+      "when": 10.278666666666666,
+      "rate": 0.8600000143051147,
+      "loop": false,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256
+    },
+    {
+      "kind": "start",
+      "label": "touchdown",
+      "t": 9.818666666666667,
+      "when": 9.850666666666667,
+      "rate": 1.0399999618530273,
+      "loop": false,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256
+    },
+    {
+      "kind": "stop",
+      "label": "touchdown",
+      "t": 9.818666666666667,
+      "when": 10.640666666666666,
+      "rate": 1.0399999618530273,
+      "loop": false,
+      "phase": "厦航 787-9 · 拉平接地",
+      "speed": 256
+    },
+    {
+      "kind": "start",
+      "label": "reverser",
+      "t": 9.92,
+      "when": 9.92,
+      "rate": 0.7518938779830933,
+      "loop": true,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 253
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 9.92,
+      "volume": 0.004112366106204471
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 10.053333333333333,
+      "volume": 0.12220897198416993
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 10.154666666666667,
+      "volume": 0.2788596079186281
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 10.256,
+      "volume": 0.4531969776751488
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 10.362666666666666,
+      "volume": 0.6119390708101387
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 10.485333333333333,
+      "volume": 0.7452612821937366
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 10.997333333333334,
+      "when": 10.997333333333334,
+      "rate": 1.2999999523162842,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 224
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 10.997333333333334,
+      "when": 11.327333333333334,
+      "rate": 1.2999999523162842,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 224
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 12.576,
+      "volume": 0.6772504737368746
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 12.576,
+      "volume": 0.4139795524544434
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 13.002666666666666,
+      "volume": 0.6485738504674532
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 13.381333333333334,
+      "volume": 0.3850072890858207
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 13.482666666666667,
+      "volume": 0.6171714461563205
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 13.872,
+      "volume": 0.5912387387010827
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 14.112,
+      "volume": 0.3587180762371228
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 14.32,
+      "volume": 0.5614816620253926
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 14.730666666666666,
+      "volume": 0.5344389102173166
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 14.864,
+      "volume": 0.3318240448495542
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 14.965333333333334,
+      "volume": 0.7106342689389527
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.072,
+      "volume": 0.6781994003880938
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.173333333333334,
+      "volume": 0.642622478664954
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 15.173333333333334,
+      "volume": 0.5052374602582443
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.28,
+      "volume": 0.5989223772171369
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.381333333333334,
+      "volume": 0.5547301174903975
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.488,
+      "volume": 0.5036483015591867
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.621333333333334,
+      "volume": 0.4376034247654026
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 15.621333333333334,
+      "volume": 0.4754381549482007
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 15.621333333333334,
+      "volume": 0.30462014141427796
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.722666666666667,
+      "volume": 0.3868549946050091
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.856,
+      "volume": 0.3192821530521794
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 15.962666666666667,
+      "volume": 0.26559416865793356
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 16.064,
+      "volume": 0.2177749077883562
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 16.064,
+      "volume": 0.4461930894712618
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 16.197333333333333,
+      "volume": 0.158457862865528
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 16.298666666666666,
+      "volume": 0.11813813705957837
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 16.437333333333335,
+      "volume": 0.069140217520062
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 16.437333333333335,
+      "volume": 0.27531619804097335
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 16.538666666666668,
+      "volume": 0.0412640989117442
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 16.538666666666668,
+      "volume": 0.41475080728019953
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 16.778666666666666,
+      "volume": 0.0024888280337562593
+    },
+    {
+      "kind": "gain",
+      "label": "reverser",
+      "t": 16.912,
+      "volume": 0
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 17.024,
+      "volume": 0.3827822350162636
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 17.024,
+      "when": 17.024,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 60
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 17.024,
+      "when": 17.234,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 60
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 17.221333333333334,
+      "volume": 0.2471749891958437
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 17.328,
+      "when": 17.328,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 51
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 17.328,
+      "when": 17.538,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 51
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 17.44,
+      "volume": 0.35520420071551534
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 17.562666666666665,
+      "when": 17.562666666666665,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 45
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 17.562666666666665,
+      "when": 17.772666666666666,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 45
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 17.882666666666665,
+      "volume": 0.32596173120164124
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 18.005333333333333,
+      "volume": 0.2199434522382731
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 18.005333333333333,
+      "when": 18.005333333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 33
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 18.005333333333333,
+      "when": 18.215333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "speed": 33
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 18.106666666666666,
+      "volume": 0.24955814321886255
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 18.421333333333333,
+      "when": 18.421333333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 29
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 18.421333333333333,
+      "when": 18.631333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 29
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 18.896,
+      "when": 18.896,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 26
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 18.896,
+      "when": 19.106,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 26
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 19.445333333333334,
+      "when": 19.44,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 24
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 19.445333333333334,
+      "when": 19.650000000000002,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 24
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 19.989333333333335,
+      "volume": 0.2151856875206274
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 20.096,
+      "when": 20.096,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 20.096,
+      "when": 20.306,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 20.64,
+      "when": 20.64,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 20.64,
+      "when": 20.85,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 21.285333333333334,
+      "when": 21.285333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 21.285333333333334,
+      "when": 21.495333333333335,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 21.877333333333333,
+      "when": 21.877333333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 21.877333333333333,
+      "when": 22.087333333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 22.554666666666666,
+      "when": 22.554666666666666,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 23
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 22.554666666666666,
+      "when": 22.764666666666667,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 23
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 23.136,
+      "when": 23.136,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 26
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 23.136,
+      "when": 23.346,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 26
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 23.605333333333334,
+      "when": 23.605333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 29
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 23.605333333333334,
+      "when": 23.815333333333335,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 29
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 24.021333333333335,
+      "when": 24.021333333333335,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 32
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 24.021333333333335,
+      "when": 24.231333333333335,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 32
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 24.122666666666667,
+      "volume": 0.24027190397394926
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 24.501333333333335,
+      "when": 24.501333333333335,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 24.501333333333335,
+      "when": 24.711333333333336,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 24.869333333333334,
+      "when": 24.869333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 24.869333333333334,
+      "when": 25.079333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 25.248,
+      "when": 25.248,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 25.248,
+      "when": 25.458000000000002,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 25.722666666666665,
+      "when": 25.722666666666665,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 25.722666666666665,
+      "when": 25.932666666666666,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 26.064,
+      "when": 26.064,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 26.064,
+      "when": 26.274,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 33
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 26.432,
+      "when": 26.432,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 31
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 26.432,
+      "when": 26.642,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 31
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 27.018666666666668,
+      "when": 27.016,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 28
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 27.018666666666668,
+      "when": 27.226,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 28
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 27.456,
+      "when": 27.456,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 25
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 27.456,
+      "when": 27.666,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 25
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 28.032,
+      "when": 28.032,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 23
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 28.032,
+      "when": 28.242,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 23
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 28.613333333333333,
+      "when": 28.613333333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 21
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 28.613333333333333,
+      "when": 28.823333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 21
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 28.848,
+      "volume": 0.21513880983484845
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 29.290666666666667,
+      "when": 29.290666666666667,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 20
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 29.290666666666667,
+      "when": 29.500666666666667,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 20
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 30.042666666666666,
+      "when": 30.042666666666666,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 19
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 30.042666666666666,
+      "when": 30.252666666666666,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 19
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 30.82133333333333,
+      "when": 30.82133333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 19
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 30.82133333333333,
+      "when": 31.031333333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 19
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 31.504,
+      "when": 31.504,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 20
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 31.504,
+      "when": 31.714000000000002,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 20
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 32.19733333333333,
+      "when": 32.19733333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 21
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 32.19733333333333,
+      "when": 32.407333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 21
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 32.730666666666664,
+      "when": 32.730666666666664,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 32.730666666666664,
+      "when": 32.940666666666665,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 22
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 33.45066666666666,
+      "when": 33.45066666666666,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 21
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 33.45066666666666,
+      "when": 33.660666666666664,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 21
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 34.053333333333335,
+      "when": 34.053333333333335,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 20
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 34.053333333333335,
+      "when": 34.263333333333335,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 20
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 34.83733333333333,
+      "when": 34.83733333333333,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 19
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 34.83733333333333,
+      "when": 35.047333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 19
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 35.53066666666667,
+      "when": 35.53066666666667,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 17
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 35.53066666666667,
+      "when": 35.74066666666667,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 17
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 36.29333333333334,
+      "when": 36.29333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 16
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 36.29333333333334,
+      "when": 36.50333333333334,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 16
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 37.04533333333333,
+      "volume": 0.18468173264093815
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 37.157333333333334,
+      "volume": 0.18545466736169727
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 37.264,
+      "volume": 0.15569469215110204
+    },
+    {
+      "kind": "start",
+      "label": "strut-impulse",
+      "t": 37.264,
+      "when": 37.264,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 11
+    },
+    {
+      "kind": "stop",
+      "label": "strut-impulse",
+      "t": 37.264,
+      "when": 37.474000000000004,
+      "rate": 1.7000000476837158,
+      "loop": false,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 11
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 37.36533333333333,
+      "volume": 0.15400323066913285
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 37.46666666666667,
+      "volume": 0.12926771887290947
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 37.568,
+      "volume": 0.12482117781932177
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 37.664,
+      "volume": 0.1034378319223511
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 37.77066666666666,
+      "volume": 0.09547019251052553
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 37.872,
+      "volume": 0.07708632008499582
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 37.973333333333336,
+      "volume": 0.06822560041692848
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 38.10666666666667,
+      "volume": 0.04817012736100346
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 38.21333333333333,
+      "volume": 0.03664058117969652
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 38.34133333333333,
+      "volume": 0.019692933868454755
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 38.44266666666667,
+      "volume": 0.006468763551150022
+    },
+    {
+      "kind": "stop",
+      "label": "turbine",
+      "t": 38.72,
+      "when": 38.81,
+      "rate": 0.6990340352058411,
+      "loop": true,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 0
+    },
+    {
+      "kind": "stop",
+      "label": "turbine",
+      "t": 38.72,
+      "when": 38.81,
+      "rate": 0.7046264410018921,
+      "loop": true,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 0
+    },
+    {
+      "kind": "stop",
+      "label": "whine",
+      "t": 38.72,
+      "when": 38.81,
+      "rate": 0.6119053959846497,
+      "loop": true,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 0
+    },
+    {
+      "kind": "stop",
+      "label": "jet",
+      "t": 38.72,
+      "when": 38.81,
+      "rate": 0.7036047577857971,
+      "loop": true,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 0
+    },
+    {
+      "kind": "gain",
+      "label": "roll",
+      "t": 38.72,
+      "volume": 0
+    },
+    {
+      "kind": "stop",
+      "label": "roll",
+      "t": 38.72,
+      "when": 38.81,
+      "rate": 0.5132660269737244,
+      "loop": true,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 0
+    },
+    {
+      "kind": "gain",
+      "label": "rumble",
+      "t": 38.72,
+      "volume": 0
+    },
+    {
+      "kind": "stop",
+      "label": "rumble",
+      "t": 38.72,
+      "when": 38.81,
+      "rate": 0.5524395704269409,
+      "loop": true,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 0
+    },
+    {
+      "kind": "stop",
+      "label": "reverser",
+      "t": 38.72,
+      "when": 38.81,
+      "rate": 0.75,
+      "loop": true,
+      "phase": "厦航 787-9 · 机坪滑行",
+      "speed": 0
+    }
+  ],
+  "runtime": {
+    "href": "http://127.0.0.1:5187/?tour=787-final&time=afternoon",
+    "js": [
+      "/assets/index-jvIRDHlC.js",
+      "/assets/sunlight-layout-Cr4k97nd.js",
+      "/assets/game-CG3du93v.js",
+      "/assets/dreamliner-CSrQzZ2s.js",
+      "/assets/arrival-terrain-CgTxni-7.js"
+    ],
+    "clips": [
+      [
+        "/aircraft/787/sounds/touchdown.wav",
+        200
+      ],
+      [
+        "/aircraft/787/sounds/roll.wav",
+        200
+      ],
+      [
+        "/aircraft/787/sounds/rumble.wav",
+        200
+      ],
+      [
+        "/aircraft/787/sounds/turbine.wav",
+        200
+      ],
+      [
+        "/aircraft/787/sounds/whine.wav",
+        200
+      ],
+      [
+        "/aircraft/787/sounds/jet.wav",
+        200
+      ],
+      [
+        "/aircraft/787/sounds/reverser.wav",
+        200
+      ]
+    ]
+  },
+  "phases": [
+    {
+      "phase": "厦航 787-9 · 进近着陆",
+      "place": "高崎机场",
+      "speed": 261,
+      "t": 0.29333333333333333,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": false
+    },
+    {
+      "phase": "厦航 787-9 · 拉平接地",
+      "place": "高崎机场",
+      "speed": 256,
+      "t": 8.464,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": false
+    },
+    {
+      "phase": "厦航 787-9 · 着陆滑跑",
+      "place": "高崎机场",
+      "speed": 253,
+      "t": 9.866666666666667,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": false
+    },
+    {
+      "phase": "厦航 787-9 · 机坪滑行",
+      "place": "高崎机场滑行道",
+      "speed": 30,
+      "t": 18.032,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": false
+    },
+    {
+      "phase": "厦航 787-9 · 已停稳",
+      "place": "高崎机场机坪",
+      "speed": 0,
+      "t": 38.944,
+      "audioContext": "running",
+      "playback": "播放 4×",
+      "arrived": true
+    }
+  ],
+  "audioBytes": 565913,
+  "method": "Production Web Audio master routed to a MediaStream recording destination. Device monitor was muted only in this verification tab."
+}

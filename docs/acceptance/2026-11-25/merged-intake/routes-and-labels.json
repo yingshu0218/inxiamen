@@ -1,0 +1,595 @@
+{
+  "generatedAt": "2026-11-24T17:11:18.359Z",
+  "artifacts": {
+    "homepage": "7d9fea75852116dbea844fe0df909ee1c59a149af013c35a8ecaa33f97a99676",
+    "/assets/index-Bpqxdic7.js": "bfdf086b7a731063cbc37a66c91b9a1405a8f9f257ce92c6e53fe101ac5b11b8",
+    "/assets/game-CEEocZK7.js": "430cce91f0e039ce6a4ff224b0dd2a53b1bc7e65a48c231558d206cb890a1268"
+  },
+  "servers": [
+    "http://127.0.0.1:5187/",
+    "http://127.0.0.1:5269/"
+  ],
+  "targets": [
+    {
+      "id": "campus",
+      "owner": "XM-001",
+      "query": "?tour=campus",
+      "menuPath": [
+        "厦大建南楼群"
+      ],
+      "mode": "轻型机",
+      "camera": null
+    },
+    {
+      "id": "campus-overview",
+      "owner": "XM-001",
+      "query": "?tour=campus-overview",
+      "menuPath": [
+        "厦大建南楼群",
+        "厦大 · 校园总览"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -2670,
+        "z": 5118,
+        "y": 392
+      }
+    },
+    {
+      "id": "campus-jiannan",
+      "owner": "XM-001",
+      "query": "?tour=campus-jiannan",
+      "menuPath": [
+        "厦大建南楼群",
+        "厦大 · 上弦场与建南"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -3214,
+        "z": 4951,
+        "y": 76
+      }
+    },
+    {
+      "id": "campus-qunxian",
+      "owner": "XM-001",
+      "query": "?tour=campus-qunxian",
+      "menuPath": [
+        "厦大建南楼群",
+        "厦大 · 群贤楼群"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -3583,
+        "z": 4684,
+        "y": 49
+      }
+    },
+    {
+      "id": "campus-furong",
+      "owner": "XM-001",
+      "query": "?tour=campus-furong",
+      "menuPath": [
+        "厦大建南楼群",
+        "厦大 · 芙蓉湖与颂恩楼"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -3060,
+        "z": 4543,
+        "y": 84
+      }
+    },
+    {
+      "id": "campus-baicheng",
+      "owner": "XM-001",
+      "query": "?tour=campus-baicheng",
+      "menuPath": [
+        "厦大建南楼群",
+        "厦大 · 白城校门"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -2814,
+        "z": 4930,
+        "y": 19.5
+      }
+    },
+    {
+      "id": "haicang",
+      "owner": "XM-001",
+      "query": "?tour=haicang",
+      "menuPath": [
+        "海沧大桥"
+      ],
+      "mode": "轻型机",
+      "camera": null
+    },
+    {
+      "id": "lake",
+      "owner": "XM-001",
+      "query": "?tour=lake",
+      "menuPath": [
+        "筼筜湖"
+      ],
+      "mode": "轻型机",
+      "camera": null
+    },
+    {
+      "id": "yanwu-sea",
+      "owner": "XM-005",
+      "query": "?tour=yanwu-sea",
+      "menuPath": [
+        "演武大桥",
+        "演武大桥 · 海上看弯桥"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -4680,
+        "z": 5370,
+        "y": 154
+      }
+    },
+    {
+      "id": "yanwu-platform",
+      "owner": "XM-005",
+      "query": "?tour=yanwu-platform",
+      "menuPath": [
+        "演武大桥",
+        "星光海岸 · 平台望双子塔"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -4120,
+        "z": 5008,
+        "y": 6.28
+      }
+    },
+    {
+      "id": "gaoqi-industry",
+      "owner": "XM-006",
+      "query": "?tour=gaoqi-industry",
+      "menuPath": [
+        "高崎机场观景机位",
+        "高崎航空产业园 · 总览"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": 1630,
+        "y": 550,
+        "z": -6260
+      }
+    },
+    {
+      "id": "gaoqi-industry-ed",
+      "owner": "XM-006",
+      "query": "?tour=gaoqi-industry-ed",
+      "menuPath": [
+        "高崎机场观景机位",
+        "高崎航空产业园 · 艾德楼群"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": 1515,
+        "y": 190,
+        "z": -6480
+      }
+    },
+    {
+      "id": "gaoqi-industry-materials",
+      "owner": "XM-006",
+      "query": "?tour=gaoqi-industry-materials",
+      "menuPath": [
+        "高崎机场观景机位",
+        "高崎航空产业园 · 国际航材中心"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": 1825,
+        "y": 125,
+        "z": -6933
+      }
+    },
+    {
+      "id": "island",
+      "owner": "XM-008",
+      "query": "?tour=island",
+      "menuPath": [
+        "鼓浪屿"
+      ],
+      "mode": "轻型机",
+      "camera": null
+    },
+    {
+      "id": "sanqiutian",
+      "owner": "XM-008",
+      "query": "?tour=sanqiutian",
+      "menuPath": [
+        "鼓浪屿",
+        "三丘田码头"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -5992,
+        "z": 2946,
+        "y": 56
+      }
+    },
+    {
+      "id": "gulangyu",
+      "owner": "XM-008",
+      "query": "?tour=gulangyu",
+      "menuPath": [
+        "鼓浪屿",
+        "全岛鸟瞰"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -5090,
+        "z": 2430,
+        "y": 605
+      }
+    },
+    {
+      "id": "hubin-sili",
+      "owner": "XM-009",
+      "query": "?tour=hubin-sili",
+      "menuPath": [
+        "厦门火车站",
+        "湖滨四里 · 回迁社区"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -2030,
+        "y": 392,
+        "z": 350
+      }
+    },
+    {
+      "id": "sili-court",
+      "owner": "XM-009",
+      "query": "?tour=sili-court",
+      "menuPath": [
+        "厦门火车站",
+        "湖滨四里 · 院落街口"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -2079,
+        "y": 102,
+        "z": 292
+      }
+    },
+    {
+      "id": "huandao",
+      "owner": "XM-012",
+      "query": "?tour=huandao",
+      "menuPath": [
+        "环岛路 · 白城起飞"
+      ],
+      "mode": "轻型机",
+      "camera": null
+    },
+    {
+      "id": "huandao-overview",
+      "owner": "XM-012",
+      "query": "?tour=huandao-overview",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "白城至曾厝垵 · 总览"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -1700,
+        "z": 6810,
+        "y": 718
+      }
+    },
+    {
+      "id": "baicheng-beach",
+      "owner": "XM-012",
+      "query": "?tour=baicheng-beach",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "白城沙滩与天桥"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -2710,
+        "z": 5118,
+        "y": 78
+      }
+    },
+    {
+      "id": "huli-revetment",
+      "owner": "XM-012",
+      "query": "?tour=huli-revetment",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "胡里山驳岸"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -2660,
+        "z": 5320,
+        "y": 88
+      }
+    },
+    {
+      "id": "zengcuoan-fish",
+      "owner": "XM-012",
+      "query": "?tour=zengcuoan-fish",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "曾厝垵渔桥"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": -612,
+        "z": 5838,
+        "y": 64
+      }
+    },
+    {
+      "id": "huangcuo-wave",
+      "owner": "XM-012",
+      "query": "?tour=huangcuo-wave",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "黄厝海浪平台"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": 4625,
+        "z": 2972,
+        "y": 112
+      }
+    },
+    {
+      "id": "yefeng-beach",
+      "owner": "XM-012",
+      "query": "?tour=yefeng-beach",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "椰风寨岸滩"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": 4080,
+        "z": 3525,
+        "y": 138
+      }
+    },
+    {
+      "id": "huandao-exhibition",
+      "owner": "XM-012",
+      "query": "?tour=huandao-exhibition",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "会展海岸"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": 6410,
+        "z": 1610,
+        "y": 275
+      }
+    },
+    {
+      "id": "guanyin-coast",
+      "owner": "XM-012",
+      "query": "?tour=guanyin-coast",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "观音山海滨与在建沙滩桥"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": 7590,
+        "z": -1740,
+        "y": 231
+      }
+    },
+    {
+      "id": "huandao-wuyuan",
+      "owner": "XM-012",
+      "query": "?tour=huandao-wuyuan",
+      "menuPath": [
+        "环岛路 · 白城起飞",
+        "五缘湾 · 东路终点"
+      ],
+      "mode": "自由移动",
+      "camera": {
+        "x": 5480,
+        "z": -6980,
+        "y": 189
+      }
+    }
+  ],
+  "hud": {
+    "flying": [
+      {
+        "id": "haicang",
+        "samples": [
+          {
+            "km": 0,
+            "held": "海沧大桥",
+            "display": "海沧大桥",
+            "fallback": "海上世界与东渡码头俯视",
+            "elapsed": 0
+          },
+          {
+            "km": 0.2108,
+            "held": "海沧大桥",
+            "display": "海沧大桥",
+            "fallback": "海上世界与东渡码头俯视",
+            "elapsed": 4.03
+          },
+          {
+            "km": 0.23,
+            "held": null,
+            "display": "海上世界与东渡码头俯视",
+            "fallback": "海上世界与东渡码头俯视",
+            "elapsed": 4.4
+          },
+          {
+            "km": 0.5009,
+            "held": null,
+            "display": "海上世界与东渡码头俯视",
+            "fallback": "海上世界与东渡码头俯视",
+            "elapsed": 9.53
+          },
+          {
+            "km": 1.0013,
+            "held": null,
+            "display": "东渡海上世界",
+            "fallback": "东渡海上世界",
+            "elapsed": 19.07
+          },
+          {
+            "km": 1.8004,
+            "held": null,
+            "display": "东渡海上世界",
+            "fallback": "东渡海上世界",
+            "elapsed": 35.4
+          }
+        ]
+      },
+      {
+        "id": "lake",
+        "samples": [
+          {
+            "km": 0,
+            "held": "筼筜湖",
+            "display": "筼筜湖",
+            "fallback": "广电大楼",
+            "elapsed": 0
+          },
+          {
+            "km": 0.2104,
+            "held": "筼筜湖",
+            "display": "筼筜湖",
+            "fallback": "南湖公园",
+            "elapsed": 4.07
+          },
+          {
+            "km": 0.2311,
+            "held": null,
+            "display": "南湖公园",
+            "fallback": "南湖公园",
+            "elapsed": 4.47
+          },
+          {
+            "km": 0.5004,
+            "held": null,
+            "display": "南湖公园",
+            "fallback": "南湖公园",
+            "elapsed": 9.53
+          },
+          {
+            "km": 1.001,
+            "held": null,
+            "display": "南湖公园东西园步桥",
+            "fallback": "南湖公园东西园步桥",
+            "elapsed": 18.5
+          },
+          {
+            "km": 1.8007,
+            "held": null,
+            "display": "厦门万象城",
+            "fallback": "厦门万象城",
+            "elapsed": 32.9
+          }
+        ]
+      },
+      {
+        "id": "island",
+        "samples": [
+          {
+            "km": 0,
+            "held": "鼓浪屿",
+            "display": "鼓浪屿",
+            "fallback": "三丘田码头",
+            "elapsed": 0
+          },
+          {
+            "km": 0.2103,
+            "held": "鼓浪屿",
+            "display": "鼓浪屿",
+            "fallback": "三丘田码头",
+            "elapsed": 4.03
+          },
+          {
+            "km": 0.2312,
+            "held": null,
+            "display": "钢琴码头",
+            "fallback": "钢琴码头",
+            "elapsed": 4.43
+          },
+          {
+            "km": 0.5007,
+            "held": null,
+            "display": "钢琴码头",
+            "fallback": "钢琴码头",
+            "elapsed": 9.63
+          },
+          {
+            "km": 1.0014,
+            "held": null,
+            "display": "海天堂构",
+            "fallback": "海天堂构",
+            "elapsed": 19.37
+          },
+          {
+            "km": 1.8014,
+            "held": null,
+            "display": "菽庄花园",
+            "fallback": "菽庄花园",
+            "elapsed": 34.2
+          }
+        ]
+      }
+    ],
+    "free": [
+      {
+        "id": "sanqiutian",
+        "initial": "三丘田码头",
+        "withinRange": "三丘田码头",
+        "released": null,
+        "nearbyAfterMovement": "中山公园南门",
+        "metres": 1837.8
+      },
+      {
+        "id": "gulangyu",
+        "initial": "全岛鸟瞰",
+        "withinRange": "全岛鸟瞰",
+        "released": null,
+        "nearbyAfterMovement": "中山公园",
+        "metres": 1837.8
+      }
+    ]
+  },
+  "geometry": {
+    "joins": [
+      {
+        "side": "seaward",
+        "point": [
+          -2848.19,
+          4968.04
+        ],
+        "nearestGap": 0.04123105625608396
+      },
+      {
+        "side": "landward",
+        "point": [
+          -2803.01,
+          4966.55
+        ],
+        "nearestGap": 0.050990195136149025
+      }
+    ],
+    "industryBuildings": 14,
+    "siliHomes": 12
+  },
+  "method": "Production HTML and linked JS fetched and verified. Local flight logic sampled with flat terrain, zero wind and no obstacles; this excludes rendered browser behavior."
+}
