@@ -63,7 +63,7 @@ export function northernChecks(group,geo){
   const westEnds=wuyuanLanes.map(l=>l.points[0]);
   const local=streets.filter(r=>ends(r).some(p=>westEnds.some(e=>distance(e,p)<.01))
     || r.slice(3).some((x,i)=>i%2===0 && x>4450 && x<4650 && r[i+4]>-7000 && r[i+4]<-6840));
-  addStreets(existing,{...geo,rawHeightAt:geo.heightAt,waterAt:()=>null,isletAt:()=>false},
+  addStreets(existing,geo,
     [...new Set([...local,...joined])],new MeshStandardMaterial(),airportFrame(runway),new LampBatch(),[]);
   existing.updateMatrixWorld();group.updateMatrixWorld();
   const seams=north.abutments.map(a=>{

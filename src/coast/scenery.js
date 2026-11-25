@@ -118,7 +118,7 @@ export function buildHuandao(group,geo,material,lights,obstacles) {
   sandBridge(details,obstacles);
   northernShore(roads,paths,details,ground,obstacles,shoreGround);
   westWaterfront(paths,details,shoreGround);
-  buildWuyuanBridge(group,ground,material,lights,obstacles);
+  buildWuyuanBridge(group,ground,material,lights,obstacles,geo.roadTerrainAt);
   roads.finish(group,material,'环岛南路、环岛东路 · 分幅机动车道');
   paths.finish(group,material,'白城至五缘湾 · 滨海步道与骑行线');
   details.finish(group,material,'环岛路沿线天桥、海浪平台、观音山施工段与五通岸墙');

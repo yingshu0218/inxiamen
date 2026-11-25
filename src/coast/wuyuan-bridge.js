@@ -43,7 +43,7 @@ function bridgeRows(ground){
   return rows;
 }
 
-export function buildWuyuanBridge(group,ground,material,lights,obstacles){
+export function buildWuyuanBridge(group,ground,material,lights,obstacles,westRoadTerrain=ground){
   const deck=new MeshBatch(),steel=new MeshBatch(),rows=bridgeRows(ground);
   const total=rows.at(-1).s;
   // The centre between the two main arch footings, located on the January aerial.
@@ -58,8 +58,10 @@ export function buildWuyuanBridge(group,ground,material,lights,obstacles){
   function corner(f,k,offset,lift=0){
     const [cx,cz]=f.lanes[k],[nx,nz]=f.normals[k];
     const x=cx+nx*offset,z=cz+nz*offset,west=Math.max(0,1-f.s/32);
-    // The western street follows transverse terrain; the eastern joint is level.
-    return [x,f.height[k]+west*(ground(x,z)-ground(cx,cz))+lift,z];
+    // Match the western approach's rendered roadbed across the joint and
+    // blend back into the raised deck profile over its first 32 metres.
+    const crossfall=west ? west*(westRoadTerrain(x,z)-ground(cx,cz)) : 0;
+    return [x,f.height[k]+crossfall+lift*(1-west),z];
   }
   let previous,lightAt=30;
   for(const f of rows){
