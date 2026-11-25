@@ -9,6 +9,9 @@ import { applyResidentialBlocks } from '../src/residential-blocks.js';
 import { runway } from '../src/route.js';
 import { landmarkReserved } from '../src/scenery-landmarks.js';
 import { inRing, ObstacleIndex } from '../src/scenery-mesh.js';
+import workplaces from '../src/island-workplaces.json' with { type: 'json' };
+import winland from '../src/winland-ifc-layout.json' with { type: 'json' };
+import huizhi from '../src/torch-huizhi-layout.json' with { type: 'json' };
 
 const read = name => readFileSync(new URL('../public/geo/' + name, import.meta.url));
 const json = name => JSON.parse(read(name));
@@ -24,6 +27,15 @@ const byRings = new Map(updated.map(row => [row.rings, row]));
 const added = updated.filter(row => !originalRings.has(row.rings));
 const removed = original.filter(row => !byRings.has(row.rings));
 const modified = original.filter(row => byRings.has(row.rings) && byRings.get(row.rings) !== row);
+const footprint = rings => JSON.stringify(rings);
+const addedFootprints = new Set(added.map(row => footprint(row.rings)));
+const retiredBySite = [...workplaces, winland, huizhi].map(site => site.retire.map(row => footprint(row.rings)));
+assert.deepEqual(retiredBySite.map(keys => keys.length), [3, 5, 4, 1]);
+const retired = new Set(retiredBySite.flat());
+assert.equal(retired.size, 13);
+// Each office replacement must still identify exactly one original XMC1 footprint.
+const matched = original.map(row => footprint(row.rings)).filter(key => retired.has(key));
+assert.deepEqual(matched.sort(), [...retired].sort());
 const centre = ring => ring.reduce(([x, z], p) => [x + p[0] / ring.length, z + p[1] / ring.length], [0, 0]);
 const protectedAt = (x, z) => protectedOldTownBounds.some(([w, n, e, s]) =>
   x >= w && x <= e && z >= n && z <= s);
@@ -107,10 +119,18 @@ async function meshStats(blocks) {
     geometry.dispose();
   }
   material.dispose();
-  const oldTown = new Set([...index.cells.values()].flat().filter(object =>
-    protectedAt(...centre(object.points))));
+  const obstacles = new Set([...index.cells.values()].flat());
+  const oldTown = [];
+  const drawnHomes = new Set();
+  for (const object of obstacles) {
+    const key = footprint([object.points, ...object.holes]);
+    assert.ok(!retired.has(key), 'Retired workplace footprint rendered in the generic city batch');
+    if (addedFootprints.has(key)) drawnHomes.add(key);
+    if (protectedAt(...centre(object.points))) oldTown.push(JSON.stringify(object));
+  }
+  assert.equal(drawnHomes.size, blocks.length ? addedFootprints.size : 0);
   return { batches: scene.children.length, vertices, triangles, views, outside: outside.sort(),
-    oldTown: [...oldTown].map(object => JSON.stringify(object)).sort() };
+    oldTown: oldTown.sort() };
 }
 
 const before = await meshStats([]);
@@ -121,5 +141,6 @@ const { outside: checked, oldTown: town, ...beforeStats } = before;
 const { outside: _, oldTown: __, ...afterStats } = after;
 console.log(JSON.stringify({
   records: { before: original.length, after: updated.length, added: added.length, removed: removed.length, styledExisting: modified.length },
+  retiredWorkplaceFootprints: retiredBySite.map(keys => keys.length),
   unchangedOffIslandBatches: checked.length, unchangedOldTownObstacles: town.length, before: beforeStats, after: afterStats,
 }, null, 2));
