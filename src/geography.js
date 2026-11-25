@@ -1,4 +1,5 @@
 import { mazeWater } from './parks/layout.js';
+import { inRing } from './scenery-mesh.js';
 import { gradeShapoweiBank } from './shapowei-bank.js';
 import { gradeOldTown } from './old-town-layout.js';
 import { gradeNeicuoaoEntrance } from './gulangyu-layout.js';
@@ -389,6 +390,9 @@ export async function loadGeography(renderer, runway) {
     group,
     uniforms,
     rawHeightAt,
+    coastDistance,
+    onMainland: (x, z) => inRing(x, z, islands.xiamen),
+    roadTerrainAt: (x, z) => refinementAt(x, z)?.sample(x, z) ?? renderedHeight(x, z),
     islandSurfaceHeightAt: islandRendered,
     coverAt,
     heightAt(x,z) {

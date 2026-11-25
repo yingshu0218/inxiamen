@@ -84,7 +84,7 @@ export async function createScenery({ scene, geo, runway }) {
   const venueSigns = addVenueSigns(group, signs);
   const brtSigns = buildBrtScenery(group, geo, material, lamps, obstacles);
   const coastSign = buildHuandao(group, geo, material, lamps, obstacles);
-  addStreets(group, geo, streets.roads, material, frame, lamps, roads);
+  const roadVegetationBlocked = addStreets(group, geo, streets.roads, material, frame, lamps, roads);
   const bridgeFootprint = bridgeCorridors(roads.filter((road) => road.carOffsets)
     .flatMap((road) => road.metro ? [road, road.metro] : [road]));
   const updateCity = await buildCity(group, geo, frame, material, obstacles, buildings, bridgeFootprint);
@@ -92,8 +92,8 @@ export async function createScenery({ scene, geo, runway }) {
   islandForeshore(shoreline, islandCover, geo, obstacles);
   const rocks = shoreline.finish(group, material, '鼓浪屿岸礁');
   if (rocks) rocks.castShadow = rocks.receiveShadow = true;
-  addGroves(group, geo, new Int16Array(trees), islandCover, new Int16Array(bankTrees), atlas, darkness, frame, obstacles, cliffPlantings);
-  vegetate(group, geo, frame, obstacles, material);
+  addGroves(group, geo, new Int16Array(trees), islandCover, new Int16Array(bankTrees), atlas, darkness, frame, obstacles, cliffPlantings, roadVegetationBlocked);
+  vegetate(group, geo, frame, obstacles, material, roadVegetationBlocked);
   const moveTraffic = maritime(group, geo, material, roads, darkness);
   const moveBuses = hubinBuses(group, geo, material);
   const moveWalkers = oldTownWalkers(group, geo);
