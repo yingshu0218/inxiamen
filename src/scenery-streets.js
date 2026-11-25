@@ -1,6 +1,7 @@
 import {
   bridgeWaterFloor, layMainlandStrip, mainlandRoadWater, mainlandStreet, roadVegetationMask,
 } from './mainland-street-surface.js';
+import { lulingConnector, lulingConnectorWidth, withLulingJunctions } from './luling-ramps.js';
 import { replacesYundangPath } from './yundang-paths.js';
 import { replacesCoastStreet, replacesNorthernRecord } from './coast/layout.js';
 import { insidePark } from './parks/layout.js';
@@ -120,7 +121,8 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
   const junctions=streetJunctions(records,geo);
   const vegetation = roadVegetationMask(geo);
   const sectors = new Map();
-  for (const [kind, flags, layer, ...flat] of records) {
+  for (const [kind, flags, layer, ...source] of records) {
+    const flat = withLulingJunctions(kind, flags, layer, source);
     const bridge=Boolean(flags&1)||layer>0;
     if (flat.length < 4 || replacesNorthernRecord(kind,bridge,flat)) continue;
     if (bridge && kind < 1 && replacesYanwuPlatformTile(flat)) continue;
@@ -128,8 +130,10 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
     const yanwuContinuation = !bridge && kind === 4 && reachesYanwuFromLujiang(flat);
     const island = kind <= 1 && inIslandBounds(flat[0], flat[1])
       && (inRing(flat[0],flat[1],geo.islands.gulangyu) || inRing(flat.at(-2),flat.at(-1),geo.islands.gulangyu));
+    const singleLane = lulingConnector(kind, flags, layer, flat);
     const points = [],
-      width = island ? (kind === -1 ? 2.05 : kind === 0 ? 3.25 : 4.35) : widths[kind + 1],
+      width = singleLane ? lulingConnectorWidth :
+        island ? (kind === -1 ? 2.05 : kind === 0 ? 3.25 : 4.35) : widths[kind + 1],
       shade = roadTones[kind + 1];
     for (let i = 2; i < flat.length; i += 2) {
       const x0 = flat[i - 2],
@@ -216,8 +220,9 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
         continue;
       }
       if (kind >= 2) {
-        road.a = at(-width / 2 + 0.6, 0.026);
-        road.b = at(width / 2 - 0.6, 0.026);
+        const shoulder = singleLane ? .25 : .6;
+        road.a = at(-width / 2 + shoulder, 0.026);
+        road.b = at(width / 2 - shoulder, 0.026);
       }
       if (prev) {
         const top = (corners, color, style, seed, uv) => {
@@ -230,7 +235,11 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
           top([prev.b, prev.hi, road.hi, road.b], '#aeaa99');
           // Metres along the centreline keep dash and light spacing continuous through bends.
           const uv=[[-1,prev.station],[1,prev.station],[1,station],[-1,station]];
-          top([prev.a, prev.b, road.b, road.a], shade, litSurface.avenue, kind, uv);
+          if (singleLane) {
+            const asphaltUV = [[-width / 2, prev.station], [width / 2, prev.station],
+              [width / 2, station], [-width / 2, station]];
+            top([prev.a, prev.b, road.b, road.a], shade, litSurface.streetAsphalt, 0, asphaltUV);
+          } else top([prev.a, prev.b, road.b, road.a], shade, litSurface.avenue, kind, uv);
         } else top([prev.lo, prev.hi, road.hi, road.lo], shade);
       }
       if (kind >= 2 && i % (kind >= 4 ? 3 : 5) === 0 && Math.abs(p[0]) < 8000 && p[1] > -9900

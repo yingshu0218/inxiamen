@@ -17,6 +17,7 @@ import { readLakes } from '../src/inland-water.js';
 import { inRing } from '../src/scenery-mesh.js';
 import { buildYundangPaths, yundangPaths } from '../src/yundang-paths.js';
 import { MeshBatch } from '../src/scenery-mesh.js';
+import { lulingConnector, lulingConnectorWidth, withLulingJunctions } from '../src/luling-ramps.js';
 import { runway } from '../src/route.js';
 import {
   bridgeWaterFloor, layMainlandStrip, mainlandRoadWater, mainlandStreet, roadVegetationMask,
@@ -226,10 +227,27 @@ for (const { points, line } of yundangPaths) {
     if (!plane.some(face => coversTriangle(...p, ...face) !== null)) throw new Error('surveyed path endpoint has no deck');
   }
 }
+const ramps = records.flatMap(([kind, flags, layer, ...flat]) => {
+  const source = lulingConnector(kind, flags, layer, flat);
+  if (!source) return [];
+  const line = points(flat);
+  const length = line.slice(1).reduce((m, p, i) => m + Math.hypot(p[0] - line[i][0], p[1] - line[i][1]), 0);
+  return [{ source, length: +length.toFixed(1), oldWidth: roadWidths[kind + 1], newWidth: lulingConnectorWidth }];
+});
+if (ramps.length !== 8 || lulingConnector(5, 3, 1, [746, -1618, 769, -1671]))
+  throw new Error('surveyed Lvling Road ramp coverage or layer mismatch');
+for (const [x, z] of [[769, -1671], [770, -1675], [785, -1669], [785, -1676]]) {
+  const joins = records.filter(([kind, flags, layer, ...flat]) =>
+    points(withLulingJunctions(kind, flags, layer, flat)).some(p => p[0] === x && p[1] === z) && layer === 0 &&
+      (kind === 4 && flags === 0 || lulingConnector(kind, flags, layer, flat)));
+  if (!joins.some(record => record[0] === 4 && record[1] === 0) ||
+      !joins.some(record => lulingConnector(record[0], record[1], record[2], record.slice(3))))
+    throw new Error('mapped ramp and carriageway no longer share their original node');
+}
 const header = 'x_cell,z_cell,path_m,service_m,local_m,tertiary_m,secondary_m,primary_m,expressway_m,grade_gt_15pct,mapped_surface_in_water_m,mapped_deck_over_water_m,coincident_elevation_endpoints,gap_candidates,probes,buried_before,buried_after,wet_before,wet_after';
 console.log(header);
 for (const [id, row] of [...table.entries()].sort(([a], [b]) => a.localeCompare(b))) {
   console.log([id, ...row.lengths.map(Math.round), row.grade, Math.round(row.water), Math.round(row.bridgeWater),
     row.mixedNodes, row.gapCandidates, row.probed, row.buriedBefore, row.buriedAfter, row.wetBefore, row.wetAfter].join(','));
 }
-console.error(JSON.stringify({ records: records.length, surveyedPoints, issues: hot, residual }, null, 2));
+console.error(JSON.stringify({ records: records.length, surveyedPoints, ramps, issues: hot, residual }, null, 2));

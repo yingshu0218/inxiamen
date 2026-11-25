@@ -31,30 +31,41 @@ export function layMainlandStrip(batch, geo, corners, color, style, kind, uv, oc
   function emit(u0, v0, u1, v1, depth) {
     const a = rowPoint(u0, v0), b = rowPoint(u1, v0), c = rowPoint(u1, v1), d = rowPoint(u0, v1);
     const u = (u0 + u1) / 2, v = (v0 + v1) / 2;
-    const center = rowPoint(u, v);
-    const midpoints = [rowPoint(u, v0), rowPoint(u1, v), rowPoint(u, v1), rowPoint(u0, v)];
     const quad = [a, b, c, d];
-    const probe = [[mix(u0, u1, .25), mix(v0, v1, .25)], [mix(u0, u1, .75), mix(v0, v1, .25)],
-      [mix(u0, u1, .75), mix(v0, v1, .75)], [mix(u0, u1, .25), mix(v0, v1, .75)]];
-    const wet = [...quad, center, ...midpoints, ...probe.map(([s, t]) => rowPoint(s, t))].map(([x, , z]) => mainlandRoadWater(geo, x, z));
-    if (wet.every(Boolean)) return;
-    // Three.js may reverse the quad's winding. Test both possible diagonals.
-    const bends = Math.abs(center[1] - (a[1] + c[1]) / 2) > .23 ||
-      Math.abs(center[1] - (b[1] + d[1]) / 2) > .23 ||
-      midpoints.some((p, i) => Math.abs(p[1] - (quad[i][1] + quad[(i + 1) % 4][1]) / 2) > .23);
-    if (depth > 0 && (wet.some(Boolean) || bends)) {
+    const wetCorners = quad.map(([x, , z]) => mainlandRoadWater(geo, x, z));
+    let anyWet = wetCorners.some(Boolean), anyDry = wetCorners.some(wet => !wet), bends = false;
+    // Check both triangles at the center and near the strip edges. A ridge
+    // between the corners or the usual midpoint can still cut through a path.
+    for (const across of [0, .075, .25, .5, .75, .925, 1]) {
+      for (const along of [0, .25, .5, .75, 1]) {
+        if ((across === 0 || across === 1) && (along === 0 || along === 1)) continue;
+        const [x, height, z] = rowPoint(mix(u0, u1, across), mix(v0, v1, along));
+        const wet = mainlandRoadWater(geo, x, z);
+        anyWet ||= wet;
+        anyDry ||= !wet;
+        const forward = along <= across
+          ? a[1] * (1 - across) + b[1] * (across - along) + c[1] * along
+          : a[1] * (1 - along) + c[1] * across + d[1] * (along - across);
+        const reverse = across + along <= 1
+          ? a[1] * (1 - across - along) + b[1] * across + d[1] * along
+          : b[1] * (1 - along) + c[1] * (across + along - 1) + d[1] * (1 - across);
+        if (Math.abs(height - forward) > .28 || Math.abs(height - reverse) > .28) bends = true;
+      }
+    }
+    if (!anyDry) return;
+    if (depth > 0 && (anyWet || bends)) {
       emit(u0, v0, u, v, depth - 1);
       emit(u, v0, u1, v, depth - 1);
       emit(u, v, u1, v1, depth - 1);
       emit(u0, v, u, v1, depth - 1);
-    } else if (!wet.some(Boolean)) {
+    } else if (!anyWet) {
       const tex = uv && [[u0, v0], [u1, v0], [u1, v1], [u0, v1]]
         .map(([s, t]) => [mix(uv[0][0], uv[1][0], s), mix(uv[0][1], uv[3][1], t)]);
       batch.top(quad, color, style, kind, tex);
       occupied?.(quad);
     }
   }
-  emit(0, 0, 1, 1, 3);
+  emit(0, 0, 1, 1, 4);
 }
 
 export function roadVegetationMask(geo) {
