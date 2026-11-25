@@ -1,5 +1,6 @@
 import { replacesCoastStreet, replacesNorthernRecord } from './coast/layout.js';
 import { insidePark } from './parks/layout.js';
+import { replacesXiagangStreet } from './xiagang-layout.js';
 import { replacesStreet } from './old-town-layout.js';
 import { replacesHubinStreet } from './hubin-layout.js';
 import { railwayReserved } from './railway-layout.js';
@@ -155,7 +156,7 @@ export function addStreets(parent, geo, records, material, frame, lights, modele
       if(i)station+=Math.hypot(p[0]-last[0],p[1]-last[1]);
       if (l < .03 || (kind < 0 && insidePark(...p)) || airportRoadReserved(frame, ...p, bridge, kind)
           || (!bridge && (geo.waterAt(...p) || (geo.rawHeightAt(...p)<.12 && !geo.isletAt(...p))))
-          || (!bridge && replacesStreet(...p,dx/l,dz/l))
+          || (!bridge && (replacesStreet(...p,dx/l,dz/l) || (!layer && replacesXiagangStreet(...p,dx/l,dz/l,kind))))
           || replacesHubinStreet(...p,dx/l,dz/l)
           || replacesCoastStreet(...p,dx/l,dz/l,bridge,kind)
           || replacesWucunStreet(...p,dx/l,dz/l,bridge)
