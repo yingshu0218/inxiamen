@@ -467,6 +467,8 @@ export const venueViews = [
     portraitView: { x: -2634, z: 8, y: 39 },
   },
   ...parkViews,
+  { id:'torch-huizhi', name:'火炬园 · 荟智空间', kind:'俯看研发楼、光伏屋面和楼间庭院',
+    x:-553,z:-4402,focusHeight:40,fov:47,view:{x:-733,y:213,z:-4296},portraitView:{x:-756,y:263,z:-4280} },
   ...eastDistrictViews.filter(site => !site.parent),
   ...islandWorkplaceViews,
   ...lianbanViews,
