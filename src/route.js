@@ -10,6 +10,7 @@ import { civicPoint, dongduPoint, governmentPoint, pearlCentre } from './west-la
 import { mixcCentre, nanhuCentre, sportsCentre } from './downtown-landmark-layout.js';
 import { parkViews } from './parks/views.js';
 import { eastDistrictViews } from './east-district-layout.js';
+import { islandWorkplaceViews } from './island-workplace-views.js';
 import { lianbanViews } from './lianban-layout.js';
 import { ccMallViews, seaMallViews, smMallViews } from './mall-landmark-layout.js';
 import { sunlight, summitLevel, summitPoint } from './sunlight-layout.js';
@@ -467,6 +468,9 @@ export const venueViews = [
   },
   ...parkViews,
   ...eastDistrictViews.filter(site => !site.parent),
+  { id:'winland-ifc', name:'五通 · 英蓝国际金融中心', kind:'从滨海侧看四塔、裙楼与高空连桥',
+    x:6582,z:-3098,focusHeight:100,fov:43,view:{x:7008,y:246,z:-3098},portraitView:{x:7160,y:325,z:-3098} },
+  ...islandWorkplaceViews,
   ...lianbanViews,
   ...smMallViews,
   ...ccMallViews,

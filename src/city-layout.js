@@ -11,6 +11,8 @@ import { inIslandBounds, replacesGardenBuilding } from './gulangyu-layout.js';
 import { neicuoaoPieces, neicuoaoImageHouses } from './gulangyu-neicuoao.js';
 import { islandHouse } from './gulangyu-neighborhoods.js';
 import { applyResidentialBlocks } from './residential-blocks.js';
+import { replacesWorkplaceFootprint } from './island-workplaces.js';
+import { replacesWinlandFootprint } from './landmark-winland-ifc.js';
 
 const plaster = ['#bcafa0','#b7aca0','#c0bcb0','#b8aa97','#afb3a7','#c6b79e','#a8afaf','#beb6a8'];
 const homes = ['#c1b4a4','#c4b69e','#c1af96','#bfb6ab','#b3ac9a','#aeb6ad','#c4bbaf'];
@@ -145,6 +147,8 @@ export async function buildCity(parent,geo,frame,material,index,buffer,bridgeFoo
     (minor?tile.small:tile.large).push(b);
   }
   for(const building of applyResidentialBlocks(decodeCityLayout(buffer),residentialBlocks)) {
+    if(replacesWorkplaceFootprint(building))continue;
+    if(replacesWinlandFootprint(building))continue;
     const neicuoao = neicuoaoPieces(building);
     if (neicuoao) {
       for (const part of neicuoao) enqueue(part);

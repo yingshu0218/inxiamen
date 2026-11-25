@@ -1,6 +1,8 @@
 import { MeshBatch } from './scenery-mesh.js';
 import { eastDistrictReserved } from './east-district-layout.js';
+import { buildBinbeiOffices, buildTorchHightech } from './island-workplaces.js';
 import { buildGuanyinBusiness, buildSoftwareOne, buildSoftwareTwo } from './landmark-east-districts.js';
+import { buildWinlandIfc } from './landmark-winland-ifc.js';
 import { buildTowers, towersReserved } from './landmark-towers.js';
 import { buildGulangyu, gulangyuReserved } from './landmark-gulangyu.js';
 import { buildIslandHeritage } from './gulangyu-heritage.js';
@@ -69,9 +71,12 @@ export function landmarkReserved(x, z) {
 }
 
 const sites = [
+  ['滨北 · 财经、振业与振兴大厦', buildBinbeiOffices],
+  ['湖里火炬园 · 高新广场', buildTorchHightech],
   ['厦门软件园一期 · 曾厝垵南北两区', buildSoftwareOne],
   ['厦门软件园二期 · 望海路与观日路', buildSoftwareTwo],
   ['东海岸观音山 · 国际商务营运中心', buildGuanyinBusiness],
+  ['五通 · 英蓝国际金融中心', buildWinlandIfc],
   ['世茂海峡双子塔', buildTowers],
   ['演武大桥与观景平台', buildYanwu],
   ['鼓浪屿 · 八卦楼、日光岩与菽庄花园', buildGulangyu],
