@@ -44,7 +44,9 @@ function touches([a, b], [c, d]) {
 
 function covers(block, ring) {
   const { west, east, north, south } = block.bounds;
-  return ring.every(([x, z]) => x > west && x < east && z > north && z < south && inRing(x, z, block.ring)) &&
+  return ring.every(([x, z]) => x > west && x < east && z > north && z < south &&
+    inRing(x, z, block.ring) && !block.holes?.some(hole => inRing(x, z, hole))) &&
+    !block.holes?.some(hole => inRing(...hole[0], ring)) &&
     !edges(ring).some(edge => block.edges.some(boundary => touches(edge, boundary)));
 }
 
@@ -57,36 +59,66 @@ function intersects(a, b) {
     edges(a).some(edge => edges(b).some(other => touches(edge, other)));
 }
 
+const cellSize = 300;
+const key = (i, j) => i * 2048 + j;
+
+function* cells({ west, east, north, south }) {
+  for (let i = Math.floor(west / cellSize); i <= Math.floor(east / cellSize); i++)
+    for (let j = Math.floor(north / cellSize); j <= Math.floor(south / cellSize); j++)
+      yield key(i, j);
+}
+
+function spatialIndex(items) {
+  const index = new Map();
+  for (const item of items) {
+    for (const cell of cells(item.bounds)) {
+      if (!index.has(cell)) index.set(cell, []);
+      index.get(cell).push(item);
+    }
+  }
+  return index;
+}
+
 export function* applyResidentialBlocks(buildings, plans) {
   const blocks = plans.map(plan => ({
-    ...plan, bounds: bounds(plan.ring), edges: edges(plan.ring), finish: finishes[plan.style],
+    ...plan, bounds: bounds(plan.ring),
+    edges: [plan.ring, ...(plan.holes ?? [])].flatMap(edges), finish: finishes[plan.style],
   }));
   const additions = blocks.flatMap(block => block.roofs
     .filter(roof => covers(block, roof.rings[0]))
     .map(roof => ({ roof, block, bounds: bounds(roof.rings[0]), occupied: false })));
+  const blocksByCell = spatialIndex(blocks);
+  const roofsByCell = spatialIndex(additions);
 
   for (const building of buildings) {
     const ring = building.rings[0];
-    const block = blocks.find(block => covers(block, ring));
-    if (block && building.streetFrontage && building.use === 1 && !building.base) continue;
+    const [x, z] = ring[0];
+    const local = blocksByCell.get(key(Math.floor(x / cellSize), Math.floor(z / cellSize)));
+    const block = local?.find(block => covers(block, ring));
+    if (block && !block.keepFrontage && building.streetFrontage && building.use === 1 && !building.base) continue;
 
     // A later base dataset may already contain this building. Keep the base geometry.
     if (additions.length) {
       const roofBounds = bounds(ring);
-      for (const item of additions) {
-        if (!item.occupied && overlap(roofBounds, item.bounds) && intersects(ring, item.roof.rings[0])) item.occupied = true;
+      for (const cell of cells(roofBounds)) {
+        for (const item of roofsByCell.get(cell) ?? []) {
+          if (!item.occupied && overlap(roofBounds, item.bounds) && intersects(ring, item.roof.rings[0])) item.occupied = true;
+        }
       }
     }
 
     const home = block && !building.base && (building.use === 1 ||
       (!building.use && building.height < 72 && Math.abs(signedArea(ring)) < 1100));
-    yield home ? { ...building, residentialFinish: block.finish, reviewedDistrict: true } : building;
+    yield home ? {
+      ...building, residentialFinish: block.finish, reviewedDistrict: building.reviewedDistrict || block.kind === 'pilot',
+    } : building;
   }
 
   for (const { roof, block, occupied } of additions) {
     if (!occupied) yield {
       rings: roof.rings, height: roof.height, base: 0, use: 1,
-      residentialFinish: block.finish, reviewedDistrict: true,
+      mappedHeight: roof.heightSource === 'mapped',
+      residentialFinish: block.finish, reviewedDistrict: block.kind === 'pilot',
     };
   }
 }

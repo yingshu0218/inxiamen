@@ -100,14 +100,15 @@
       "edits": "乐海路选取九个已建 OSM 住宅地块，投影并融合屋面，转移匹配高度或按地块估算。绿泉新村单楼轮廓与 D07 八栋塔楼按观景尺度近似；地面为地图道路、用地与估绘铺装。影像仅供复核，游戏内没有分发该航片。融合数据库按 ODbL 1.0 提供。"
     },
     {
-      "layer": "洪文中心社区三期、吕岭—双浦路住宅组团",
-      "credit": "© OpenStreetMap contributors · Overture Maps Foundation · Qian Shi et al. (East Asian Buildings)",
+      "layer": "厦门本岛住宅小区与街坊",
+      "credit": "© OpenStreetMap contributors · OpenFreeMap · OpenMapTiles · Overture Maps Foundation · Qian Shi et al. (East Asian Buildings)",
       "release": "2026-11-18.0",
+      "mapSnapshot": "OpenFreeMap 20261122_124456_pt",
       "copyright": "https://www.openstreetmap.org/copyright",
       "license": "https://opendatacommons.org/licenses/odbl/1-0/",
       "eastAsianBuildings": "https://doi.org/10.5281/zenodo.8174931",
       "data": ["/geo/residential-blocks.json"],
-      "edits": "地块取自 2026-11-25 查阅的 OSM 已建住宅区边界。两区用 2025-08-06 高分辨率影像抽核，再分别用 2026-11-10（洪文）与 2026-11-13（吕岭）的 Sentinel-2 影像核对组团。洪文选择开放来源的八排屋面并估算高度。吕岭沿用底库轮廓，按院落统一外观并保留远景楼列。核验影像不在游戏中分发。"
+      "edits": "按本岛陆地、地图住宅用地和路网划分。路网推断街坊需有成片既有住宅支持。补充的遥感屋面保留来源标识，高度为估值。洪文、吕岭、金尚及五缘湾西北用带采集日影像抽查。核验影像不在游戏中分发。"
     },
     {
       "layer": "鼓浪屿西坡与日光岩山肩局部相对地形",

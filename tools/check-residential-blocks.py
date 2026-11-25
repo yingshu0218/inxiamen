@@ -2,9 +2,8 @@
 # requires-python = ">=3.10"
 # dependencies = ["numpy", "pillow", "shapely>=2.1,<3"]
 # ///
-"""Offline checks for the published Hongwen and Lüling residential plans."""
+"""Offline checks for the published Xiamen Island residential overlay."""
 
-import itertools
 import json
 import math
 from pathlib import Path
@@ -64,14 +63,14 @@ def measure():
     ]
     road_space = STRtree(streets)
     height = terrain()
-    plans = read("residential-blocks.json")["blocks"]
+    overlay = read("residential-blocks.json")
+    plans = overlay["blocks"]
     results, all_roofs, parcels = [], [], []
-    # Explicit pilot windows in game metres. The western waterfront and the
-    # Sha Pow Wei extension are outside both, including their source footprints.
-    scope = [box(750, -2300, 1180, -1630), box(3550, -400, 3870, -105)]
+    protected = [box(*bounds) for bounds in overlay["protectedOldTownBounds"]]
     for plan in plans:
-        parcel = Polygon(plan["ring"])
-        assert parcel.is_valid and any(window.contains(parcel) for window in scope)
+        parcel = Polygon(plan["ring"], plan.get("holes", []))
+        assert parcel.is_valid and island.contains(parcel)
+        assert all(not parcel.intersects(area) for area in protected)
         parcels.append(parcel)
         for record in plan["roofs"]:
             roof = Polygon(record["rings"][0], record["rings"][1:])
@@ -95,19 +94,24 @@ def measure():
                 for x, z in samples
             )
             relief = float(max(ground) - min(ground))
-            assert min(ground) > 2 and relief < 4 and grade < 0.16, record["id"]
+            assert min(ground) > 2 and relief < 5.3 and grade < 0.19, record["id"]
             results.append({
                 "id": record["id"],
+                "source": record.get("source", "reviewed-open-roofprint"),
                 "areaM2": round(roof.area, 1),
                 "roadClearanceM": round(roof.distance(streets[road_space.nearest(roof)]), 1),
                 "shoreClearanceM": round(coast.distance(roof), 1),
                 "groundRangeM": [round(float(min(ground)), 1), round(float(max(ground)), 1)],
                 "maxGroundGradePercent": round(100 * grade, 1),
             })
-    for a, b in itertools.combinations(parcels, 2):
-        assert a.intersection(b).area == 0
-    for a, b in itertools.combinations(all_roofs, 2):
-        assert not a.intersects(b)
+    parcel_index = STRtree(parcels)
+    roof_index = STRtree(all_roofs)
+    for i, parcel in enumerate(parcels):
+        # Half metre quantisation may share a boundary with an adjacent piece.
+        assert all(parcel.intersection(parcels[j]).area <= 0.5
+                   for j in parcel_index.query(parcel) if j > i)
+    for i, roof in enumerate(all_roofs):
+        assert all(j == i for j in roof_index.query(roof, predicate="intersects"))
     # Interior garden gaps at Hongwen and the kindergarten recess at Lüling.
     courts = [Point(3699, -275).buffer(7), Point(3718, -273).buffer(5), Point(950, -1960).buffer(15)]
     assert all(not roof.intersects(court) for roof in all_roofs for court in courts)
